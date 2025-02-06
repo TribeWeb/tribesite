@@ -1,0 +1,1 @@
+{"id":"84bc2145-f759-4f66-aee2-1d71bc8aa113","timestamp":1738884758426,"matcher":{"static":{"/api/content/landing/database.sql":{"prerender":true},"/api/content/docs/database.sql":{"prerender":true}},"wildcard":{},"dynamic":{}},"prerendered":["/","/getting-started","/getting-started/installation","/getting-started/usage"]}
