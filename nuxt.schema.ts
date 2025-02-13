@@ -7,6 +7,39 @@ export default defineNuxtSchema({
       description: 'UI Customization.',
       icon: 'i-mdi-palette-outline',
       fields: {
+        colors: group({
+          title: 'Colours',
+          description: 'Manage colours used in UI Pro.',
+          icon: 'i-mdi-palette-outline',
+          fields: {
+            primary: field({
+              type: 'string',
+              title: 'Primary',
+              description: 'Primary color of the UI.',
+              icon: 'i-mdi-palette-outline',
+              default: 'green',
+              // eslint-disable-next-line @stylistic/max-len
+              required: ['sky', 'mint', 'rose', 'amber', 'violet', 'emerald', 'fuchsia', 'indigo', 'lime', 'orange', 'pink', 'purple', 'red', 'teal', 'yellow', 'green', 'blue', 'cyan', 'gray', 'white', 'black']
+            }),
+            secondary: field({
+              type: 'string',
+              title: 'Secondary',
+              description: 'Accent color for the UI.',
+              icon: 'i-mdi-palette-outline',
+              default: 'fuchsia',
+              // eslint-disable-next-line @stylistic/max-len
+              required: ['sky', 'mint', 'rose', 'amber', 'violet', 'emerald', 'fuchsia', 'indigo', 'lime', 'orange', 'pink', 'purple', 'red', 'teal', 'yellow', 'green', 'blue', 'cyan', 'gray', 'white', 'black']
+            }),
+            neutral: field({
+              type: 'string',
+              title: 'Gray',
+              description: 'Gray color of your UI.',
+              icon: 'i-mdi-palette-outline',
+              default: 'slate',
+              required: ['slate', 'cool', 'zinc', 'neutral', 'stone']
+            })
+          }
+        }),
         icons: group({
           title: 'Icons',
           description: 'Manage icons used in UI Pro.',
@@ -40,10 +73,10 @@ export default defineNuxtSchema({
               icon: 'i-mdi-arrow-top-right',
               default: 'i-lucide-external-link'
             }),
-            chevron: field({
+            chevronDown: field({
               type: 'icon',
-              title: 'Chevron',
-              description: 'Icon for chevron.',
+              title: 'Chevron down',
+              description: 'Icon for chevron down.',
               icon: 'i-mdi-chevron-down',
               default: 'i-lucide-chevron-down'
             }),
@@ -55,22 +88,6 @@ export default defineNuxtSchema({
               default: 'i-lucide-hash'
             })
           }
-        }),
-        primary: field({
-          type: 'string',
-          title: 'Primary',
-          description: 'Primary color of your UI.',
-          icon: 'i-mdi-palette-outline',
-          default: 'green',
-          required: ['red', 'orange', 'amber', 'yellow', 'lime', 'green', 'emerald', 'teal', 'cyan', 'sky', 'blue', 'indigo', 'violet', 'purple', 'fuchsia', 'pink', 'rose']
-        }),
-        neutral: field({
-          type: 'string',
-          title: 'Neutral',
-          description: 'Neutral color of your UI.',
-          icon: 'i-mdi-palette-outline',
-          default: 'slate',
-          required: ['slate', 'cool', 'zinc', 'neutral', 'stone']
         })
       }
     }),
@@ -93,20 +110,6 @@ export default defineNuxtSchema({
       description: 'Header configuration.',
       icon: 'i-mdi-page-layout-header',
       fields: {
-        title: field({
-          type: 'string',
-          title: 'Title',
-          description: 'Title to display in the header.',
-          icon: 'i-mdi-format-title',
-          default: ''
-        }),
-        to: field({
-          type: 'string',
-          title: 'To',
-          description: 'URL to redirect to when the title is clicked.',
-          icon: 'i-mdi-link-variant',
-          default: ''
-        }),
         logo: group({
           title: 'Logo',
           description: 'Header logo configuration.',
@@ -152,8 +155,15 @@ export default defineNuxtSchema({
         links: field({
           type: 'array',
           title: 'Links',
-          description: 'Array of link object displayed in header.',
+          description: 'Array of link objects displayed in header right hand side.',
           icon: 'i-mdi-link-variant',
+          default: []
+        }),
+        menu: field({
+          type: 'array',
+          title: 'Menu',
+          description: 'Array of link objects displayed in header.',
+          icon: 'i-mdi-menu',
           default: []
         })
       }
