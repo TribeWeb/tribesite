@@ -1,7 +1,8 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: 'green',
+      primary: 'tribeweb',
+      secondary: 'accent',
       neutral: 'slate'
     }
   },
@@ -14,7 +15,7 @@ export default defineAppConfig({
     }
   },
   seo: {
-    siteName: 'Nuxt UI Pro - Docs template'
+    siteName: 'Tribeweb'
   },
   header: {
     title: '',
@@ -24,17 +25,38 @@ export default defineAppConfig({
       light: '',
       dark: ''
     },
-    search: true,
+    search: false,
     colorMode: true,
     links: [{
-      'icon': 'i-simple-icons-github',
-      'to': 'https://github.com/nuxt-ui-pro/docs/tree/v3',
+      'label': '02476 214799',
+      'icon': 'i-lucide-phone',
+      'to': 'tel:+442476214799',
       'target': '_blank',
-      'aria-label': 'GitHub'
+      'aria-label': 'Call our friendly team'
+    }],
+    menu: [{
+      label: 'Home',
+      icon: 'i-lucide-home',
+      to: '/#home',
+      // to: '/#beautifully-crafted-applications-for-the-web',
+      name: 'index'
+    }, {
+      label: 'Testimonials',
+      icon: 'i-lucide-mail',
+      to: '/#testimonials'
+    }, {
+      label: 'Contact',
+      icon: 'i-lucide-mail',
+      to: '/#contact'
+    }, {
+      label: 'Blog',
+      icon: 'i-lucide-lightbulb',
+      to: '/blog',
+      name: 'blog-slug'
     }]
   },
   footer: {
-    credits: `Copyright © ${new Date().getFullYear()}`,
+    credits: `Copyright Tribeweb © ${new Date().getFullYear()}`,
     colorMode: false,
     links: [{
       'icon': 'i-simple-icons-nuxtdotjs',
@@ -59,7 +81,7 @@ export default defineAppConfig({
     }]
   },
   toc: {
-    title: 'Table of Contents',
+    title: 'On this page',
     bottom: {
       title: 'Community',
       edit: 'https://github.com/nuxt-ui-pro/docs/edit/v3/content',
