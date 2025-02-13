@@ -5,16 +5,20 @@
 
 @theme {
   --font-sans: 'Public Sans', sans-serif;
+  --font-display: 'Comfortaa', sans-serif;
 
-  --color-green-50: #EFFDF5;
-  --color-green-100: #D9FBE8;
-  --color-green-200: #B3F5D1;
-  --color-green-300: #75EDAE;
-  --color-green-400: #00DC82;
-  --color-green-500: #00C16A;
-  --color-green-600: #00A155;
-  --color-green-700: #007F45;
-  --color-green-800: #016538;
-  --color-green-900: #0A5331;
-  --color-green-950: #052E16;
+  --color-tribeweb-50: #ebf8fb;
+  --color-tribeweb-100: #d2eef6;
+  --color-tribeweb-200: #71d1e7;
+  --color-tribeweb-300: #59bfd6;
+  --color-tribeweb-400: #40a9c0;
+  --color-tribeweb-500: #008ca3;
+  --color-tribeweb-600: #007386;
+  --color-tribeweb-700: #005c6c;
+  --color-tribeweb-800: #00515f;
+  --color-tribeweb-900: #004d5a;
+  --color-tribeweb-950: #004d5a;
+
+  --color-accent-400: #439bff;
+  --color-accent-500: #73b2ff;
 }
