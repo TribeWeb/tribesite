@@ -2,18 +2,14 @@
 import type { ContentNavigationItem } from '@nuxt/content'
 import { findPageHeadline } from '#ui-pro/utils/content'
 
-definePageMeta({
-  layout: 'docs'
-})
-
 const route = useRoute()
-const { toc, seo } = useAppConfig()
+const { seo, toc } = useAppConfig()
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 
 const { data } = await useAsyncData(route.path, () => Promise.all([
-  queryCollection('docs').path(route.path).first(),
-  queryCollectionItemSurroundings('docs', route.path, {
-    fields: ['title', 'description']
+  queryCollection('posts').path(route.path).first(),
+  queryCollectionItemSurroundings('posts', route.path, {
+    fields: ['description']
   })
 ]), {
   transform: ([page, surround]) => ({ page, surround })
@@ -25,16 +21,20 @@ if (!data.value || !data.value.page) {
 const page = computed(() => data.value?.page)
 const surround = computed(() => data.value?.surround)
 
+definePageMeta({
+  layout: 'docs'
+})
+
 useSeoMeta({
-  title: page.value.seo.title,
-  ogTitle: `${page.value.seo.title} - ${seo?.siteName}`,
-  description: page.value.seo.description,
-  ogDescription: page.value.seo.description
+  title: page.value?.seo.title,
+  ogTitle: `${page.value?.seo.title} - ${seo?.siteName}`,
+  description: page.value?.seo.description,
+  ogDescription: page.value?.seo.description
 })
 
 defineOgImageComponent('Docs')
 
-const headline = computed(() => findPageHeadline(navigation.value, page.value))
+const headline = computed(() => findPageHeadline(navigation?.value, page.value))
 
 const links = computed(() => [toc?.bottom?.edit && {
   icon: 'i-lucide-external-link',
@@ -49,21 +49,15 @@ const links = computed(() => [toc?.bottom?.edit && {
     <UPageHeader
       :title="page.title"
       :description="page.description"
-      :links="page.links"
       :headline="headline"
     />
-
     <UPageBody>
-      <ContentRenderer
-        v-if="page"
-        :value="page"
-      />
+      <ContentRenderer v-if="page.body" :value="page" />
 
-      <USeparator v-if="surround?.length" />
+      <USeparator v-if="surround?.filter(Boolean).length" />
 
-      <UContentSurround :surround="surround" />
+      <UContentSurround :surround="(surround as any)" />
     </UPageBody>
-
     <template
       v-if="page?.body?.toc?.links?.length"
       #right
@@ -84,7 +78,6 @@ const links = computed(() => [toc?.bottom?.edit && {
               v-if="page.body?.toc?.links?.length"
               type="dashed"
             />
-
             <UPageLinks
               :title="toc.bottom.title"
               :links="links"

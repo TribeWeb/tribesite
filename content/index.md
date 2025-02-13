@@ -5,9 +5,10 @@ seo:
     of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.
 ---
 
-::u-page-hero
+::u-page-hero{id="home" class="h-dvh"}
 ---
 orientation: horizontal
+as: section
 ---
 
   :::prose-pre{filename="Terminal"}
@@ -19,7 +20,7 @@ orientation: horizontal
   :::
 
 #title
-Build your docs with Nuxt UI Pro
+[Beautifully crafted applications for the web]{id="title-home"}
 
 #description
 Nuxt UI Pro is a collection of premium components built on top of Nuxt UI to create beautiful & responsive applications in minutes.
@@ -28,7 +29,7 @@ Nuxt UI Pro is a collection of premium components built on top of Nuxt UI to cre
   :::u-button
   ---
   size: xl
-  to: /getting-started
+  to: /blog
   trailing-icon: i-lucide-arrow-right
   ---
   Get started
@@ -47,9 +48,10 @@ Nuxt UI Pro is a collection of premium components built on top of Nuxt UI to cre
   :::
 ::
 
-::u-page-section
+::u-page-section{id="testimonials" class="h-dvh"}
+
 #title
-All-in-one documentation template
+[Testimonials]{id="title-testimonials"}
 
 #links
   :::u-button
@@ -144,13 +146,12 @@ All-in-one documentation template
   :::
 ::
 
-::u-page-section
-
+::u-page-section{id="contact" class="h-dvh"}
   :::u-page-c-t-a
   ---
-  title: Start with Nuxt UI Pro today!
   description: Nuxt UI Pro is free in development, but you need a license to use it in production.
   variant: subtle
+  as: section
   links:
     - label: Buy now
       to: 'https://ui.nuxt.com/pro/purchase'
@@ -164,6 +165,7 @@ All-in-one documentation template
       color: neutral
       variant: subtle
   ---
+  #title
+  [Contact]{id="title-contact"}
   :::
-
 ::
