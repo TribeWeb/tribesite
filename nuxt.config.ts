@@ -5,7 +5,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui-pro',
     '@nuxt/content',
-    'nuxt-og-image'
+    'nuxt-og-image',
+    '@nuxthub/core'
   ],
 
   devtools: {
