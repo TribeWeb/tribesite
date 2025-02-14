@@ -37,4 +37,4 @@ jobs:
         uses: nuxt-hub/action@v1
         id: deploy
         with:
-          project-key: tribeweb-websit-o0e1
+          project-key: tribesite-rxd4
