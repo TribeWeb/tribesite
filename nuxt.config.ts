@@ -14,6 +14,13 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  content: {
+    database: {
+      type: 'sqlite',
+      filename: 'SQLITE_DB_LOCATION'
+    }
+  },
+
   future: {
     compatibilityVersion: 4
   },
