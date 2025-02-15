@@ -27,14 +27,14 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Approve install - pnpm bug
-        run: pnpm approve-builds  
-
       - name: Ensure NuxtHub module is installed
         run: npx nuxthub@latest ensure
 
       - name: Build application
         run: pnpm build
+        env:
+          NUXT_CONTENT_PREVIEW_API: https://api.nuxt.studio
+          NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
 
       - name: Deploy to NuxtHub
         uses: nuxt-hub/action@v1
