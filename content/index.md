@@ -5,33 +5,27 @@ seo:
     of Nuxt UI to create beautiful & responsive Nuxt applications in minutes.
 ---
 
-::u-page-hero{id="home" class="h-dvh"}
+::u-page-hero
 ---
-orientation: horizontal
 as: section
+class: h-dvh
+id: home
+orientation: horizontal
 ---
-
   :::prose-pre{filename="Terminal"}
-
   ```bash
   npx nuxi init -t github:nuxt-ui-pro/docs#v3
   ```
-
   :::
 
 #title
-[Beautifully crafted applications for a web]{id="title-home"}
+[Beautifully crafted applications for the web]{#title-home}
 
 #description
 Nuxt UI Pro is a collection of premium components built on top of Nuxt UI to create beautiful & responsive applications in minutes.
 
 #links
-  :::u-button
-  ---
-  size: xl
-  to: /blog
-  trailing-icon: i-lucide-arrow-right
-  ---
+  :::u-button{size="xl" to="/blog" trailing-icon="i-lucide-arrow-right"}
   Get started
   :::
 
@@ -48,10 +42,13 @@ Nuxt UI Pro is a collection of premium components built on top of Nuxt UI to cre
   :::
 ::
 
-::u-page-section{id="testimonials" class="h-dvh"}
-
+::u-page-section
+---
+class: h-dvh
+id: testimonials
+---
 #title
-[Testimonials]{id="title-testimonials"}
+[Testimonials]{#title-testimonials}
 
 #links
   :::u-button
@@ -75,7 +72,7 @@ Nuxt UI Pro is a collection of premium components built on top of Nuxt UI to cre
   ---
   #title
   Nuxt 3
-
+  
   #description
   Powered by Nuxt 3 for optimal performances and SEO.
   :::
@@ -88,7 +85,7 @@ Nuxt UI Pro is a collection of premium components built on top of Nuxt UI to cre
   ---
   #title
   Markdown
-
+  
   #description
   Write your pages with MDC thanks to Nuxt Content.
   :::
@@ -101,7 +98,7 @@ Nuxt UI Pro is a collection of premium components built on top of Nuxt UI to cre
   ---
   #title
   Nuxt UI v3
-
+  
   #description
   Offers a very large set of full customizable components.
   :::
@@ -114,7 +111,7 @@ Nuxt UI Pro is a collection of premium components built on top of Nuxt UI to cre
   ---
   #title
   TypeScript
-
+  
   #description
   A fully typed development experience.
   :::
@@ -127,7 +124,7 @@ Nuxt UI Pro is a collection of premium components built on top of Nuxt UI to cre
   ---
   #title
   Nuxt Studio
-
+  
   #description
   Supported by Nuxt Studio for fast updates and previews.
   :::
@@ -140,32 +137,33 @@ Nuxt UI Pro is a collection of premium components built on top of Nuxt UI to cre
   ---
   #title
   Search
-
+  
   #description
   A full-text search modal powered by Fuse.js.
   :::
 ::
 
-::u-page-section{id="contact" class="h-dvh"}
+::u-page-section{#contact .h-dvh}
   :::u-page-c-t-a
   ---
-  description: Nuxt UI Pro is free in development, but you need a license to use it in production.
-  variant: subtle
-  as: section
   links:
     - label: Buy now
-      to: 'https://ui.nuxt.com/pro/purchase'
+      to: https://ui.nuxt.com/pro/purchase
       target: _blank
       icon: i-lucide-shopping-cart
       color: neutral
     - label: License
-      to: 'https://ui3.nuxt.dev/getting-started/license'
+      to: https://ui3.nuxt.dev/getting-started/license
       trailingIcon: i-lucide-circle-help
       target: _blank
       color: neutral
       variant: subtle
+  as: section
+  description: Nuxt UI Pro is free in development, but you need a license to use
+    it in production.
+  variant: subtle
   ---
   #title
-  [Contact]{id="title-contact"}
+  [Contact]{#title-contact}
   :::
 ::
