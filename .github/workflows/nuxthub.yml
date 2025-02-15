@@ -27,6 +27,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Approve install - pnpm bug
+        run: pnpm approve-builds  
+
       - name: Ensure NuxtHub module is installed
         run: npx nuxthub@latest ensure
 
