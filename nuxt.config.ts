@@ -19,6 +19,10 @@ export default defineNuxtConfig({
     database: {
       type: 'd1',
       bindingName: 'DB'
+    },
+    preview: {
+      dev: true,
+      api: 'https://api.nuxt.studio'
     }
   },
 

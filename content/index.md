@@ -20,7 +20,7 @@ as: section
   :::
 
 #title
-[Beautifully crafted applications for the web]{id="title-home"}
+[Beautifully crafted bobs for the web]{id="title-home"}
 
 #description
 Nuxt UI Pro is a collection of premium components built on top of Nuxt UI to create beautiful & responsive applications in minutes.
