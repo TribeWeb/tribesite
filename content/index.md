@@ -25,7 +25,7 @@ orientation: horizontal
 Nuxt UI Pro is a collection of premium components built on top of Nuxt UI to create beautiful & responsive applications in minutes.
 
 #links
-  :::u-button{size="xl" to="/blog" trailing-icon="i-lucide-arrow-right"}
+  :::u-button{size="xl" to="/projects" trailing-icon="i-lucide-arrow-right"}
   Get started
   :::
 

@@ -2,7 +2,7 @@
 const { seo } = useAppConfig()
 
 const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('projects'), {
-  // transform: data => data.find(item => item.path === '/blog')?.children || []
+  // transform: data => data.find(item => item.path === '/projects')?.children || []
 })
 const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSections('projects'), {
   server: false
