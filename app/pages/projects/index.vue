@@ -7,8 +7,8 @@ const { seo } = useAppConfig()
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 
 const { data } = await useAsyncData(route.path, () => Promise.all([
-  queryCollection('blog').path(route.path).first(),
-  queryCollection('posts').all()
+  queryCollection('projectLanding').path(route.path).first(),
+  queryCollection('projects').all()
 ]), {
   transform: ([page, posts]) => ({ page, posts })
 })
@@ -20,7 +20,7 @@ const page = computed(() => data.value?.page)
 const posts = computed(() => data.value?.posts)
 
 definePageMeta({
-  layout: 'docs'
+  layout: 'projects'
 })
 
 useSeoMeta({
@@ -49,7 +49,7 @@ const headline = computed(() => findPageHeadline(navigation?.value, page.value))
       :description="page.description"
       :headline="headline"
     />
-    <UPageHero title="Blog" />
+    <UPageHero title="Projects" />
     <UPageBody>
       <UBlogPosts>
         <UBlogPost

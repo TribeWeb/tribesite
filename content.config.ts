@@ -6,13 +6,13 @@ export default defineContentConfig({
       type: 'page',
       source: 'index.md'
     }),
-    blog: defineCollection({
+    projectLanding: defineCollection({
       type: 'page',
-      source: 'blog/index.md'
+      source: 'projects/index.md'
     }),
-    posts: defineCollection({
+    projects: defineCollection({
       type: 'page',
-      source: { include: 'blog/*.md', exclude: ['blog/index.md'] },
+      source: { include: 'projects/*.md', exclude: ['projects/index.md'] },
       schema: z.object({
         draft: z.boolean().default(false),
         authors: z.array(z.object({

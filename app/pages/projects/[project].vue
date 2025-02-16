@@ -7,8 +7,8 @@ const { seo, toc } = useAppConfig()
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 
 const { data } = await useAsyncData(route.path, () => Promise.all([
-  queryCollection('posts').path(route.path).first(),
-  queryCollectionItemSurroundings('posts', route.path, {
+  queryCollection('projects').path(route.path).first(),
+  queryCollectionItemSurroundings('projects', route.path, {
     fields: ['description']
   })
 ]), {
@@ -22,7 +22,7 @@ const page = computed(() => data.value?.page)
 const surround = computed(() => data.value?.surround)
 
 definePageMeta({
-  layout: 'docs'
+  layout: 'projects'
 })
 
 useSeoMeta({

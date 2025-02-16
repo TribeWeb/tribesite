@@ -49,10 +49,10 @@ export default defineAppConfig({
       icon: 'i-lucide-mail',
       to: '/#contact'
     }, {
-      label: 'Blog',
+      label: 'Projects',
       icon: 'i-lucide-lightbulb',
-      to: '/blog',
-      name: 'blog-slug'
+      to: '/projects',
+      name: 'projects-slug'
     }]
   },
   footer: {
