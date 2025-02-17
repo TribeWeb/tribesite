@@ -3,6 +3,25 @@ title: Nuxt quirks
 description: A list of all the quirks and gotchas I've encountered when setting up a Nuxt website using NuxtHub, Nuxt Studio/Content and Nuxt UI.
 image: https://nuxt.com/assets/blog/nuxt-icon/cover.png
 date: 2025-02-16
+authors:
+- name: Richard Stephenson
+  slug: richstephenson
+  avatar:
+    src: https://2.gravatar.com/avatar/2e5901ad247594b81d5083318783e351314a7e6f5dbadc779c3c4c5734afbef7
+    alt: Richard Stephenson's avatar
+  to: ""
+- name: Ben Poffley
+  slug: benpoffley
+  description: benpoffley
+  avatar:
+    src: https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=606,h=769,fit=crop/dWxbrVXW2bF41OlW/ben-poffley-2-YKbrR1M4p2hD10gq.jpeg
+    alt: Ben Poffley's avatar
+  to: https://poffley.studio/about
+  target: _blank
+badge:
+  label: 'Development'
+  color: 'primary'
+  variant: 'outline'
 seo:
   title: Quirks when setting up a Nuxt website
   description: A list of all the quirks and gotchas I've encountered when setting up a Nuxt website using NuxtHub, Nuxt Studio/Content and Nuxt UI.
@@ -40,7 +59,7 @@ Error:  Could not locate the bindings file. Tried:
 ```
 ::
 
-## NuxtHub Server API documentation
+## NuxtHub API documentation
 
 The Server API documentation within NuxtHub is not working as expected and enabling it causes builds to fail.
 
@@ -74,7 +93,7 @@ nitro: {
 ```
 ::
 
-## No content styling
+## Content is not styled
 
 If the site has styling but markdown files have no (prose) styling, before you go looking for `prose` plugins, classes or props, check the module order in `nuxt.config.ts`.
 
@@ -101,7 +120,7 @@ export default defineNuxtConfig({
 ```
 ::
 
-## `Preview` mode
+## `Preview` broken
 
 ::note
 The term `Preview` is used in Nuxt Studio but has nothing in common with `Preview mode` in NuxtHub. This is fully explained in this article.
@@ -111,4 +130,32 @@ The term `Preview` is used in Nuxt Studio but has nothing in common with `Previe
 
 <sup>\*</sup>It actually works fine in the background it's just that it's visible because the loading blur and indicator never clear. 
 
+## Missing `.env` variables
 
+The way this issue surfaces is that building using the GitHub workflow will fail due to a missing Nuxt UI-Pro license.
+Although the NuxtHub docs say that environment variables will automatically be copied to your GitHub repo, I don't think this is the case. In addition, it seems the GitHub workflow has to be manually updated in order to actually use the variables.
+
+- https://hub.nuxt.com/docs/getting-started/deploy#environment-variables-secrets
+
+::steps{level="4"}
+#### Add secrets to the repository
+
+From the project GitHub repository, go to to `Settings > Settings & variables > Actions` and add any secrets and environment variables. 
+
+
+::caution
+There's a fairly confusing interchanging of the terms, `environment`, `repository`, `variables` and `secrets`. The Nuxt UI-Pro license needs to be encrypted and so should be a `secret`.  
+::
+
+#### Update the GitHub workflow
+
+In the project, go to `.github/workflows/nuxthub.yml` and add an `env` object to the `Build application` step. 
+
+```yaml
+- name: Build application
+  run: pnpm build
+  env:
+    NUXT_CONTENT_PREVIEW_API: https://api.nuxt.studio
+    NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
+```
+::

@@ -1,0 +1,22 @@
+[
+    {
+      "name": "Richard Stephenson",
+      "slug": "richstephenson",
+      "avatar": {
+        "src": "https://gravatar.com/richstephenson",
+        "alt": "Richard Stephenson's avatar"
+      },
+      "to": "/authors/richstephenson"
+    },
+    {
+      "name": "Ben Poffley",
+      "slug": "benpoffley",
+      "description": "benpoffley",
+      "avatar": {
+        "src": "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=606,h=769,fit=crop/dWxbrVXW2bF41OlW/ben-poffley-2-YKbrR1M4p2hD10gq.jpeg",
+        "alt": "Ben Poffley's avatar"
+      },
+      "to": "https://poffley.studio/about",
+      "target": "_blank"
+    }
+  ]

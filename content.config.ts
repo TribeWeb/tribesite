@@ -25,12 +25,17 @@ export default defineContentConfig({
             alt: z.string()
           })
         })),
-        category: z.enum(['studio', 'content']).optional(),
+        category: z.enum(['development', 'product']).optional(),
         date: z.date(),
         image: z.object({
           src: z.string(),
           alt: z.string()
-        })
+        }),
+        badge: z.object({
+          label: z.string(),
+          color: z.string(),
+          variant: z.string()
+        }).optional()
       })
     })
   }
