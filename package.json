@@ -1,5 +1,5 @@
 {
-  "name": "tribeweb-site",
+  "name": "tribesite",
   "private": true,
   "type": "module",
   "scripts": {
@@ -14,7 +14,7 @@
   "dependencies": {
     "@iconify-json/lucide": "^1.2.26",
     "@iconify-json/simple-icons": "^1.2.24",
-    "@iconify-json/vscode-icons": "^1.2.13",
+    "@iconify-json/vscode-icons": "^1.2.14",
     "@nuxt/content": "^3.1.1",
     "@nuxt/image": "^1.9.0",
     "@nuxt/ui-pro": "3.0.0-alpha.12",
@@ -26,11 +26,13 @@
     "@nuxt/eslint": "^1.0.1",
     "eslint": "^9.20.1",
     "typescript": "^5.7.3",
-    "vue-tsc": "^2.2.0",
+    "vue-tsc": "^2.2.2",
     "wrangler": "^3.109.1"
   },
   "packageManager": "pnpm@10.4.0",
   "pnpm": {
-    "onlyBuiltDependencies": ["better-sqlite3"]
+    "onlyBuiltDependencies": [
+      "better-sqlite3"
+    ]
   }
 }
