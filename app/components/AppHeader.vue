@@ -93,7 +93,7 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 
       <UColorModeButton v-if="header?.colorMode" />
 
-      <template v-if="header?.links">
+      <!-- <template v-if="header?.links">
         <UButton
           v-for="(link, index) of header.links"
           :key="index"
@@ -106,7 +106,7 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
             :label="link.badge"
           />
         </UButton>
-      </template>
+      </template> -->
     </template>
 
     <template #content>
