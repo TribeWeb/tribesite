@@ -150,12 +150,13 @@ From the project GitHub repository, go to to `Settings > Settings & variables > 
 In the project, go to `.github/workflows/nuxthub.yml` and add an `env` object to the `Build application` step.
 
 ```diff [.github/workflows/nuxthub.yml]
- - name: Build application
-   run: pnpm build
-+  env:
-+    NUXT_CONTENT_PREVIEW_API: https://api.nuxt.studio
-+    NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
+  - name: Build application
+    run: pnpm run build
++   env:
++     NUXT_CONTENT_PREVIEW_API: https://api.nuxt.studio
++     NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
 ```
+
 ::
 
 ## `.json` not editable
