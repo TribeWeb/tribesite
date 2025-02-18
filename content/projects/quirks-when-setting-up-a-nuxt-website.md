@@ -41,8 +41,8 @@ Versions used are:
 
 Pnpm 10.4.0 introduced a new feature - postinstall scripts of dependencies are ignored by default. Unfortuately this causes builds to fail when using the github CI workflow as set up by NuxtHub. Local builds appear to be unaffected.
 
-- [github.com/pnpm/pnpm/issues/9073#issuecomment-2649312658](https://github.com/pnpm/pnpm/issues/9073#issuecomment-2649312658)
-- [github.com/pnpm/pnpm/issues/9045#issuecomment-2637610205](https://github.com/pnpm/pnpm/issues/9045#issuecomment-2637610205)
+- [github.com/pnpm/pnpm/issues/9073](https://github.com/pnpm/pnpm/issues/9073#issuecomment-2649312658)
+- [github.com/pnpm/pnpm/issues/9045](https://github.com/pnpm/pnpm/issues/9045#issuecomment-2637610205)
 - [pnpm.io/cli/approve-builds](https://pnpm.io/cli/approve-builds)
 
 ::code-group
@@ -150,13 +150,12 @@ From the project GitHub repository, go to to `Settings > Settings & variables > 
 In the project, go to `.github/workflows/nuxthub.yml` and add an `env` object to the `Build application` step.
 
 ```diff [.github/workflows/nuxthub.yml]
-  - name: Build application
-    run: pnpm run build
-+   env:
-+     NUXT_CONTENT_PREVIEW_API: https://api.nuxt.studio
-+     NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
+ - name: Build application
+   run: pnpm build
++  env:
++    NUXT_CONTENT_PREVIEW_API: https://api.nuxt.studio
++    NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
 ```
-
 ::
 
 ## `.json` not editable
