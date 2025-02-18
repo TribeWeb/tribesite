@@ -38,9 +38,9 @@ Versions used are:
 
 Pnpm 10.4.0 introduced a new feature - postinstall scripts of dependencies are ignored by default. Unfortuately this causes builds to fail when using the github CI workflow as set up by NuxtHub. Local builds appear to be unaffected.
 
-- https://github.com/pnpm/pnpm/issues/9073#issuecomment-2649312658
-- https://github.com/pnpm/pnpm/issues/9045#issuecomment-2637610205
-- https://pnpm.io/cli/approve-builds
+- [github.com/pnpm/pnpm/issues/9073#issuecomment-2649312658](https://github.com/pnpm/pnpm/issues/9073#issuecomment-2649312658)
+- [github.com/pnpm/pnpm/issues/9045#issuecomment-2637610205](https://github.com/pnpm/pnpm/issues/9045#issuecomment-2637610205)
+- [pnpm.io/cli/approve-builds](https://pnpm.io/cli/approve-builds)
 
 ::code-group
 
@@ -63,7 +63,7 @@ Error:  Could not locate the bindings file. Tried:
 
 The Server API documentation within NuxtHub is not working as expected and enabling it causes builds to fail.
 
-- https://github.com/nuxt/content/issues/2839
+- [github.com/nuxt/content/issues/2839](https://github.com/nuxt/content/issues/2839)
 
 ::code-group
 
@@ -99,8 +99,7 @@ If the site has styling but markdown files have no (prose) styling, before you g
 
 Although this is now explicit in the docs, it is easily missed. `@nuxt/content` must be listed _after_ `@nuxt/ui-pro`. 
 
-- https://ui3.nuxt.dev/getting-started/content
-
+- [ui3.nuxt.dev/getting-started/content](https://ui3.nuxt.dev/getting-started/content)
 
 ::code-group
 ```bash [pnpm]
@@ -135,7 +134,7 @@ The term `Preview` is used in Nuxt Studio but has nothing in common with `Previe
 The way this issue surfaces is that building using the GitHub workflow will fail due to a missing Nuxt UI-Pro license.
 Although the NuxtHub docs say that environment variables will automatically be copied to your GitHub repo, I don't think this is the case. In addition, it seems the GitHub workflow has to be manually updated in order to actually use the variables.
 
-- https://hub.nuxt.com/docs/getting-started/deploy#environment-variables-secrets
+- [hub.nuxt.com/docs/getting-started/deploy#environment-variables-secrets](https://hub.nuxt.com/docs/getting-started/deploy#environment-variables-secrets)
 
 ::steps{level="4"}
 #### Add secrets to the repository
