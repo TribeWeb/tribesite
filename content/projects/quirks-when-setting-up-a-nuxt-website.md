@@ -36,7 +36,7 @@ Versions used are:
 
 ## better-sqlite3: Could not locate bindings file
 
-pnpm 10.4.0 introduced a new feature - postinstall scripts of dependencies are ignored by default. Unfortuately this causes builds to fail when using the github CI workflow as set up by NuxtHub. Local builds appear to be unaffected.
+Pnpm 10.4.0 introduced a new feature - postinstall scripts of dependencies are ignored by default. Unfortuately this causes builds to fail when using the github CI workflow as set up by NuxtHub. Local builds appear to be unaffected.
 
 - https://github.com/pnpm/pnpm/issues/9073#issuecomment-2649312658
 - https://github.com/pnpm/pnpm/issues/9045#issuecomment-2637610205
@@ -151,7 +151,7 @@ There's a fairly confusing interchanging of the terms, `environment`, `repositor
 
 In the project, go to `.github/workflows/nuxthub.yml` and add an `env` object to the `Build application` step. 
 
-```yaml
+```yaml[.github/workflows/nuxthub.yml]
 - name: Build application
   run: pnpm build
   env:
@@ -159,3 +159,9 @@ In the project, go to `.github/workflows/nuxthub.yml` and add an `env` object to
     NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
 ```
 ::
+
+## `.json` not editable
+
+Nuxt Studio does not allow you to edit `.json` files. Only `.md` and `.yml` can be edited. Ironically, `YAML` looks like `JSON` when editing!
+
+
