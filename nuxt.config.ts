@@ -15,6 +15,10 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  site: {
+    url: 'https://tribeweb.co.uk',
+    name: 'Tribeweb'
+  },
   content: {
     database: {
       type: 'd1',
@@ -52,5 +56,9 @@ export default defineNuxtConfig({
         braceStyle: '1tbs'
       }
     }
+  },
+
+  ogImage: {
+    zeroRuntime: true
   }
 })

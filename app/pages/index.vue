@@ -4,6 +4,8 @@ if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
 
+defineOgImageComponent('NuxtSeo')
+
 useSeoMeta({
   title: page.value.seo.title,
   ogTitle: page.value.seo.title,
@@ -47,8 +49,6 @@ useSeoMeta({
   description: page.value.seo.description,
   ogDescription: page.value.seo.description
 })
-
-defineOgImageComponent('Docs')
 
 const headline = computed(() => findPageHeadline(navigation.value, page.value))
 </script>

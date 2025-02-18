@@ -32,7 +32,12 @@ useSeoMeta({
   ogDescription: page.value?.seo.description
 })
 
-defineOgImageComponent('Docs')
+defineOgImageComponent('NuxtSeo', {
+  title: page.value?.seo.title,
+  description: page.value?.seo.description,
+  theme: '#ff0000',
+  colorMode: 'dark'
+})
 
 const headline = computed(() => findPageHeadline(navigation?.value, page.value))
 
