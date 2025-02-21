@@ -161,3 +161,7 @@ In the project, go to `.github/workflows/nuxthub.yml` and add an `env` object to
 ## `.json` not editable
 
 Nuxt Studio does not allow you to edit `.json` files. Only `.md` and `.yml` can be edited. Ironically, `YAML` looks like `JSON` when editing!
+
+## Remove `@nuxt/fonts`
+
+Building on NuxtHub fails if `@nuxt/fonts` is included is in `package.json`. It can safely be removed if using Nuxt UI-Pro as it is installed as a dependency.
