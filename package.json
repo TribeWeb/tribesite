@@ -13,9 +13,9 @@
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.26",
-    "@iconify-json/simple-icons": "^1.2.25",
-    "@iconify-json/vscode-icons": "^1.2.15",
-    "@nuxt/content": "^3.2.0",
+    "@iconify-json/simple-icons": "^1.2.26",
+    "@iconify-json/vscode-icons": "^1.2.16",
+    "@nuxt/content": "^3.2.1",
     "@nuxt/image": "^1.9.0",
     "@nuxt/ui-pro": "3.0.0-alpha.13",
     "@nuxthub/core": "0.8.17",
@@ -24,10 +24,10 @@
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.1.0",
-    "eslint": "^9.20.1",
+    "eslint": "^9.21.0",
     "typescript": "^5.7.3",
-    "vue-tsc": "^2.2.2",
-    "wrangler": "^3.109.2"
+    "vue-tsc": "^2.2.4",
+    "wrangler": "^3.109.3"
   },
   "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af",
   "pnpm": {
