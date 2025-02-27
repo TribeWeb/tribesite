@@ -165,3 +165,7 @@ Nuxt Studio does not allow you to edit `.json` files. Only `.md` and `.yml` can 
 ## Remove `@nuxt/fonts`
 
 Building on NuxtHub fails if `@nuxt/fonts` is included is in `package.json`. It can safely be removed if using Nuxt UI-Pro as it is installed as a dependency.
+
+## Studio team account
+
+To start the free trial, you have to first create a team in Nuxt Studio and then start or move your project to that team. The options to upgrade appear at that point.
