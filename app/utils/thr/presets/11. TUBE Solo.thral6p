@@ -1,0 +1,73 @@
+{
+  "data" : {
+    "meta" : {
+      "name" : "TUBE Solo",
+      "tnid" : 0
+    },
+    "device" : 2359299,
+    "tone" : {
+      "global" : {
+        "THRPresetParamTempo" : 913
+      },
+      "THRGroupFX3EffectEcho" : {
+        "@asset" : "L6DigitalDelayAco",
+        "Time" : 0.39100000262260437,
+        "Bass" : 0.31891176104545593,
+        "Treble" : 0.20573306083679199,
+        "@wetDry" : 0.25475078821182251,
+        "@enabled" : true,
+        "Feedback" : 0.28883296251296997
+      },
+      "THRGroupStereoImagerAcoustic" : {
+        "@asset" : "StereoImager",
+        "StereoImagerType" : 1
+      },
+      "THRGroupFX1Compressor" : {
+        "Sens" : 0.32809895277023315,
+        "@enabled" : true,
+        "@asset" : "VettaComp",
+        "Level" : 0.79000002145767212
+      },
+      "THRGroupFX4EffectReverb" : {
+        "@wetDry" : 0.67647057771682739,
+        "Decay" : 0.38999414443969727,
+        "@enabled" : true,
+        "PreDelay" : 0.24509412050247192,
+        "@asset" : "ReallyLargeHallAco",
+        "Tone" : 0.5649411678314209
+      },
+      "THRGroupFX2Effect" : {
+        "@asset" : "StereoSquareChorusAco",
+        "Depth" : 0.24880000948905945,
+        "Freq" : 0.097600005567073822,
+        "Pre" : 0.095688000321388245,
+        "@wetDry" : 0.72000002861022949,
+        "@enabled" : false,
+        "Feedback" : 0.57899200916290283
+      },
+      "THRGroupMic" : {
+        "MicHPFEnable" : 0,
+        "MicMidGain" : 0.5,
+        "MicRevMix" : 0,
+        "@asset" : "MIC",
+        "MicHiGain" : 0.5,
+        "MicLowGain" : 0.5
+      },
+      "THRGroupAmp" : {
+        "Treble" : 0.45098039507865906,
+        "Bass" : 0.63137257099151611,
+        "@asset" : "THR10_Aco_Tube1LE",
+        "Drive" : 1,
+        "Mid" : 0.43137255311012268
+      }
+    },
+    "device_version" : 16777318
+  },
+  "meta" : {
+    "original" : 0,
+    "pbn" : 0,
+    "premium" : 0
+  },
+  "schema" : "L6Preset",
+  "version" : 5
+}

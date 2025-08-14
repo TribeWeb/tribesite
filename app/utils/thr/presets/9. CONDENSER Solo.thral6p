@@ -1,0 +1,73 @@
+{
+  "data" : {
+    "meta" : {
+      "name" : "CONDENSER Solo",
+      "tnid" : 0
+    },
+    "device" : 2359299,
+    "tone" : {
+      "global" : {
+        "THRPresetParamTempo" : 913
+      },
+      "THRGroupFX3EffectEcho" : {
+        "@asset" : "L6DigitalDelayAco",
+        "Time" : 0.39100000262260437,
+        "Bass" : 0.32076472043991089,
+        "Treble" : 0.41477644443511963,
+        "@wetDry" : 0.18470588326454163,
+        "@enabled" : false,
+        "Feedback" : 0.10738823562860489
+      },
+      "THRGroupStereoImagerAcoustic" : {
+        "@asset" : "StereoImager",
+        "StereoImagerType" : 0
+      },
+      "THRGroupFX1Compressor" : {
+        "Sens" : 0.33394384384155273,
+        "@enabled" : true,
+        "@asset" : "VettaComp",
+        "Level" : 0.72183173894882202
+      },
+      "THRGroupFX4EffectReverb" : {
+        "@wetDry" : 0.66470587253570557,
+        "Decay" : 0.31099864840507507,
+        "@enabled" : true,
+        "PreDelay" : 0.2435411661863327,
+        "@asset" : "ReallyLargeHallAco",
+        "Tone" : 0.35915324091911316
+      },
+      "THRGroupFX2Effect" : {
+        "@asset" : "StereoSquareChorusAco",
+        "Depth" : 0.20875294506549835,
+        "Freq" : 0.072188235819339752,
+        "Pre" : 0.076562821865081787,
+        "@wetDry" : 0.40235292911529541,
+        "@enabled" : false,
+        "Feedback" : 0.46188139915466309
+      },
+      "THRGroupMic" : {
+        "MicHPFEnable" : 0,
+        "MicMidGain" : 0.50196760892868042,
+        "MicRevMix" : 0,
+        "@asset" : "MIC",
+        "MicHiGain" : 0.50587385892868042,
+        "MicLowGain" : 0.50491899251937866
+      },
+      "THRGroupAmp" : {
+        "Treble" : 0.43529412150382996,
+        "Bass" : 0.66666668653488159,
+        "@asset" : "THR10_Aco_Condenser1LE",
+        "Drive" : 0.83529412746429443,
+        "Mid" : 0.38823530077934265
+      }
+    },
+    "device_version" : 16777318
+  },
+  "meta" : {
+    "original" : 0,
+    "pbn" : 0,
+    "premium" : 0
+  },
+  "schema" : "L6Preset",
+  "version" : 5
+}

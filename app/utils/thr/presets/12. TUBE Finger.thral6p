@@ -1,0 +1,73 @@
+{
+  "data" : {
+    "meta" : {
+      "name" : "TUBE Finger",
+      "tnid" : 0
+    },
+    "device" : 2359299,
+    "tone" : {
+      "global" : {
+        "THRPresetParamTempo" : 913
+      },
+      "THRGroupFX3EffectEcho" : {
+        "@asset" : "L6DigitalDelayAco",
+        "Time" : 0.39100000262260437,
+        "Bass" : 0.32052940130233765,
+        "Treble" : 0.41515293717384338,
+        "@wetDry" : 0.18941175937652588,
+        "@enabled" : false,
+        "Feedback" : 0.10757646709680557
+      },
+      "THRGroupStereoImagerAcoustic" : {
+        "@asset" : "StereoImager",
+        "StereoImagerType" : 0
+      },
+      "THRGroupFX1Compressor" : {
+        "Sens" : 0.33394384384155273,
+        "@enabled" : false,
+        "@asset" : "VettaComp",
+        "Level" : 0.72183173894882202
+      },
+      "THRGroupFX4EffectReverb" : {
+        "@wetDry" : 0.37352940440177917,
+        "Decay" : 0.037470590323209763,
+        "@enabled" : true,
+        "PreDelay" : 0.0099999997764825821,
+        "@asset" : "VintagePlateAco",
+        "Tone" : 0.35058823227882385
+      },
+      "THRGroupFX2Effect" : {
+        "@asset" : "StereoSquareChorusAco",
+        "Depth" : 0.24560000002384186,
+        "Freq" : 0.091200001537799835,
+        "Pre" : 0.086855992674827576,
+        "@wetDry" : 0.63999998569488525,
+        "@enabled" : false,
+        "Feedback" : 0.55390399694442749
+      },
+      "THRGroupMic" : {
+        "MicHPFEnable" : 0,
+        "MicMidGain" : 0.50196760892868042,
+        "MicRevMix" : 0,
+        "@asset" : "MIC",
+        "MicHiGain" : 0.50587385892868042,
+        "MicLowGain" : 0.50491899251937866
+      },
+      "THRGroupAmp" : {
+        "Treble" : 0.37254902720451355,
+        "Bass" : 0.92941176891326904,
+        "@asset" : "THR10_Aco_Tube1LE",
+        "Drive" : 0.98823529481887817,
+        "Mid" : 0.70588237047195435
+      }
+    },
+    "device_version" : 16777318
+  },
+  "meta" : {
+    "original" : 0,
+    "pbn" : 0,
+    "premium" : 0
+  },
+  "schema" : "L6Preset",
+  "version" : 5
+}

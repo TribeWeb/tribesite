@@ -1,0 +1,70 @@
+{
+  "data" : {
+    "meta" : {
+      "name" : "OH JAPAN ～OUR TIME IS NOW～",
+      "tnid" : 0
+    },
+    "device" : 2359300,
+    "tone" : {
+      "THRGroupGate" : {
+        "Decay" : 0.20499999821186066,
+        "@enabled" : true,
+        "@asset" : "noiseGate",
+        "Thresh" : -28
+      },
+      "THRGroupFX3EffectEcho" : {
+        "@asset" : "THRTM_DelayDigitalDelay",
+        "Time" : 0.49000000953674316,
+        "Bass" : 0.22882400453090668,
+        "Treble" : 0.34019601345062256,
+        "@wetDry" : 0.33725500106811523,
+        "@enabled" : false,
+        "Feedback" : 0.32548999786376953
+      },
+      "global" : {
+        "THRPresetParamTempo" : 864
+      },
+      "THRGroupFX1Compressor" : {
+        "@enabled" : false,
+        "Sustain" : 0.50777089595794678,
+        "@asset" : "RedComp",
+        "Level" : 0.50267565250396729
+      },
+      "THRGroupFX4EffectReverb" : {
+        "@wetDry" : 0.40264260768890381,
+        "Decay" : 0.40236139297485352,
+        "@enabled" : false,
+        "PreDelay" : 0.10000000149011612,
+        "@asset" : "THRTM_ReverbHall",
+        "Tone" : 0.35727402567863464
+      },
+      "THRGroupCab" : {
+        "@asset" : "speakerSimulator",
+        "SpkSimType" : 5
+      },
+      "THRGroupFX2Effect" : {
+        "@wetDry" : 0.28282153606414795,
+        "@enabled" : false,
+        "@asset" : "THRTM_PitchDetune",
+        "Gain" : 0.5,
+        "Pedal" : 0.40421596169471741
+      },
+      "THRGroupAmp" : {
+        "Treble" : 0.55924510955810547,
+        "Bass" : 0.50680333375930786,
+        "Master" : 0.56939524412155151,
+        "@asset" : "THRTM_AmpREI8084B",
+        "Drive" : 0.35361310839653015,
+        "Mid" : 0.28346213698387146
+      }
+    },
+    "device_version" : 16777313
+  },
+  "meta" : {
+    "original" : 0,
+    "pbn" : 0,
+    "premium" : 0
+  },
+  "schema" : "L6Preset",
+  "version" : 5
+}

@@ -1,0 +1,71 @@
+{
+  "data" : {
+    "meta" : {
+      "name" : "juice Flanger",
+      "tnid" : 0
+    },
+    "device" : 2359300,
+    "tone" : {
+      "THRGroupGate" : {
+        "Decay" : 0.20499999821186066,
+        "@enabled" : true,
+        "@asset" : "noiseGate",
+        "Thresh" : -24.423591613769531
+      },
+      "THRGroupFX3EffectEcho" : {
+        "@asset" : "THRTM_DelayDigitalDelay",
+        "Time" : 0.10260139405727386,
+        "Bass" : 0.22882400453090668,
+        "Treble" : 0.34019601345062256,
+        "@wetDry" : 0.2263445258140564,
+        "@enabled" : true,
+        "Feedback" : 0.32548999786376953
+      },
+      "global" : {
+        "THRPresetParamTempo" : 864
+      },
+      "THRGroupFX1Compressor" : {
+        "@enabled" : false,
+        "Sustain" : 0.44709745049476624,
+        "@asset" : "RedComp",
+        "Level" : 0.65414762496948242
+      },
+      "THRGroupFX4EffectReverb" : {
+        "@wetDry" : 0.10918568074703217,
+        "Decay" : 0.40813654661178589,
+        "@enabled" : true,
+        "PreDelay" : 0.15000000596046448,
+        "@asset" : "SmallRoom1",
+        "Tone" : 0.5
+      },
+      "THRGroupCab" : {
+        "@asset" : "speakerSimulator",
+        "SpkSimType" : 5
+      },
+      "THRGroupFX2Effect" : {
+        "@wetDry" : 0.4060484766960144,
+        "Freq" : 0.355388343334198,
+        "@enabled" : true,
+        "Feedback" : 0.80907917022705078,
+        "@asset" : "THRTM_FlangeXT",
+        "Depth" : 0.57311761379241943
+      },
+      "THRGroupAmp" : {
+        "Treble" : 0.65607792139053345,
+        "Bass" : 0.45310166478157043,
+        "Master" : 0.6511121392250061,
+        "@asset" : "THRTM_Amp5152",
+        "Drive" : 0.12916655838489532,
+        "Mid" : 0.50144696235656738
+      }
+    },
+    "device_version" : 3342433
+  },
+  "meta" : {
+    "original" : 0,
+    "pbn" : 0,
+    "premium" : 0
+  },
+  "schema" : "L6Preset",
+  "version" : 5
+}

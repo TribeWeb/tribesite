@@ -1,0 +1,70 @@
+{
+  "data" : {
+    "meta" : {
+      "name" : "今夜月の見える丘に Intro",
+      "tnid" : 0
+    },
+    "device" : 2359300,
+    "tone" : {
+      "THRGroupGate" : {
+        "Decay" : 0.60000002384185791,
+        "@enabled" : true,
+        "@asset" : "noiseGate",
+        "Thresh" : -38
+      },
+      "THRGroupFX3EffectEcho" : {
+        "@asset" : "THRTM_DelayDigitalDelay",
+        "Time" : 0.34000000357627869,
+        "Bass" : 0.5,
+        "Treble" : 0.5,
+        "@wetDry" : 0.25682157278060913,
+        "@enabled" : true,
+        "Feedback" : 0.40777996182441711
+      },
+      "global" : {
+        "THRPresetParamTempo" : 864
+      },
+      "THRGroupFX1Compressor" : {
+        "@enabled" : false,
+        "Sustain" : 0.50868171453475952,
+        "@asset" : "RedComp",
+        "Level" : 0.50816351175308228
+      },
+      "THRGroupFX4EffectReverb" : {
+        "@wetDry" : 0.15088365972042084,
+        "@enabled" : true,
+        "Time" : 0.25,
+        "@asset" : "StandardSpring",
+        "Tone" : 0.5
+      },
+      "THRGroupCab" : {
+        "@asset" : "speakerSimulator",
+        "SpkSimType" : 6
+      },
+      "THRGroupFX2Effect" : {
+        "@wetDry" : 0.35156670212745667,
+        "@enabled" : true,
+        "Bass" : 0.55551397800445557,
+        "@asset" : "THRTM_PitchHarmony",
+        "Treble" : 0.46120661497116089,
+        "Pitch" : 1
+      },
+      "THRGroupAmp" : {
+        "Treble" : 0.62544399499893188,
+        "Bass" : 0.33534765243530273,
+        "Master" : 0.65212219953536987,
+        "@asset" : "THRTM_AmpXTCM_BlueB",
+        "Drive" : 0.45178142189979553,
+        "Mid" : 0.65214484930038452
+      }
+    },
+    "device_version" : 16777313
+  },
+  "meta" : {
+    "original" : 0,
+    "pbn" : 0,
+    "premium" : 0
+  },
+  "schema" : "L6Preset",
+  "version" : 5
+}

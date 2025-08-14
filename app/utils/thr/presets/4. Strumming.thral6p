@@ -1,0 +1,73 @@
+{
+  "data" : {
+    "meta" : {
+      "name" : "Strumming",
+      "tnid" : 0
+    },
+    "device" : 2359299,
+    "tone" : {
+      "global" : {
+        "THRPresetParamTempo" : 913
+      },
+      "THRGroupFX3EffectEcho" : {
+        "@asset" : "L6DigitalDelayAco",
+        "Time" : 0.39100000262260437,
+        "Bass" : 0.32052940130233765,
+        "Treble" : 0.41515293717384338,
+        "@wetDry" : 0.18941175937652588,
+        "@enabled" : false,
+        "Feedback" : 0.10757646709680557
+      },
+      "THRGroupStereoImagerAcoustic" : {
+        "@asset" : "StereoImager",
+        "StereoImagerType" : 0
+      },
+      "THRGroupFX1Compressor" : {
+        "Sens" : 0.3992505669593811,
+        "@enabled" : true,
+        "@asset" : "VettaComp",
+        "Level" : 0.65752333402633667
+      },
+      "THRGroupFX4EffectReverb" : {
+        "@wetDry" : 0.2578074038028717,
+        "Decay" : 0.01840277761220932,
+        "@enabled" : true,
+        "PreDelay" : 0.0099999997764825821,
+        "@asset" : "VintagePlateAco",
+        "Tone" : 0.51157033443450928
+      },
+      "THRGroupFX2Effect" : {
+        "@asset" : "StereoSquareChorusAco",
+        "Depth" : 0.24560000002384186,
+        "Freq" : 0.091200001537799835,
+        "Pre" : 0.086855992674827576,
+        "@wetDry" : 0.63999998569488525,
+        "@enabled" : false,
+        "Feedback" : 0.55390399694442749
+      },
+      "THRGroupMic" : {
+        "MicHPFEnable" : 0,
+        "MicMidGain" : 0.50196760892868042,
+        "MicRevMix" : 0,
+        "@asset" : "MIC",
+        "MicHiGain" : 0.50587385892868042,
+        "MicLowGain" : 0.50491899251937866
+      },
+      "THRGroupAmp" : {
+        "Treble" : 0.3490196168422699,
+        "Bass" : 0.62745100259780884,
+        "@asset" : "THR10_Aco_Tube1LE",
+        "Drive" : 0.7137255072593689,
+        "Mid" : 0.13725489377975464
+      }
+    },
+    "device_version" : 16777318
+  },
+  "meta" : {
+    "original" : 0,
+    "pbn" : 0,
+    "premium" : 0
+  },
+  "schema" : "L6Preset",
+  "version" : 5
+}

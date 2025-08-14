@@ -1,0 +1,72 @@
+{
+  "data" : {
+    "meta" : {
+      "name" : "LADY NAVIGATION Riff",
+      "tnid" : 0
+    },
+    "device" : 2359300,
+    "tone" : {
+      "THRGroupGate" : {
+        "Decay" : 0.20499999821186066,
+        "@enabled" : true,
+        "@asset" : "noiseGate",
+        "Thresh" : -37.687728881835938
+      },
+      "THRGroupFX3EffectEcho" : {
+        "@asset" : "THRTM_DelayDigitalDelay",
+        "Time" : 0.43000000715255737,
+        "Bass" : 0.5,
+        "Treble" : 0.5,
+        "@wetDry" : 0.30000001192092896,
+        "@enabled" : false,
+        "Feedback" : 0.28999999165534973
+      },
+      "global" : {
+        "THRPresetParamTempo" : 864
+      },
+      "THRGroupFX1Compressor" : {
+        "@enabled" : false,
+        "Sustain" : 0.40100821852684021,
+        "@asset" : "RedComp",
+        "Level" : 0.6542283296585083
+      },
+      "THRGroupFX4EffectReverb" : {
+        "@wetDry" : 0.11338783800601959,
+        "Decay" : 0.30078679323196411,
+        "@enabled" : true,
+        "PreDelay" : 0.10998467355966568,
+        "@asset" : "SmallRoom1",
+        "Tone" : 0.5
+      },
+      "THRGroupCab" : {
+        "@asset" : "speakerSimulator",
+        "SpkSimType" : 2
+      },
+      "THRGroupFX2Effect" : {
+        "@asset" : "THRTM_ChorusAnalogChorus",
+        "Treble" : 0.50555920600891113,
+        "Bass" : 0.50521904230117798,
+        "Depth" : 0.52363532781600952,
+        "Speed" : 0.21685208380222321,
+        "@wetDry" : 0.25482857227325439,
+        "@enabled" : true
+      },
+      "THRGroupAmp" : {
+        "Treble" : 0.70033079385757446,
+        "Bass" : 0.50202500820159912,
+        "Master" : 0.65486180782318115,
+        "@asset" : "THRTM_AmpRock2150DIST",
+        "Drive" : 0.65644091367721558,
+        "Mid" : 0.43961763381958008
+      }
+    },
+    "device_version" : 16777313
+  },
+  "meta" : {
+    "original" : 0,
+    "pbn" : 0,
+    "premium" : 0
+  },
+  "schema" : "L6Preset",
+  "version" : 5
+}

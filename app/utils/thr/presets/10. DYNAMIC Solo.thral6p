@@ -1,0 +1,73 @@
+{
+  "data" : {
+    "meta" : {
+      "name" : "DYNAMIC Solo",
+      "tnid" : 0
+    },
+    "device" : 2359299,
+    "tone" : {
+      "global" : {
+        "THRPresetParamTempo" : 913
+      },
+      "THRGroupFX3EffectEcho" : {
+        "@asset" : "L6DigitalDelayAco",
+        "Time" : 0.39380672574043274,
+        "Bass" : 0.37097790837287903,
+        "Treble" : 0.16732308268547058,
+        "@wetDry" : 0.25454485416412354,
+        "@enabled" : true,
+        "Feedback" : 0.24443989992141724
+      },
+      "THRGroupStereoImagerAcoustic" : {
+        "@asset" : "StereoImager",
+        "StereoImagerType" : 0
+      },
+      "THRGroupFX1Compressor" : {
+        "Sens" : 0.33394384384155273,
+        "@enabled" : false,
+        "@asset" : "VettaComp",
+        "Level" : 0.72183173894882202
+      },
+      "THRGroupFX4EffectReverb" : {
+        "@wetDry" : 0.35279089212417603,
+        "Decay" : 0.37982058525085449,
+        "@enabled" : true,
+        "PreDelay" : 0.0099999997764825821,
+        "@asset" : "VintagePlateAco",
+        "Tone" : 0.29296928644180298
+      },
+      "THRGroupFX2Effect" : {
+        "@asset" : "StereoSquareChorusAco",
+        "Depth" : 0.20875294506549835,
+        "Freq" : 0.072188235819339752,
+        "Pre" : 0.076562821865081787,
+        "@wetDry" : 0.40235292911529541,
+        "@enabled" : false,
+        "Feedback" : 0.46188139915466309
+      },
+      "THRGroupMic" : {
+        "MicHPFEnable" : 0,
+        "MicMidGain" : 0.50196760892868042,
+        "MicRevMix" : 0,
+        "@asset" : "MIC",
+        "MicHiGain" : 0.50587385892868042,
+        "MicLowGain" : 0.50491899251937866
+      },
+      "THRGroupAmp" : {
+        "Treble" : 0.40784314274787903,
+        "Bass" : 0.63921570777893066,
+        "@asset" : "THR10_Aco_Dynamic1LE",
+        "Drive" : 0.87450981140136719,
+        "Mid" : 0.67058825492858887
+      }
+    },
+    "device_version" : 16777318
+  },
+  "meta" : {
+    "original" : 0,
+    "pbn" : 0,
+    "premium" : 0
+  },
+  "schema" : "L6Preset",
+  "version" : 5
+}

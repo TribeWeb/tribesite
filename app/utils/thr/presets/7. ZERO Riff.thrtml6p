@@ -1,0 +1,70 @@
+{
+  "data" : {
+    "meta" : {
+      "name" : "ZERO Riff",
+      "tnid" : 0
+    },
+    "device" : 2359300,
+    "tone" : {
+      "THRGroupGate" : {
+        "Decay" : 0.20499999821186066,
+        "@enabled" : true,
+        "@asset" : "noiseGate",
+        "Thresh" : -37.609645843505859
+      },
+      "THRGroupFX3EffectEcho" : {
+        "@asset" : "THRTM_DelayDigitalDelay",
+        "Time" : 0.43000000715255737,
+        "Bass" : 0.5,
+        "Treble" : 0.5,
+        "@wetDry" : 0.30000001192092896,
+        "@enabled" : false,
+        "Feedback" : 0.28999999165534973
+      },
+      "global" : {
+        "THRPresetParamTempo" : 864
+      },
+      "THRGroupFX1Compressor" : {
+        "@enabled" : false,
+        "Sustain" : 0.40100821852684021,
+        "@asset" : "RedComp",
+        "Level" : 0.6542283296585083
+      },
+      "THRGroupFX4EffectReverb" : {
+        "@wetDry" : 0.059591788798570633,
+        "Decay" : 0.30000001192092896,
+        "@enabled" : false,
+        "PreDelay" : 0.15000000596046448,
+        "@asset" : "SmallRoom1",
+        "Tone" : 0.5
+      },
+      "THRGroupCab" : {
+        "@asset" : "speakerSimulator",
+        "SpkSimType" : 5
+      },
+      "THRGroupFX2Effect" : {
+        "@wetDry" : 0.25557363033294678,
+        "@enabled" : true,
+        "@asset" : "THRTM_PitchDetune",
+        "Gain" : 0.5,
+        "Pedal" : 0.30000001192092896
+      },
+      "THRGroupAmp" : {
+        "Treble" : 0.55854898691177368,
+        "Bass" : 0.50389683246612549,
+        "Master" : 0.65462106466293335,
+        "@asset" : "THRTM_AmpRock2150DIST",
+        "Drive" : 0.7080686092376709,
+        "Mid" : 0.35294118523597717
+      }
+    },
+    "device_version" : 16777313
+  },
+  "meta" : {
+    "original" : 0,
+    "pbn" : 0,
+    "premium" : 0
+  },
+  "schema" : "L6Preset",
+  "version" : 5
+}

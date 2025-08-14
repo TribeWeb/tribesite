@@ -1,0 +1,70 @@
+{
+  "data" : {
+    "meta" : {
+      "name" : "Pleasure'98 ～人生の快楽～",
+      "tnid" : 0
+    },
+    "device" : 2359300,
+    "tone" : {
+      "THRGroupGate" : {
+        "Decay" : 0.20499999821186066,
+        "@enabled" : true,
+        "@asset" : "noiseGate",
+        "Thresh" : -26.311241149902344
+      },
+      "THRGroupFX3EffectEcho" : {
+        "@asset" : "THRTM_DelayDigitalDelay",
+        "Time" : 0.4699999988079071,
+        "Bass" : 0.5,
+        "Treble" : 0.5,
+        "@wetDry" : 0.28581452369689941,
+        "@enabled" : false,
+        "Feedback" : 0.3077634871006012
+      },
+      "global" : {
+        "THRPresetParamTempo" : 670
+      },
+      "THRGroupFX1Compressor" : {
+        "@enabled" : false,
+        "Sustain" : 0.36026623845100403,
+        "@asset" : "RedComp",
+        "Level" : 0.57250815629959106
+      },
+      "THRGroupFX4EffectReverb" : {
+        "@wetDry" : 0.051368769258260727,
+        "Decay" : 0.30000001192092896,
+        "@enabled" : false,
+        "PreDelay" : 0.15000000596046448,
+        "@asset" : "SmallRoom1",
+        "Tone" : 0.5
+      },
+      "THRGroupCab" : {
+        "@asset" : "speakerSimulator",
+        "SpkSimType" : 5
+      },
+      "THRGroupFX2Effect" : {
+        "@wetDry" : 0.80623924732208252,
+        "@enabled" : false,
+        "@asset" : "THRTM_WahPostWah",
+        "Level" : 0.5,
+        "Pedal" : 0.40616974234580994
+      },
+      "THRGroupAmp" : {
+        "Treble" : 0.55556768178939819,
+        "Bass" : 0.55294120311737061,
+        "Master" : 0.55318742990493774,
+        "@asset" : "THRTM_Amp5152",
+        "Drive" : 0.60331332683563232,
+        "Mid" : 0.40086182951927185
+      }
+    },
+    "device_version" : 3342433
+  },
+  "meta" : {
+    "original" : 0,
+    "pbn" : 0,
+    "premium" : 0
+  },
+  "schema" : "L6Preset",
+  "version" : 5
+}

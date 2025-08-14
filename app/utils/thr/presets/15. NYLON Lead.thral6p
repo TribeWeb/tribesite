@@ -1,0 +1,73 @@
+{
+  "data" : {
+    "meta" : {
+      "name" : "NYLON Lead",
+      "tnid" : 0
+    },
+    "device" : 2359299,
+    "tone" : {
+      "global" : {
+        "THRPresetParamTempo" : 913
+      },
+      "THRGroupFX3EffectEcho" : {
+        "@asset" : "L6DigitalDelayAco",
+        "Time" : 0.39100000262260437,
+        "Bass" : 0.32029411196708679,
+        "Treble" : 0.41552940011024475,
+        "@wetDry" : 0.19411766529083252,
+        "@enabled" : false,
+        "Feedback" : 0.10776470601558685
+      },
+      "THRGroupStereoImagerAcoustic" : {
+        "@asset" : "StereoImager",
+        "StereoImagerType" : 0
+      },
+      "THRGroupFX1Compressor" : {
+        "Sens" : 0.31000000238418579,
+        "@enabled" : true,
+        "@asset" : "VettaComp",
+        "Level" : 0.79000002145767212
+      },
+      "THRGroupFX4EffectReverb" : {
+        "@wetDry" : 0.44117644429206848,
+        "Decay" : 0.34999999403953552,
+        "@enabled" : true,
+        "PreDelay" : 0.21308234333992004,
+        "@asset" : "ReallyLargeHallAco",
+        "Tone" : 0.55000001192092896
+      },
+      "THRGroupFX2Effect" : {
+        "@asset" : "StereoSquareChorusAco",
+        "Depth" : 0.2177882194519043,
+        "Freq" : 0.074447058141231537,
+        "Pre" : 0.077556706964969635,
+        "@wetDry" : 0.43058821558952332,
+        "@enabled" : true,
+        "Feedback" : 0.48157832026481628
+      },
+      "THRGroupMic" : {
+        "MicHPFEnable" : 0,
+        "MicMidGain" : 0.5,
+        "MicRevMix" : 0,
+        "@asset" : "MIC",
+        "MicHiGain" : 0.5,
+        "MicLowGain" : 0.5
+      },
+      "THRGroupAmp" : {
+        "Treble" : 0.63529413938522339,
+        "Bass" : 0.364705890417099,
+        "@asset" : "THR10_Aco_Nylon1LE",
+        "Drive" : 0.05098038911819458,
+        "Mid" : 0.45882353186607361
+      }
+    },
+    "device_version" : 16777318
+  },
+  "meta" : {
+    "original" : 0,
+    "pbn" : 0,
+    "premium" : 0
+  },
+  "schema" : "L6Preset",
+  "version" : 5
+}

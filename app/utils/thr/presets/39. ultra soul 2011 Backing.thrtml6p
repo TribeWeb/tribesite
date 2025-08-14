@@ -1,0 +1,70 @@
+{
+  "data" : {
+    "meta" : {
+      "name" : "ultra soul 2011 Backing",
+      "tnid" : 0
+    },
+    "device" : 2359300,
+    "tone" : {
+      "THRGroupGate" : {
+        "Decay" : 0.20499999821186066,
+        "@enabled" : true,
+        "@asset" : "noiseGate",
+        "Thresh" : -33
+      },
+      "THRGroupFX3EffectEcho" : {
+        "@asset" : "THRTM_DelayDigitalDelay",
+        "Time" : 0.40999999642372131,
+        "Bass" : 0.5,
+        "Treble" : 0.5,
+        "@wetDry" : 0.2657591700553894,
+        "@enabled" : false,
+        "Feedback" : 0.40777996182441711
+      },
+      "global" : {
+        "THRPresetParamTempo" : 110
+      },
+      "THRGroupFX1Compressor" : {
+        "@enabled" : true,
+        "Sustain" : 0.45024299621582031,
+        "@asset" : "RedComp",
+        "Level" : 0.5067981481552124
+      },
+      "THRGroupFX4EffectReverb" : {
+        "@wetDry" : 0.26396054029464722,
+        "Decay" : 0.30166569352149963,
+        "@enabled" : false,
+        "PreDelay" : 0.10984700173139572,
+        "@asset" : "THRTM_ReverbHall",
+        "Tone" : 0.52140545845031738
+      },
+      "THRGroupCab" : {
+        "@asset" : "speakerSimulator",
+        "SpkSimType" : 5
+      },
+      "THRGroupFX2Effect" : {
+        "@wetDry" : 0.90344846248626709,
+        "@enabled" : false,
+        "@asset" : "THRTM_WahPostWah",
+        "Level" : 0.40611979365348816,
+        "Pedal" : 0.38696685433387756
+      },
+      "THRGroupAmp" : {
+        "Treble" : 0.68341958522796631,
+        "Bass" : 0.45325374603271484,
+        "Master" : 0.60803073644638062,
+        "@asset" : "THRTM_AmpREI8084",
+        "Drive" : 0.75981152057647705,
+        "Mid" : 0.38170075416564941
+      }
+    },
+    "device_version" : 16777313
+  },
+  "meta" : {
+    "original" : 0,
+    "pbn" : 0,
+    "premium" : 0
+  },
+  "schema" : "L6Preset",
+  "version" : 5
+}

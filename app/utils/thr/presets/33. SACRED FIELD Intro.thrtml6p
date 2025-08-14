@@ -1,0 +1,70 @@
+{
+  "data" : {
+    "meta" : {
+      "name" : "SACRED FIELD Intro",
+      "tnid" : 0
+    },
+    "device" : 2359300,
+    "tone" : {
+      "THRGroupGate" : {
+        "Decay" : 0.20499999821186066,
+        "@enabled" : true,
+        "@asset" : "noiseGate",
+        "Thresh" : -33
+      },
+      "THRGroupFX3EffectEcho" : {
+        "@asset" : "THRTM_DelayDigitalDelay",
+        "Time" : 0.43000000715255737,
+        "Bass" : 0.22882400453090668,
+        "Treble" : 0.34019601345062256,
+        "@wetDry" : 0.25815626978874207,
+        "@enabled" : true,
+        "Feedback" : 0.32548999786376953
+      },
+      "global" : {
+        "THRPresetParamTempo" : 864
+      },
+      "THRGroupFX1Compressor" : {
+        "@enabled" : true,
+        "Sustain" : 0.50441873073577881,
+        "@asset" : "RedComp",
+        "Level" : 0.55975168943405151
+      },
+      "THRGroupFX4EffectReverb" : {
+        "@wetDry" : 0.20977285504341125,
+        "Decay" : 0.15000000596046448,
+        "@enabled" : true,
+        "PreDelay" : 0.10000000149011612,
+        "@asset" : "THRTM_ReverbHall",
+        "Tone" : 0.5
+      },
+      "THRGroupCab" : {
+        "@asset" : "speakerSimulator",
+        "SpkSimType" : 3
+      },
+      "THRGroupFX2Effect" : {
+        "@wetDry" : 0.40931022167205811,
+        "@enabled" : true,
+        "@asset" : "THRTM_PitchDetune",
+        "Gain" : 0.58729928731918335,
+        "Pedal" : 0.55261951684951782
+      },
+      "THRGroupAmp" : {
+        "Treble" : 0.62358295917510986,
+        "Bass" : 0.50248086452484131,
+        "Master" : 0.42302680015563965,
+        "@asset" : "THRTM_AmpXTCM_RedB",
+        "Drive" : 0.60292214155197144,
+        "Mid" : 0.5505225658416748
+      }
+    },
+    "device_version" : 16777313
+  },
+  "meta" : {
+    "original" : 0,
+    "pbn" : 0,
+    "premium" : 0
+  },
+  "schema" : "L6Preset",
+  "version" : 5
+}

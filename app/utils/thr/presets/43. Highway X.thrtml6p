@@ -1,0 +1,70 @@
+{
+  "data" : {
+    "meta" : {
+      "name" : "Highway X",
+      "tnid" : 0
+    },
+    "device" : 2359300,
+    "tone" : {
+      "THRGroupGate" : {
+        "Decay" : 0.60000002384185791,
+        "@enabled" : true,
+        "@asset" : "noiseGate",
+        "Thresh" : -42.884788513183594
+      },
+      "THRGroupFX3EffectEcho" : {
+        "@asset" : "THRTM_DelayDigitalDelay",
+        "Time" : 0.40999999642372131,
+        "Bass" : 0.5,
+        "Treble" : 0.5,
+        "@wetDry" : 0.2657591700553894,
+        "@enabled" : false,
+        "Feedback" : 0.40777996182441711
+      },
+      "global" : {
+        "THRPresetParamTempo" : 110
+      },
+      "THRGroupFX1Compressor" : {
+        "@enabled" : true,
+        "Sustain" : 0.78085881471633911,
+        "@asset" : "RedComp",
+        "Level" : 0.80426543951034546
+      },
+      "THRGroupFX4EffectReverb" : {
+        "@wetDry" : 0.053001120686531067,
+        "Decay" : 0.80983138084411621,
+        "@enabled" : true,
+        "PreDelay" : 0.15000000596046448,
+        "@asset" : "SmallRoom1",
+        "Tone" : 0.30018073320388794
+      },
+      "THRGroupCab" : {
+        "@asset" : "speakerSimulator",
+        "SpkSimType" : 1
+      },
+      "THRGroupFX2Effect" : {
+        "@wetDry" : 0.353302001953125,
+        "@enabled" : true,
+        "@asset" : "THRTM_PitchDetune",
+        "Gain" : 1,
+        "Pedal" : 0.65540426969528198
+      },
+      "THRGroupAmp" : {
+        "Treble" : 0.60068261623382568,
+        "Bass" : 0.14817352592945099,
+        "Master" : 0.50418645143508911,
+        "@asset" : "THRTM_AmpTwoStoneSSSD",
+        "Drive" : 0.75146365165710449,
+        "Mid" : 0.48433589935302734
+      }
+    },
+    "device_version" : 16777313
+  },
+  "meta" : {
+    "original" : 0,
+    "pbn" : 0,
+    "premium" : 0
+  },
+  "schema" : "L6Preset",
+  "version" : 5
+}

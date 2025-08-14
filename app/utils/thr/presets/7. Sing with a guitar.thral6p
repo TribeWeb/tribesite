@@ -1,0 +1,73 @@
+{
+  "data" : {
+    "meta" : {
+      "name" : "Sing with a guitar",
+      "tnid" : 0
+    },
+    "device" : 2359299,
+    "tone" : {
+      "global" : {
+        "THRPresetParamTempo" : 913
+      },
+      "THRGroupFX3EffectEcho" : {
+        "@asset" : "L6DigitalDelayAco",
+        "Time" : 0.39100000262260437,
+        "Bass" : 0.5,
+        "Treble" : 0.5,
+        "@wetDry" : 0.5,
+        "@enabled" : false,
+        "Feedback" : 0.38999998569488525
+      },
+      "THRGroupStereoImagerAcoustic" : {
+        "@asset" : "StereoImager",
+        "StereoImagerType" : 1
+      },
+      "THRGroupFX1Compressor" : {
+        "Sens" : 0.31000000238418579,
+        "@enabled" : false,
+        "@asset" : "VettaComp",
+        "Level" : 0.79000002145767212
+      },
+      "THRGroupFX4EffectReverb" : {
+        "@wetDry" : 0.5,
+        "Decay" : 0.40274885296821594,
+        "@enabled" : true,
+        "PreDelay" : 0.0099999997764825821,
+        "@asset" : "VintagePlateAco",
+        "Tone" : 0.60419559478759766
+      },
+      "THRGroupFX2Effect" : {
+        "@asset" : "StereoSquareChorusAco",
+        "Depth" : 0.20875294506549835,
+        "Freq" : 0.072188235819339752,
+        "Pre" : 0.076562821865081787,
+        "@wetDry" : 0.35073256492614746,
+        "@enabled" : true,
+        "Feedback" : 0.46188139915466309
+      },
+      "THRGroupMic" : {
+        "MicHPFEnable" : 0,
+        "MicMidGain" : 0.50366032123565674,
+        "MicRevMix" : 0.26510417461395264,
+        "@asset" : "MIC",
+        "MicHiGain" : 0.61980611085891724,
+        "MicLowGain" : 0.30969327688217163
+      },
+      "THRGroupAmp" : {
+        "Treble" : 0.30988135933876038,
+        "Bass" : 0.60698783397674561,
+        "@asset" : "THR10_Aco_Condenser1LE",
+        "Drive" : 0.44602140784263611,
+        "Mid" : 0.40031829476356506
+      }
+    },
+    "device_version" : 16777318
+  },
+  "meta" : {
+    "original" : 0,
+    "pbn" : 0,
+    "premium" : 0
+  },
+  "schema" : "L6Preset",
+  "version" : 5
+}

@@ -1,0 +1,73 @@
+{
+  "data" : {
+    "meta" : {
+      "name" : "Piezo guitar",
+      "tnid" : 0
+    },
+    "device" : 2359299,
+    "tone" : {
+      "global" : {
+        "THRPresetParamTempo" : 913
+      },
+      "THRGroupFX3EffectEcho" : {
+        "@asset" : "L6DigitalDelayAco",
+        "Time" : 0.39100000262260437,
+        "Bass" : 0.5,
+        "Treble" : 0.5,
+        "@wetDry" : 0.5,
+        "@enabled" : false,
+        "Feedback" : 0.38999998569488525
+      },
+      "THRGroupStereoImagerAcoustic" : {
+        "@asset" : "StereoImager",
+        "StereoImagerType" : 0
+      },
+      "THRGroupFX1Compressor" : {
+        "Sens" : 0.31000000238418579,
+        "@enabled" : false,
+        "@asset" : "VettaComp",
+        "Level" : 0.79000002145767212
+      },
+      "THRGroupFX4EffectReverb" : {
+        "@wetDry" : 0.25941175222396851,
+        "Decay" : 0.035188235342502594,
+        "@enabled" : true,
+        "PreDelay" : 0.0099999997764825821,
+        "@asset" : "VintagePlateAco",
+        "Tone" : 0.39623531699180603
+      },
+      "THRGroupFX2Effect" : {
+        "@asset" : "StereoSquareChorusAco",
+        "Depth" : 0.20000000298023224,
+        "Freq" : 0.039999999105930328,
+        "Pre" : 0.5,
+        "@wetDry" : 0.5,
+        "@enabled" : false,
+        "Feedback" : 0.12999999523162842
+      },
+      "THRGroupMic" : {
+        "MicHPFEnable" : 0,
+        "MicMidGain" : 0.5,
+        "MicRevMix" : 0,
+        "@asset" : "MIC",
+        "MicHiGain" : 0.5,
+        "MicLowGain" : 0.5
+      },
+      "THRGroupAmp" : {
+        "Treble" : 0.36078432202339172,
+        "Bass" : 0.69019609689712524,
+        "@asset" : "THR10_Aco_Condenser1LE",
+        "Drive" : 1,
+        "Mid" : 0.43921568989753723
+      }
+    },
+    "device_version" : 16777318
+  },
+  "meta" : {
+    "original" : 0,
+    "pbn" : 0,
+    "premium" : 0
+  },
+  "schema" : "L6Preset",
+  "version" : 5
+}

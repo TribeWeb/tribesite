@@ -1,0 +1,73 @@
+{
+  "data" : {
+    "meta" : {
+      "name" : "Sing with Silent Guitar",
+      "tnid" : 0
+    },
+    "device" : 2359299,
+    "tone" : {
+      "global" : {
+        "THRPresetParamTempo" : 913
+      },
+      "THRGroupFX3EffectEcho" : {
+        "@asset" : "L6DigitalDelayAco",
+        "Time" : 0.39100000262260437,
+        "Bass" : 0.31499215960502625,
+        "Treble" : 0.41477644443511963,
+        "@wetDry" : 0.25349929928779602,
+        "@enabled" : true,
+        "Feedback" : 0.20319263637065887
+      },
+      "THRGroupStereoImagerAcoustic" : {
+        "@asset" : "StereoImager",
+        "StereoImagerType" : 0
+      },
+      "THRGroupFX1Compressor" : {
+        "Sens" : 0.31000000238418579,
+        "@enabled" : false,
+        "@asset" : "VettaComp",
+        "Level" : 0.79000002145767212
+      },
+      "THRGroupFX4EffectReverb" : {
+        "@wetDry" : 0.50518703460693359,
+        "Decay" : 0.45586919784545898,
+        "@enabled" : true,
+        "PreDelay" : 0.22516706585884094,
+        "@asset" : "ReallyLargeHallAco",
+        "Tone" : 0.55282354354858398
+      },
+      "THRGroupFX2Effect" : {
+        "@asset" : "StereoSquareChorusAco",
+        "Depth" : 0.24428234994411469,
+        "Freq" : 0.088564708828926086,
+        "Pre" : 0.08445364236831665,
+        "@wetDry" : 0.60705888271331787,
+        "@enabled" : false,
+        "Feedback" : 0.54644423723220825
+      },
+      "THRGroupMic" : {
+        "MicHPFEnable" : 0,
+        "MicMidGain" : 0.5,
+        "MicRevMix" : 0.26247105002403259,
+        "@asset" : "MIC",
+        "MicHiGain" : 0.60620659589767456,
+        "MicLowGain" : 0.30842015147209167
+      },
+      "THRGroupAmp" : {
+        "Treble" : 0.50588232278823853,
+        "Bass" : 0.50601166486740112,
+        "@asset" : "THR10_Flat_A",
+        "Drive" : 1,
+        "Mid" : 0.50248152017593384
+      }
+    },
+    "device_version" : 16777318
+  },
+  "meta" : {
+    "original" : 0,
+    "pbn" : 0,
+    "premium" : 0
+  },
+  "schema" : "L6Preset",
+  "version" : 5
+}

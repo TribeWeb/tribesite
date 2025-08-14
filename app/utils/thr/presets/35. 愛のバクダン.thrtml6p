@@ -1,0 +1,70 @@
+{
+  "data" : {
+    "meta" : {
+      "name" : "愛のバクダン",
+      "tnid" : 0
+    },
+    "device" : 2359300,
+    "tone" : {
+      "THRGroupGate" : {
+        "Decay" : 0.20499999821186066,
+        "@enabled" : true,
+        "@asset" : "noiseGate",
+        "Thresh" : -33
+      },
+      "THRGroupFX3EffectEcho" : {
+        "@asset" : "THRTM_DelayDigitalDelay",
+        "Time" : 0.40999999642372131,
+        "Bass" : 0.5,
+        "Treble" : 0.5,
+        "@wetDry" : 0.2657591700553894,
+        "@enabled" : false,
+        "Feedback" : 0.40777996182441711
+      },
+      "global" : {
+        "THRPresetParamTempo" : 110
+      },
+      "THRGroupFX1Compressor" : {
+        "@enabled" : false,
+        "Sustain" : 0.50016772747039795,
+        "@asset" : "RedComp",
+        "Level" : 0.50677990913391113
+      },
+      "THRGroupFX4EffectReverb" : {
+        "@wetDry" : 0.26396054029464722,
+        "Decay" : 0.30166569352149963,
+        "@enabled" : false,
+        "PreDelay" : 0.10984700173139572,
+        "@asset" : "THRTM_ReverbHall",
+        "Tone" : 0.52140545845031738
+      },
+      "THRGroupCab" : {
+        "@asset" : "speakerSimulator",
+        "SpkSimType" : 3
+      },
+      "THRGroupFX2Effect" : {
+        "@wetDry" : 0.90344846248626709,
+        "@enabled" : false,
+        "@asset" : "THRTM_WahPostWah",
+        "Level" : 0.40611979365348816,
+        "Pedal" : 0.38696685433387756
+      },
+      "THRGroupAmp" : {
+        "Treble" : 0.68510591983795166,
+        "Bass" : 0.50664836168289185,
+        "Master" : 0.52116882801055908,
+        "@asset" : "THRTM_AmpREI8084",
+        "Drive" : 0.7541164755821228,
+        "Mid" : 0.41053247451782227
+      }
+    },
+    "device_version" : 16777313
+  },
+  "meta" : {
+    "original" : 0,
+    "pbn" : 0,
+    "premium" : 0
+  },
+  "schema" : "L6Preset",
+  "version" : 5
+}

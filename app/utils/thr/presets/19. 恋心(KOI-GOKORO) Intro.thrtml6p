@@ -1,0 +1,71 @@
+{
+  "data" : {
+    "meta" : {
+      "name" : "恋心(KOI-GOKORO) Intro",
+      "tnid" : 0
+    },
+    "device" : 2359300,
+    "tone" : {
+      "THRGroupGate" : {
+        "Decay" : 0.20499999821186066,
+        "@enabled" : true,
+        "@asset" : "noiseGate",
+        "Thresh" : -33
+      },
+      "THRGroupFX3EffectEcho" : {
+        "@asset" : "THRTM_DelayDotDelay",
+        "Time" : 0.44999998807907104,
+        "Bass" : 0.5,
+        "Treble" : 0.5,
+        "@wetDry" : 0.50330442190170288,
+        "@enabled" : true,
+        "Feedback" : 0
+      },
+      "global" : {
+        "THRPresetParamTempo" : 864
+      },
+      "THRGroupFX1Compressor" : {
+        "@enabled" : false,
+        "Sustain" : 0.50469678640365601,
+        "@asset" : "RedComp",
+        "Level" : 0.50823754072189331
+      },
+      "THRGroupFX4EffectReverb" : {
+        "@wetDry" : 0.45299389958381653,
+        "Decay" : 0.40296050906181335,
+        "@enabled" : true,
+        "PreDelay" : 0.20000000298023224,
+        "@asset" : "THRTM_ReverbHall",
+        "Tone" : 0.60442787408828735
+      },
+      "THRGroupCab" : {
+        "@asset" : "speakerSimulator",
+        "SpkSimType" : 5
+      },
+      "THRGroupFX2Effect" : {
+        "@wetDry" : 0.40375977754592896,
+        "@enabled" : false,
+        "Bass" : 0.5,
+        "@asset" : "THRTM_PitchHarmony",
+        "Treble" : 0.40000000596046448,
+        "Pitch" : 0.80109864473342896
+      },
+      "THRGroupAmp" : {
+        "Treble" : 0.65099489688873291,
+        "Bass" : 0.50451356172561646,
+        "Master" : 0.55197900533676147,
+        "@asset" : "THRTM_AmpRock2150DIST",
+        "Drive" : 0.50965481996536255,
+        "Mid" : 0.45388796925544739
+      }
+    },
+    "device_version" : 3342433
+  },
+  "meta" : {
+    "original" : 0,
+    "pbn" : 0,
+    "premium" : 0
+  },
+  "schema" : "L6Preset",
+  "version" : 5
+}
