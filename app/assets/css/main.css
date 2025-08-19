@@ -21,4 +21,26 @@
 
   --color-accent-400: #439bff;
   --color-accent-500: #73b2ff;
+
+  --color-modern-400: #ff1600;
+  --color-modern-500: #ff1600;
+
+  --color-boutique-400: #0d6eff;
+  --color-boutique-500: #0d6eff;
+
+  --color-classic-400: #01dc51;
+  --color-classic-500: #01dc51;
+
+}
+
+:root {
+  --ui-error: var(--color-modern-500);
+  --ui-info: var(--color-boutique-500);
+  --ui-success: var(--color-classic-500);
+}
+
+.dark {
+  --ui-error: var(--color-modern-500);
+  --ui-info: var(--color-boutique-500);
+  --ui-success: var(--color-classic-500);
 }

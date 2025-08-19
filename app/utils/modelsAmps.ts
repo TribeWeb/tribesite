@@ -334,7 +334,7 @@ export default [
         default: 0.5,
         max: 1.0,
         min: 0.0,
-        name: 'Gain',
+        name: 'Blend',
         persist: 100,
         symbolicID: 'Drive',
         valueType: 1
@@ -766,7 +766,7 @@ export default [
         default: 0.5,
         max: 1.0,
         min: 0.0,
-        name: 'Gain',
+        name: 'Blend',
         persist: 100,
         symbolicID: 'Drive',
         valueType: 1
@@ -1198,7 +1198,7 @@ export default [
         default: 0.5,
         max: 1.0,
         min: 0.0,
-        name: 'Gain',
+        name: 'Blend',
         persist: 100,
         symbolicID: 'Drive',
         valueType: 1

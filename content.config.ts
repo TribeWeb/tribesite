@@ -1,4 +1,5 @@
 import { defineContentConfig, defineCollection, z } from '@nuxt/content'
+import { schemaPreset } from './app/utils/schemaPreset'
 
 export default defineContentConfig({
   collections: {
@@ -37,6 +38,11 @@ export default defineContentConfig({
           variant: z.string()
         }).optional()
       })
+    }),
+    thrPresets: defineCollection({
+      type: 'data',
+      source: 'data/presets/*.json',
+      schema: schemaPreset
     })
   }
 })
