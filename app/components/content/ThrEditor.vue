@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import type { z } from 'zod'
 
+const colorMode = useColorMode()
+
 type channelColours = 'error' | 'success' | 'info' | 'neutral'
 const colorMap = { modern: 'success', boutique: 'info', classic: 'error' }
 
@@ -125,8 +127,6 @@ onMounted(() => {
       :description="ampDetails?.description"
       class="h-54"
       orientation="horizontal"
-      spotlight
-      spotlight-color="primary"
     >
       <template #title>
         {{ ampDetails?.inspiration }}
@@ -148,21 +148,31 @@ onMounted(() => {
           variant="soft"
         />
       </template>
+      <UIcon
+        v-if="ampDetails?.symbolicID && ampDetails?.symbolicID.includes('Flat')"
+        :name="`i-svg-${ampDetails?.symbolicID}`"
+        class="size-40 bg-primary place-self-center"
+      />
       <NuxtImg
+        v-if="ampDetails?.symbolicID && !ampDetails?.symbolicID.includes('Flat')"
         :src="`/amps/${ampDetails?.symbolicID}.png`"
-        height="160"
+        width="375"
+        height="153"
+        fit="contain"
+        :modifiers="{ b: `${colorMode.value === 'dark' ? '#0f172b' : '#ffffff'}` }"
         :alt="ampDetails?.inspiration"
         class="justify-self-center"
       />
 
       <template #footer>
         <div class="flex flex-col gap-2">
-          <UButtonGroup class="w-24">
+          <UButtonGroup>
             <UButton
               v-for="item in presetList"
               :key="item.data.meta.name"
+              class="max-w-28"
               :label="item.data.meta.name"
-              icon="i-f7:guitars"
+              icon="i-lucide:factory"
               size="xs"
               variant="subtle"
               :ui="{ label: 'text-xs' }"

@@ -62,6 +62,20 @@ export default defineNuxtConfig({
     }
   },
 
+  icon: {
+    provider: 'iconify',
+    serverBundle: false,
+    customCollections: [{
+      prefix: 'svg',
+      dir: './app/assets/icons',
+      normalizeIconName: false
+    }]
+  },
+
+  image: {
+    provider: 'ipx'
+  },
+
   ogImage: {
     zeroRuntime: true
   }
