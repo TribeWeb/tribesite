@@ -1,5 +1,5 @@
 import { defineContentConfig, defineCollection, z } from '@nuxt/content'
-import { schemaPreset } from './app/utils/schemaPreset'
+import { schemaPreset } from './app/utils/schemas'
 
 export default defineContentConfig({
   collections: {
