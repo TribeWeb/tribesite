@@ -1,4 +1,6 @@
-export default [
+import type { AmpMap } from '~/utils/schemas'
+
+export default <AmpMap[]> [
   {
     channelId: 'clean',
     channel: 'Clean',
@@ -235,7 +237,7 @@ export default [
     channel: 'Flat',
     styleId: 'classic',
     style: 'Classic',
-    inspiration: 'Neutral EQ: Flat',
+    inspiration: 'Direct Injection: Flat',
     modded: false,
     description: 'A neutral tone with no amp or speaker modeling. Great for connecting other instruments to your THR',
     symbolicID: 'THR10_Flat',
@@ -246,7 +248,7 @@ export default [
     channel: 'Flat',
     styleId: 'boutique',
     style: 'Boutique',
-    inspiration: 'Neutral EQ: Bass boost',
+    inspiration: 'Direct Injection: Bass boost',
     modded: false,
     description: 'A neutral tone with no amp or speaker modeling, and a slight bass boost. Great for connecting other instruments to your THR',
     symbolicID: 'THR10_Flat_B',
@@ -257,7 +259,7 @@ export default [
     channel: 'Flat',
     styleId: 'modern',
     style: 'Modern',
-    inspiration: 'Neutral EQ: Mid-scoop',
+    inspiration: 'Direct Injection: Mid-scoop',
     modded: false,
     description: 'A neutral tone with no amp or speaker modeling, and a slight mid scoop. Great for connecting other instruments to your THR',
     symbolicID: 'THR10_Flat_V',
