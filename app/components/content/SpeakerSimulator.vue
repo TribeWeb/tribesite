@@ -22,14 +22,28 @@ const cabDetails = computed(() =>
   <UPageCard
     v-if="colorMode"
     :description="cabDetails?.description"
-    orientation="horizontal"
+    orientation="vertical"
   >
     <template #title>
-      {{ cabDetails?.name }}
+      <USelect
+        v-model="preset.data.tone.THRGroupCab['SpkSimType']"
+        :items="cabsMap"
+        value-key="SpkSimType"
+        label-key="name"
+        size="lg"
+        class="w-72"
+        color="primary"
+        variant="soft"
+        :icon="`i-svg-${cabDetails?.speakerCount}x${cabDetails?.speakerSize}`"
+      >
+        <template #item-leading="{ item }">
+          <UIcon :name="`i-svg-${item.speakerCount}x${item.speakerSize}`" size="30" class="bg-primary" />
+        </template>
+      </USelect>
       <UBadge
         class="ml-2"
-        :label="`${cabDetails.speakerCount}x${cabDetails.speakerSize}`"
-        icon="i-lucide-wrench"
+        :label="`${cabDetails?.enclosure}`"
+        icon="i-bxs-guitar-amp"
         size="sm"
         color="warning"
         variant="soft"
@@ -37,7 +51,7 @@ const cabDetails = computed(() =>
     </template>
     <template #leading>
       <UBadge
-        :label="cabDetails?.enclosure"
+        :label="`${cabDetails.category} ${cabDetails.speakerCount}x${cabDetails.speakerSize}`"
         color="neutral"
         size="sm"
         variant="soft"
@@ -58,7 +72,7 @@ const cabDetails = computed(() =>
 
     <template #footer>
       <div class="flex flex-col gap-2">
-        <UButtonGroup v-if="relatedPresets">
+        <UButtonGroup v-if="relatedPresets" class="flex-wrap">
           <UButton
             v-for="item in relatedPresets"
             :key="item.data.meta.name"
@@ -68,7 +82,7 @@ const cabDetails = computed(() =>
             size="xs"
             variant="subtle"
             :ui="{ label: 'text-xs' }"
-            @click="preset = factoryPresets?.find((preset: Schema) => preset.data.meta.name === item.data.meta.name) as Schema"
+            @click="preset = factoryPresets?.find((preset) => preset.data.meta.name === item.data.meta.name) as Schema"
           />
         </UButtonGroup>
       </div>

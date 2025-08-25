@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g
+    id="side"
+    stroke="currentColor"
+    stroke-width="2"
+    fill="none"
+  >
+    <path
+      d="M 16 23 L 7 23 C 4 23 4 23 4 20 L 4 12 C 4 9 4 9 7 9 L 16 9"
+    />
+    <path
+      d="M 7 16 A 1 1 0 0 0 15 16 A 1 1 0 0 0 7 16"
+      opacity="0.7"
+      stroke-width="1.5"
+    /> 
+  </g>
+  <use href="#side" transform="rotate(+180 16 16)" />
+</svg>

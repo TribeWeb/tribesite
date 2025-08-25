@@ -12,6 +12,8 @@ const channel = defineModel<AmpMap['channelId']>('channel', {
 
 const preset = inject('preset') as Ref<Schema>
 
+const change = computed(() => preset.value.data.tone.THRGroupAmp['@asset'])
+
 const ampDetails = computed(() => ampsMap.find(amp => amp.channelId === channel.value && amp.styleId === style.value) as AmpMap)
 const ampModel = computed(() => modelsAmps.find(amp => amp.symbolicID === preset.value.data.tone.THRGroupAmp['@asset']) as Model)
 
@@ -19,7 +21,7 @@ watch(ampDetails, (newAmp: AmpMap) => {
   preset.value.data.tone.THRGroupAmp['@asset'] = newAmp?.symbolicID || 'THR10C_Deluxe'
 })
 
-watch(preset, () => {
+watch(change, () => {
   style.value = ampsMap.find(amp => amp.symbolicID === preset.value.data.tone.THRGroupAmp['@asset'])?.styleId || 'classic'
   channel.value = ampsMap.find(amp => amp.symbolicID === preset.value.data.tone.THRGroupAmp['@asset'])?.channelId || 'clean'
 })
@@ -35,7 +37,10 @@ const colourVar = computed(() => `var(--ui-${colour.value})`)
       <ChannelSelector v-model:channel="channel" :colour="colour" />
       <ModelControls v-model="preset.data.tone.THRGroupAmp" :amp-model="ampModel" />
     </div>
-    <AmpDisplay :amp-details="ampDetails" />
+    <div class="flex flex-col md:grid md:grid-cols-2 md:gap-4">
+      <AmpDisplay :amp-details="ampDetails" />
+      <SpeakerSimulator v-model="preset.data.tone.THRGroupCab.SpkSimType" />
+    </div>
   </div>
 </template>
 

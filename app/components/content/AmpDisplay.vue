@@ -4,6 +4,7 @@ defineProps<{
 }>()
 
 const colorMode = useColorMode()
+const preset = inject('preset') as Ref<Schema>
 
 const { factoryPresets } = useFactoryPresets()
 
@@ -14,22 +15,25 @@ const relatedPresets = computed(() =>
     preset.value.data.tone.THRGroupAmp['@asset'],
     factoryPresets.value as Schema[])
 )
-
-const preset = inject('preset') as Ref<Schema>
-
-// const relatedPresets = computed(() => (factoryPresets.value ?? []).filter(factoryPreset =>
-//   factoryPreset.data.tone.THRGroupAmp['@asset'] === preset.value.data.tone.THRGroupAmp['@asset'])
-// )
 </script>
 
 <template>
   <UPageCard
     v-if="colorMode"
     :description="ampDetails?.description"
-    orientation="horizontal"
+    orientation="vertical"
   >
     <template #title>
-      {{ ampDetails?.inspiration }}
+      <USelect
+        v-model="preset.data.tone.THRGroupAmp['@asset']"
+        :items="ampsMap"
+        value-key="symbolicID"
+        label-key="inspiration"
+        size="lg"
+        class="w-72"
+        color="primary"
+        variant="soft"
+      />
       <UBadge
         v-if="ampDetails?.modded"
         class="ml-2"
@@ -68,7 +72,7 @@ const preset = inject('preset') as Ref<Schema>
 
     <template #footer>
       <div class="flex flex-col gap-2">
-        <UButtonGroup v-if="relatedPresets">
+        <UButtonGroup v-if="relatedPresets" class="flex-wrap">
           <UButton
             v-for="item in relatedPresets"
             :key="item.data.meta.name"
@@ -78,7 +82,7 @@ const preset = inject('preset') as Ref<Schema>
             size="xs"
             variant="subtle"
             :ui="{ label: 'text-xs' }"
-            @click="preset = factoryPresets?.find((preset: Schema) => preset.data.meta.name === item.data.meta.name) as Schema"
+            @click="preset = factoryPresets?.find((preset) => preset.data.meta.name === item.data.meta.name) as Schema"
           />
         </UButtonGroup>
       </div>

@@ -96,7 +96,7 @@ export default [
     name: 'Fender Tweed Bassman',
     description: '45W, 2-ohm, 4x10-inch combo with Jensen P10R speakers',
     speakerCount: 4,
-    speakerSize: 12,
+    speakerSize: 10,
     enclosure: 'combo'
   },
   {
