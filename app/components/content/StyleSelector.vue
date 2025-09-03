@@ -20,6 +20,7 @@ const styleItems = computed(() => styleList.map((styleId) => {
 <template>
   <URadioGroup
     v-model="style"
+    class="glow"
     variant="table"
     orientation="horizontal"
     :items="styleItems"

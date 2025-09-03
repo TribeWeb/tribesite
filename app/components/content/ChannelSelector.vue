@@ -41,6 +41,7 @@ const knobValue = computed(() => (channelMeta[channel.value as keyof typeof chan
     <div class="flex flex-col w-26 gap-1">
       <URadioGroup
         v-model="channel"
+        class="glow"
         :items="channelItems.filter(item => item.split==='lhs')"
         :color="colour"
         indicator="end"
@@ -52,6 +53,7 @@ const knobValue = computed(() => (channelMeta[channel.value as keyof typeof chan
     <div class="flex flex-col w-26 gap-2 items-start">
       <URadioGroup
         v-model="channel"
+        class="glow"
         :items="channelItems.filter(item => item.split==='rhs')"
         :color="colour"
       />

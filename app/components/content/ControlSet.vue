@@ -21,6 +21,8 @@ const [value, modifiers] = defineModel<number>({
     return value
   }
 })
+
+const disableControls = inject('disableControls') as boolean
 </script>
 
 <template>
@@ -33,6 +35,7 @@ const [value, modifiers] = defineModel<number>({
         :step="1"
         orientation="vertical"
         :ui="{ thumb: 'rounded-xs h-2' }"
+        :disabled="disableControls"
       />
       <div class="flex flex-col gap-2 justify-center items-center">
         <UInputNumber
@@ -47,11 +50,12 @@ const [value, modifiers] = defineModel<number>({
           :format-options="{
             maximumFractionDigits: 0
           }"
+          :disabled="disableControls"
         />
-        <ControlKnob :value="value / 100" />
+        <ControlKnob :value="value / 100" :class="disableControls ? 'opacity-75 cursor-not-allowed' : ''" />
       </div>
     </div>
-    <h3 class=" font-bold text-center text-primary">
+    <h3 class="font-bold text-center text-primary" :class="disableControls ? 'opacity-75' : ''">
       {{ name }}
     </h3>
   </div>

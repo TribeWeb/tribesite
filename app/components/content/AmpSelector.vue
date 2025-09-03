@@ -15,7 +15,7 @@ const preset = inject('preset') as Ref<Schema>
 const change = computed(() => preset.value.data.tone.THRGroupAmp['@asset'])
 
 const ampDetails = computed(() => ampsMap.find(amp => amp.channelId === channel.value && amp.styleId === style.value) as AmpMap)
-const ampModel = computed(() => modelsAmps.find(amp => amp.symbolicID === preset.value.data.tone.THRGroupAmp['@asset']) as Model)
+// const ampModel = computed(() => modelsAmps.find(amp => amp.symbolicID === preset.value.data.tone.THRGroupAmp['@asset']) as Model)
 
 watch(ampDetails, (newAmp: AmpMap) => {
   preset.value.data.tone.THRGroupAmp['@asset'] = newAmp?.symbolicID || 'THR10C_Deluxe'
@@ -35,7 +35,7 @@ const colourVar = computed(() => `var(--ui-${colour.value})`)
     <StyleSelector v-model:style="style" :colour="colour" />
     <div class="flex flex-row gap-x-4 gap-y-6 flex-wrap">
       <ChannelSelector v-model:channel="channel" :colour="colour" />
-      <ModelControls v-model="preset.data.tone.THRGroupAmp" :amp-model="ampModel" />
+      <FxGroup :fx-group="'THRGroupAmp'" />
     </div>
     <div class="flex flex-col md:grid md:grid-cols-2 md:gap-4">
       <AmpDisplay :amp-details="ampDetails" />
@@ -45,7 +45,7 @@ const colourVar = computed(() => `var(--ui-${colour.value})`)
 </template>
 
 <style>
-button[data-state="checked"] {
+.glow button[data-state="checked"] {
   color: v-bind(colourVar);
   box-shadow: 0px 0px 8px 2px;
 }

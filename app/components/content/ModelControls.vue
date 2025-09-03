@@ -1,6 +1,7 @@
 <script setup lang="ts">
 defineProps<{
-  ampModel: Partial<Model> | undefined
+  knobParams: ModelParam[]
+  fxGroup: keyof Schema['data']['tone']
 }>()
 
 const preset = inject('preset') as Schema
@@ -8,13 +9,14 @@ const preset = inject('preset') as Schema
 
 <template>
   <div class="flex flex-row gap-2 flex-wrap">
-    <template v-for="control in ampModel?.params" :key="control.symbolicID">
+    <template v-for="param in knobParams" :key="param?.symbolicID">
       <ControlSet
-        v-model.scale="preset.data.tone.THRGroupAmp[control.symbolicID as keyof Omit<THRGroupAmp, '@asset'>]"
-        :default="control.default"
-        :min="control.min"
-        :max="control.max"
-        :name="control.name"
+        v-if="param"
+        v-model.scale="(preset.data.tone[fxGroup] as THRGroupEffects)[param.symbolicID as keyof Omit<THRGroupEffects, '@asset' | '@enabled'>]"
+        :default="param.default"
+        :min="param.min"
+        :max="param.max"
+        :name="param.name"
       />
     </template>
   </div>

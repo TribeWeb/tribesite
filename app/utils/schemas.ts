@@ -145,6 +145,12 @@ const tHRGroupFX2Effect = z.union([
   biasTremolo
 ])
 export type THRGroupFX2Effect = z.output<typeof tHRGroupFX2Effect>
+export const THRGroupFX2EffectAssets = [
+  'StereoSquareChorus',
+  'L6Flanger',
+  'Phaser',
+  'BiasTremolo'
+]
 
 const tHRGroupFX3EffectEcho = z.union([
   tapeEcho,
@@ -167,6 +173,8 @@ const tHRGroupGate = z.object({
   'Thresh': z.number().min(-96).max(0).default(-96)
 })
 export type THRGroupGate = z.output<typeof tHRGroupGate>
+
+export type GroupEffects = THRGroupAmp | THRGroupFX1Compressor | THRGroupFX2Effect | THRGroupFX3EffectEcho | THRGroupFX4EffectReverb | THRGroupGate
 
 export const schemaPreset = z.object({
   data: z.object({
@@ -199,6 +207,15 @@ export const schemaPreset = z.object({
 })
 
 export type Schema = z.output<typeof schemaPreset>
+
+export type THRGroupEffects
+  = THRGroupAmp
+    | THRGroupCab
+    | THRGroupFX1Compressor
+    | THRGroupFX2Effect
+    | THRGroupFX3EffectEcho
+    | THRGroupFX4EffectReverb
+    | THRGroupGate
 
 export interface AmpMap {
   channelId: 'clean' | 'crunch' | 'lead' | 'hiGain' | 'special' | 'bass' | 'acoustic' | 'flat'
