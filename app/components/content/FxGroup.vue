@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { THRGroupFX2EffectAssets, type ModelParam, type Schema } from '~/utils/schemas'
-
 const props = defineProps<{
   fxGroup: keyof Schema['data']['tone']
 }>()
@@ -13,7 +11,7 @@ const keysToRemove = ['@asset', '@enabled']
 const presetFX = computed(() => preset.value.data.tone[props.fxGroup])
 const presetFXAsset = computed(() => (presetFX.value as { '@asset': Model['symbolicID'] })['@asset'])
 
-const groupModels = computed(() => models.filter(model => THRGroupFX2EffectAssets.includes(model.symbolicID)))
+const groupModels = computed(() => models.filter(model => assetsList[props.fxGroup as keyof typeof assetsList]?.includes(model.symbolicID)))
 const items = computed(() => groupModels.value.map(model => ({ symbolicID: model.symbolicID, name: model.name })))
 
 const model = computed(() => models.find(model => model.symbolicID === presetFXAsset.value) as Model)
@@ -28,40 +26,63 @@ const disableControls = computed(() => {
 })
 provide('disableControls', disableControls)
 watch(modelParams, (newParams, oldParams) => {
-  const removeParams = oldParams.filter(oldParam => !newParams.map(newParam => newParam.symbolicID).includes(oldParam.symbolicID))
-  const addObj = Object.fromEntries(newParams.map((param) => {
+  const paramsToRemove = oldParams.filter(
+    oldParam => !newParams.map(
+      newParam => newParam.symbolicID).includes(oldParam.symbolicID)
+  )
+
+  const paramObjToAdd = Object.fromEntries(newParams.map((param) => {
     return [param.symbolicID, param.default]
   }))
-  const removeObj = Object.fromEntries(removeParams.map((param) => {
+  const paramObjToRemove = Object.fromEntries(paramsToRemove.map((param) => {
     return [param.symbolicID, undefined]
   }))
-  const defaults = { ...addObj, ...removeObj }
+  const defaults = { ...paramObjToAdd, ...paramObjToRemove }
   Object.assign(preset.value.data.tone[props.fxGroup], { ...defaults })
 })
 </script>
 
 <template>
-  <div class="flex flex-col gap-6">
-    <div v-if="hasSwitch" class="flex flex-row gap-x-4 gap-y-6 flex-wrap">
-      <USelect
-        v-model="(preset.data.tone[props.fxGroup] as { '@asset': Model['symbolicID'] })['@asset']"
-        :items="items"
-        value-key="symbolicID"
-        label-key="name"
-        size="lg"
-        class="w-72"
-        color="primary"
-        variant="soft"
-      />
-      <USwitch
-        v-model="(preset.data.tone[props.fxGroup] as { '@enabled': boolean })['@enabled']"
-        checked-icon="i-lucide-check"
-      />
+  <UCard
+    class="w-fit"
+    :ui="{ body: props.fxGroup === 'THRGroupAmp' ? 'p-0 sm:p-0' : '',
+           root: props.fxGroup === 'THRGroupAmp' ? 'ring-0 rounded-none overflow-visible' : ''
+    }"
+  >
+    <div class="flex flex-col gap-6">
+      <div v-if="hasSwitch" class="flex flex-row gap-x-4 gap-y-6 flex-wrap justify-between">
+        <UCheckbox
+          v-model="(preset.data.tone[props.fxGroup] as { '@enabled': boolean })['@enabled']"
+          variant="card"
+          icon="i-fluent-circle-small-20-filled"
+          size="xs"
+          color="success"
+          class="on"
+        />
+        <URadioGroup
+          v-model="(preset.data.tone[props.fxGroup] as { '@asset': Model['symbolicID'] })['@asset']"
+          :items="items"
+          orientation="horizontal"
+          value-key="symbolicID"
+          label-key="name"
+          size="xs"
+          variant="table"
+          :class="(preset.data.tone[props.fxGroup] as { '@enabled': boolean })['@enabled'] ? '' : 'opacity-75' "
+        />
+        <!-- <UIcon
+          name="i-streamline-interface-arrows-bend-up-right-1-arrow-bend-curve-change-direction-right-to-up"
+        /> -->
+      </div>
+      <div class="flex flex-row gap-x-4 gap-y-6 flex-wrap">
+        <ModelControls :knob-params="knobParams" :fx-group />
+      </div>
     </div>
-    <div class="flex flex-row gap-x-4 gap-y-6 flex-wrap">
-      <ModelControls :knob-params="knobParams" :fx-group />
-    </div>
-    <pre>{{ presetFXAsset }}</pre>
-    <pre>{{ preset.data.tone[props.fxGroup] }}</pre>
-  </div>
+  </UCard>
 </template>
+
+<style>
+.on button[data-state="checked"] {
+  color: var(--color-success);
+  box-shadow: 0px 0px 8px 2px;
+}
+</style>
