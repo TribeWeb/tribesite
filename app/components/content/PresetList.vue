@@ -16,7 +16,7 @@ useSortable(el, factoryPresets as Ref<Schema[]>, {
       v-for="(item, i) in factoryPresets"
       :key="i"
       class="m-1 cursor-grab"
-      variant="solid"
+      variant="soft"
       size="lg"
       trailing-icon="i-lucide-grip-vertical"
     >

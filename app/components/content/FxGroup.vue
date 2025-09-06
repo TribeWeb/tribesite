@@ -50,7 +50,7 @@ watch(modelParams, (newParams, oldParams) => {
     }"
   >
     <div class="flex flex-col gap-6">
-      <div v-if="hasSwitch" class="flex flex-row gap-x-4 gap-y-6 flex-wrap justify-between">
+      <div v-if="hasSwitch" class="flex flex-0 flex-row gap-x-4 gap-y-6 flex-wrap justify-between">
         <UCheckbox
           v-model="(preset.data.tone[props.fxGroup] as { '@enabled': boolean })['@enabled']"
           variant="card"
@@ -69,13 +69,12 @@ watch(modelParams, (newParams, oldParams) => {
           variant="table"
           :class="(preset.data.tone[props.fxGroup] as { '@enabled': boolean })['@enabled'] ? '' : 'opacity-75' "
         />
-        <!-- <UIcon
-          name="i-streamline-interface-arrows-bend-up-right-1-arrow-bend-curve-change-direction-right-to-up"
-        /> -->
       </div>
-      <div class="flex flex-row gap-x-4 gap-y-6 flex-wrap">
-        <ModelControls :knob-params="knobParams" :fx-group />
-      </div>
+      <Transition name="slide-fade">
+        <div v-show="!disableControls" class="flex flex-row gap-x-4 gap-y-6 flex-wrap">
+          <ModelControls :knob-params="knobParams" :fx-group />
+        </div>
+      </Transition>
     </div>
   </UCard>
 </template>
@@ -84,5 +83,19 @@ watch(modelParams, (newParams, oldParams) => {
 .on button[data-state="checked"] {
   color: var(--color-success);
   box-shadow: 0px 0px 8px 2px;
+}
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateY(-10px);
+  transform: translateX(10px);
+  opacity: 0;
 }
 </style>
