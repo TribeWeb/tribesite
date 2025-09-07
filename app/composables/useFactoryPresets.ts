@@ -11,7 +11,7 @@ export function getRelatedPresets(
 export function useFactoryPresets() {
   const { data: factoryPresets } = useAsyncData('factoryPresets', () => {
     return queryCollection('thrPresets')
-      .select('data')
+      .select('data', 'meta', 'schema', 'version')
       .all()
   })
   return {
