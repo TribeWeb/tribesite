@@ -19,15 +19,11 @@ provide('preset', preset)
     </h2>
     <AmpSelector v-model="preset.data.tone.THRGroupAmp['@asset' as keyof Pick<THRGroupAmp, '@asset'>]" />
     <div class="flex flex-row gap-4 justify-between">
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-4 place-items-start">
         <FxGroup :fx-group="'THRGroupFX1Compressor'" />
       </div>
-      <div class="flex flex-col gap-4">
-        <FxGroup :fx-group="'THRGroupGate'" />
-      </div>
-    </div>
-    <div class="flex flex-row-reverse gap-4">
       <div class="flex flex-col gap-4 place-items-end">
+        <FxGroup :fx-group="'THRGroupGate'" />
         <FxGroup :fx-group="'THRGroupFX2Effect'" />
         <FxGroup :fx-group="'THRGroupFX3EffectEcho'" />
         <FxGroup :fx-group="'THRGroupFX4EffectReverb'" />
