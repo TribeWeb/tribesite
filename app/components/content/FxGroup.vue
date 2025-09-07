@@ -50,12 +50,10 @@ watch(modelParams, (newParams, oldParams) => {
     }"
   >
     <div class="flex flex-col gap-6">
-      <div v-if="hasSwitch" class="flex flex-0 flex-row gap-x-4 gap-y-6 flex-wrap justify-between">
-        <UCheckbox
+      <div v-if="hasSwitch" class="flex flex-0 flex-row gap-x-4 gap-y-6 flex-wrap justify-between items-center">
+        <USwitch
           v-model="(preset.data.tone[props.fxGroup] as { '@enabled': boolean })['@enabled']"
-          variant="card"
-          icon="i-fluent-circle-small-20-filled"
-          size="xs"
+          size="lg"
           color="success"
           class="on"
         />
@@ -71,7 +69,7 @@ watch(modelParams, (newParams, oldParams) => {
         />
       </div>
       <Transition name="slide-fade">
-        <div v-show="!disableControls" class="flex flex-row gap-x-4 gap-y-6 flex-wrap">
+        <div v-if="!disableControls" class="flex flex-row gap-x-4 gap-y-6 flex-wrap">
           <ModelControls :knob-params="knobParams" :fx-group />
         </div>
       </Transition>
