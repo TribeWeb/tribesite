@@ -75,7 +75,7 @@ export default defineNuxtConfig({
   image: {
     provider: 'ipx',
     format: ['webp', 'jpg', 'png', 'jpeg'],
-    dir: 'public'
+    dir: 'assets/images'
   },
 
   ogImage: {
