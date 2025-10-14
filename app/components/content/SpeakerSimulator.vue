@@ -72,7 +72,7 @@ const cabDetails = computed(() =>
 
     <template #footer>
       <div class="flex flex-col gap-2">
-        <UButtonGroup v-if="relatedPresets" class="flex-wrap">
+        <UFieldGroup v-if="relatedPresets" class="flex-wrap">
           <UButton
             v-for="item in relatedPresets"
             :key="item.data.meta.name"
@@ -84,7 +84,7 @@ const cabDetails = computed(() =>
             :ui="{ label: 'text-xs' }"
             @click="preset = factoryPresets?.find((preset) => preset.data.meta.name === item.data.meta.name) as Schema"
           />
-        </UButtonGroup>
+        </UFieldGroup>
       </div>
     </template>
   </UPageCard>

@@ -6,14 +6,6 @@ export default defineAppConfig({
       neutral: 'slate'
     }
   },
-  uiPro: {
-    footer: {
-      slots: {
-        root: 'border-t border-(--ui-border)',
-        left: 'text-sm text-(--ui-text-muted)'
-      }
-    }
-  },
   seo: {
     siteName: 'Tribeweb'
   },
@@ -56,6 +48,10 @@ export default defineAppConfig({
     }]
   },
   footer: {
+    slots: {
+      root: 'border-t border-(--ui-border)',
+      left: 'text-sm text-(--ui-text-muted)'
+    },
     credits: `Copyright Tribeweb © ${new Date().getFullYear()}`,
     colorMode: false,
     links: [{
