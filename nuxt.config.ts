@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     'nuxt-og-image',
     '@nuxthub/core',
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    '@nuxthub/core-nightly'
   ],
 
   devtools: {
