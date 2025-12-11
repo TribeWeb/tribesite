@@ -21,10 +21,10 @@ export default defineNuxtConfig({
     name: 'Tribeweb'
   },
   content: {
-    database: {
-      type: 'd1',
-      bindingName: 'DB'
-    },
+    // database: {
+    //   type: 'd1',
+    //   bindingName: 'DB'
+    // },
     preview: {
       dev: true,
       api: 'https://api.nuxt.studio'
@@ -51,6 +51,7 @@ export default defineNuxtConfig({
 
   hub: {
     database: true
+    // db: 'sqlite'
   },
 
   eslint: {
