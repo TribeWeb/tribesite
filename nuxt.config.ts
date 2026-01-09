@@ -6,9 +6,7 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/content',
     'nuxt-og-image',
-    '@nuxthub/core',
-    '@vueuse/nuxt',
-    '@nuxthub/core-nightly'
+    '@vueuse/nuxt'
   ],
 
   devtools: {
@@ -21,23 +19,6 @@ export default defineNuxtConfig({
     url: 'https://tribeweb.co.uk',
     name: 'Tribeweb'
   },
-  content: {
-    // database: {
-    //   type: 'd1',
-    //   bindingName: 'DB'
-    // },
-    preview: {
-      dev: true,
-      api: 'https://api.nuxt.studio'
-    },
-    build: {
-      markdown: {
-        highlight: {
-          langs: ['sql', 'diff']
-        }
-      }
-    }
-  },
 
   compatibilityDate: '2024-07-11',
 
@@ -48,11 +29,6 @@ export default defineNuxtConfig({
       ],
       crawlLinks: true
     }
-  },
-
-  hub: {
-    // database: true
-    db: 'sqlite'
   },
 
   eslint: {
@@ -72,12 +48,6 @@ export default defineNuxtConfig({
       dir: './app/assets/icons',
       normalizeIconName: false
     }]
-  },
-
-  image: {
-    provider: 'ipx',
-    format: ['webp', 'jpg', 'png', 'jpeg'],
-    dir: 'assets/images'
   },
 
   ogImage: {
