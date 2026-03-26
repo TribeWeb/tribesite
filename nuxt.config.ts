@@ -1,9 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-const imageProvider = process.env.NETLIFY
-  ? 'netlify'
-  : process.env.NODE_ENV === 'production'
-    ? 'ipxStatic'
-    : 'ipx'
+const isNetlify = Boolean(process.env.NETLIFY || process.env.NETLIFY_LOCAL)
+const imageProvider = process.env.NUXT_IMAGE_PROVIDER || (isNetlify ? 'netlify' : process.env.NODE_ENV === 'production' ? 'none' : 'ipx')
 
 export default defineNuxtConfig({
   modules: [
