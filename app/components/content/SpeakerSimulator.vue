@@ -60,7 +60,7 @@ const cabDetails = computed(() =>
     <ClientOnly>
       <NuxtImg
         v-if="cabDetails?.slug"
-        :src="`cabs/${cabDetails?.slug}.png`"
+        :src="`/cabs/${cabDetails?.slug}.png`"
         width="375"
         height="153"
         fit="contain"

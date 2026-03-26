@@ -20,11 +20,11 @@ export default defineAppConfig({
     search: false,
     colorMode: true,
     links: [{
-      'label': '02476 214799',
-      'icon': 'i-lucide-phone',
-      'to': 'tel:+442476214799',
+      'label': 'hello@tribeweb.co.uk',
+      'icon': 'i-lucide-mail',
+      'to': 'mailto:hello@tribeweb.co.uk',
       'target': '_blank',
-      'aria-label': 'Call our friendly team'
+      'aria-label': 'Email TribeWeb'
     }],
     menu: [{
       label: 'Home',
@@ -33,9 +33,13 @@ export default defineAppConfig({
       // to: '/#beautifully-crafted-applications-for-the-web',
       name: 'index'
     }, {
-      label: 'Testimonials',
-      icon: 'i-lucide-mail',
-      to: '/#testimonials'
+      label: 'Expertise',
+      icon: 'i-lucide-cog',
+      to: '/#expertise'
+    }, {
+      label: 'Work',
+      icon: 'i-lucide-briefcase-business',
+      to: '/#selected-work'
     }, {
       label: 'Contact',
       icon: 'i-lucide-mail',
@@ -53,28 +57,7 @@ export default defineAppConfig({
       left: 'text-sm text-(--ui-text-muted)'
     },
     credits: `Copyright Tribeweb © ${new Date().getFullYear()}`,
-    colorMode: false,
-    links: [{
-      'icon': 'i-simple-icons-nuxtdotjs',
-      'to': 'https://nuxt.com',
-      'target': '_blank',
-      'aria-label': 'Nuxt Website'
-    }, {
-      'icon': 'i-simple-icons-discord',
-      'to': 'https://discord.com/invite/ps2h6QT',
-      'target': '_blank',
-      'aria-label': 'Nuxt UI on Discord'
-    }, {
-      'icon': 'i-simple-icons-x',
-      'to': 'https://x.com/nuxt_js',
-      'target': '_blank',
-      'aria-label': 'Nuxt on X'
-    }, {
-      'icon': 'i-simple-icons-github',
-      'to': 'https://github.com/nuxt/ui',
-      'target': '_blank',
-      'aria-label': 'Nuxt UI on GitHub'
-    }]
+    colorMode: false
   },
   toc: {
     title: 'On this page',

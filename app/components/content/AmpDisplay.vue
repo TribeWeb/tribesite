@@ -60,7 +60,7 @@ const relatedPresets = computed(() =>
     <ClientOnly>
       <NuxtImg
         v-if="ampDetails?.symbolicID && !ampDetails?.symbolicID.includes('Flat')"
-        :src="`amps/${ampDetails?.symbolicID}.png`"
+        :src="`/amps/${ampDetails?.symbolicID}.png`"
         width="375"
         height="153"
         fit="contain"

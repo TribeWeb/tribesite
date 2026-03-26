@@ -93,7 +93,6 @@ watch(modelParams, (newParams, oldParams) => {
 .slide-fade-enter-from,
 .slide-fade-leave-to {
   transform: translateY(-10px);
-  transform: translateX(10px);
   opacity: 0;
 }
 </style>
