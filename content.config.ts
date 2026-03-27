@@ -1,4 +1,4 @@
-import { defineContentConfig, defineCollection, z } from '@nuxt/content'
+import { defineContentConfig, defineCollection, property, z } from '@nuxt/content'
 import { schemaPreset } from './app/utils/schemas'
 
 export default defineContentConfig({
@@ -32,11 +32,7 @@ export default defineContentConfig({
           src: z.string(),
           alt: z.string()
         }),
-        badge: z.object({
-          label: z.string(),
-          color: z.string(),
-          variant: z.string()
-        }).optional()
+        badge: z.union([property(z.object({})).inherit('@nuxt/ui/components/Badge.vue'), z.string()]).optional()
       })
     }),
     thrPresets: defineCollection({
