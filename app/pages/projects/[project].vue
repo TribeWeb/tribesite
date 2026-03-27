@@ -32,14 +32,14 @@ useSeoMeta({
   ogDescription: page.value?.seo.description
 })
 
-defineOgImageComponent('Projects', {
+defineOgImage('Projects.takumi', {
   title: page.value?.seo.title,
   description: page.value?.seo.description
   // theme: '#ff0000',
   // colorMode: 'dark'
 })
 
-const headline = computed(() => findPageHeadline(navigation?.value, page.value))
+const headline = computed(() => findPageHeadline(navigation?.value, route.path))
 
 const links = computed(() => [toc?.bottom?.edit && {
   icon: 'i-lucide-external-link',
@@ -77,7 +77,7 @@ const links = computed(() => [toc?.bottom?.edit && {
         >
           <div
             class="hidden lg:block space-y-6"
-            :class="{ '!mt-6': page.body?.toc?.links?.length }"
+            :class="{ 'mt-6!': page.body?.toc?.links?.length }"
           >
             <USeparator
               v-if="page.body?.toc?.links?.length"

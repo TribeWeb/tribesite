@@ -30,9 +30,14 @@ useSeoMeta({
   ogDescription: page.value?.seo.description
 })
 
-defineOgImageComponent('Docs')
+defineOgImage('Docs.takumi', {
+  title: page.value?.seo.title,
+  description: page.value?.seo.description
+  // theme: '#ff0000',
+  // colorMode: 'dark'
+})
 
-const headline = computed(() => findPageHeadline(navigation?.value, page.value))
+const headline = computed(() => findPageHeadline(navigation?.value, route.path))
 
 // const links = computed(() => [toc?.bottom?.edit && {
 //   icon: 'i-lucide-external-link',
