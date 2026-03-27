@@ -1,6 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-// const isNetlify = Boolean(process.env.NETLIFY || process.env.NETLIFY_LOCAL)
-// const imageProvider = process.env.NUXT_IMAGE_PROVIDER || (isNetlify ? 'netlify' : process.env.NODE_ENV === 'production' ? 'none' : 'ipx')
 
 export default defineNuxtConfig({
   modules: [
@@ -23,6 +21,8 @@ export default defineNuxtConfig({
       include: [
         '@vue/devtools-core',
         '@vue/devtools-kit',
+        '@vueuse/integrations/useSortable',
+        'zod',
       ]
     }
   },
@@ -42,11 +42,6 @@ export default defineNuxtConfig({
   },
 
   css: ['~/assets/css/main.css'],
-
-  // image: {
-  //   provider: imageProvider,
-  //   dir: 'public'
-  // },
 
   image: {
     // Use Netlify image transforms in production on Netlify, keep ipx for local/dev.
