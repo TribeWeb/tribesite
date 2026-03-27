@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-const isNetlify = Boolean(process.env.NETLIFY || process.env.NETLIFY_LOCAL)
-const imageProvider = process.env.NUXT_IMAGE_PROVIDER || (isNetlify ? 'netlify' : process.env.NODE_ENV === 'production' ? 'none' : 'ipx')
+// const isNetlify = Boolean(process.env.NETLIFY || process.env.NETLIFY_LOCAL)
+// const imageProvider = process.env.NUXT_IMAGE_PROVIDER || (isNetlify ? 'netlify' : process.env.NODE_ENV === 'production' ? 'none' : 'ipx')
 
 export default defineNuxtConfig({
   modules: [
@@ -43,9 +43,23 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  // image: {
+  //   provider: imageProvider,
+  //   dir: 'public'
+  // },
+
   image: {
-    provider: imageProvider,
-    dir: 'public'
+    // Use Netlify image transforms in production on Netlify, keep ipx for local/dev.
+    provider: process.env.NUXT_IMAGE_PROVIDER || (process.env.NETLIFY ? 'netlify' : 'ipx'),
+    format: ['webp'],
+    quality: 80,
+    screens: {
+      sm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      xxl: 1536
+    }
   },
 
   site: {
