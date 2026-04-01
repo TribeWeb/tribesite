@@ -11,7 +11,31 @@ class: min-h-dvh
 id: home
 orientation: horizontal
 ---
-:hero-image
+  :::u-marquee{:overlay='false' pause-on-hover orientation="vertical"}
+    ::::u-color-mode-image
+    ---
+    height: 300
+    width: 500
+    dark: /hero/amp-dark.png
+    fit: outside
+    format: webp
+    light: /hero/amp-light.png
+    loading: lazy
+    ---
+    ::::
+
+    ::::u-color-mode-image
+    ---
+    height: 300
+    width: 500
+    dark: /hero/picker-dark.png
+    fit: outside
+    format: webp
+    light: /hero/picker-light.png
+    loading: lazy
+    ---
+    ::::
+  :::
 
 #title
 Beautifully [crafted]{.text-primary} applications for the web
