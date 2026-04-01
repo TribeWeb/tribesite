@@ -9,11 +9,35 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     '@vueuse/nuxt',
     '@nuxt/fonts',
-    'nuxt-studio'
+    'nuxt-studio',
+    'nuxt-google-sheets-import'
   ],
 
   devtools: {
-    enabled: true
+    enabled: false
+  },
+
+  css: ['~/assets/css/main.css'],
+
+  site: {
+    url: 'https://tribeweb.co.uk',
+    name: 'Tribeweb'
+  },
+
+  runtimeConfig: {
+    // Private keys are only available on the server
+    googleApiKey: ''
+  },
+
+  compatibilityDate: '2024-07-11',
+
+  nitro: {
+    prerender: {
+      routes: [
+        '/'
+      ],
+      crawlLinks: true
+    }
   },
 
   vite: {
@@ -22,26 +46,35 @@ export default defineNuxtConfig({
         '@vue/devtools-core',
         '@vue/devtools-kit',
         '@vueuse/integrations/useSortable',
-        'zod',
+        'zod'
       ]
     }
   },
 
-   studio: {
-    repository: {
-      provider: 'github', // 'github' or 'gitlab'
-      owner: 'tribeweb',
-      repo: 'tribesite',
-      branch: 'main'
-    },
-    git: {
-      commit: {
-        messagePrefix: 'content:'
+  eslint: {
+    config: {
+      stylistic: {
+        commaDangle: 'never',
+        braceStyle: '1tbs'
       }
     }
   },
 
-  css: ['~/assets/css/main.css'],
+  googleSheetsImport: {
+    googleSheets: [
+      { id: '1aOTrB6bE4DjvEmefNMgx9-1irITIozynNW-clLi7MCs', label: 'Bible data' }
+    ]
+  },
+
+  icon: {
+    provider: 'iconify',
+    serverBundle: false,
+    customCollections: [{
+      prefix: 'svg',
+      dir: './app/assets/icons',
+      normalizeIconName: false
+    }]
+  },
 
   image: {
     // Use Netlify image transforms in production on Netlify, keep ipx for local/dev.
@@ -57,42 +90,29 @@ export default defineNuxtConfig({
     }
   },
 
-  site: {
-    url: 'https://tribeweb.co.uk',
-    name: 'Tribeweb'
-  },
-
-  compatibilityDate: '2024-07-11',
-
-  nitro: {
-    prerender: {
-      routes: [
-        '/'
-      ],
-      crawlLinks: true
-    }
-  },
-
-  eslint: {
-    config: {
-      stylistic: {
-        commaDangle: 'never',
-        braceStyle: '1tbs'
-      }
-    }
-  },
-
-  icon: {
-    provider: 'iconify',
-    serverBundle: false,
-    customCollections: [{
-      prefix: 'svg',
-      dir: './app/assets/icons',
-      normalizeIconName: false
-    }]
-  },
-
   ogImage: {
     zeroRuntime: true
+  },
+
+  studio: {
+    repository: {
+      provider: 'github', // 'github' or 'gitlab'
+      owner: 'tribeweb',
+      repo: 'tribesite',
+      branch: 'main'
+    },
+    git: {
+      commit: {
+        messagePrefix: 'content:'
+      }
+    },
+    meta: {
+      components: {
+        groups: [
+          { label: 'Content', include: ['app/components/content/**'] },
+          { label: 'Bible', include: ['app/components/bible/**'] }
+        ]
+      }
+    }
   }
 })
