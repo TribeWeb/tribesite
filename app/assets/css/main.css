@@ -5,7 +5,7 @@
 
 @theme static {
   --font-sans: 'Public Sans', sans-serif;
-  --font-display: 'Comfortaa', sans-serif;
+  --font-feature: 'Comfortaa', sans-serif;
 
   --color-tribeweb-50: #ebf8fb;
   --color-tribeweb-100: #d2eef6;
@@ -30,6 +30,13 @@
 
   --color-classic-400: #01dc51;
   --color-classic-500: #01dc51;
+
+  --color-history-700: #38638e;
+  --color-history-500: #6d9bc3;
+  --color-experience-700: #c58d00;
+  --color-experience-500: #ffd810;
+  --color-prophecy-700: #87569f;
+  --color-prophecy-500: #c19ed4;
 
 }
 

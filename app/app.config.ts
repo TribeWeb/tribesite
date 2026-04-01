@@ -3,7 +3,10 @@ export default defineAppConfig({
     colors: {
       primary: 'tribeweb',
       secondary: 'accent',
-      neutral: 'slate'
+      neutral: 'slate',
+      experience: 'experience',
+      history: 'history',
+      prophecy: 'prophecy'
     }
   },
   seo: {
