@@ -64,7 +64,7 @@ const relatedPresets = computed(() =>
         width="375"
         height="153"
         fit="contain"
-        :modifiers="{ b: `${colorMode.value === 'dark' ? '#0f172b' : '#ffffff'}` }"
+        :modifiers="{ background: `${colorMode.value === 'dark' ? '#0f172b' : '#ffffff'}` }"
         :alt="ampDetails?.inspiration"
         class="justify-self-center"
       />
