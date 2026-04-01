@@ -1,0 +1,11 @@
+{
+    "layerId": "brothers",
+    "title": "Brothers",
+    "description": "Ge 4 & Lk 15.",
+    "icons": {
+        "genesis": [],
+        "luke": []
+    },
+    "defaultIcons": ["i-twemoji-angry-face","i-twemoji-slightly-smiling-face"],
+    "bringToFront": []
+}

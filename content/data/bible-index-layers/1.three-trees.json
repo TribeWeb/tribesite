@@ -1,0 +1,11 @@
+{
+    "layerId": "threeTrees",
+    "title": "Three trees",
+    "description": "The beginning, middle and end.",
+    "icons": {
+        "genesis": [ "i-noto-deciduous-tree" ],
+        "psalms": [ "i-noto-deciduous-tree" ],
+        "revelation": [ "i-noto-deciduous-tree" ]
+    },
+    "defaultIcons": [ "i-noto-leafless-tree" ]
+}
