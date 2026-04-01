@@ -1,0 +1,22 @@
+{
+  "slug": "matthew",
+  "pageOrder": 201,
+  "name": "Matthew",
+  "shortName": "",
+  "abbr2": "Mt",
+  "abbr3": "Mat",
+  "abbrFull": "Matt.",
+  "author": "Matthew",
+  "authoredDateOrder": 50,
+  "authoredDateDisplay": "50 AD",
+  "chapterCount": 28,
+  "wordCount": 18346,
+  "wordCountRank": 51,
+  "oldTestament": false,
+  "newTestament": true,
+  "testament": "new",
+  "category": "history-entry",
+  "designation": "Gospel - synoptic",
+  "geography": "",
+  "mapSlug": "matt"
+}

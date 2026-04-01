@@ -1,0 +1,22 @@
+{
+  "slug": "2-kings",
+  "pageOrder": 112,
+  "name": "2 Kings",
+  "shortName": "",
+  "abbr2": "2Ki",
+  "abbr3": "2Ki",
+  "abbrFull": "2 Ki.",
+  "author": "Jeremiah",
+  "authoredDateOrder": -580,
+  "authoredDateDisplay": "580 BC",
+  "chapterCount": 25,
+  "wordCount": 18784,
+  "wordCountRank": 53,
+  "oldTestament": true,
+  "newTestament": false,
+  "testament": "old",
+  "category": "history",
+  "designation": "Monarchy",
+  "geography": "Jerusalem - Exile",
+  "mapSlug": "2kgs"
+}

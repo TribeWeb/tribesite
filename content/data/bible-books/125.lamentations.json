@@ -1,0 +1,22 @@
+{
+  "slug": "lamentations",
+  "pageOrder": 125,
+  "name": "Lamentations",
+  "shortName": "Lament",
+  "abbr2": "La",
+  "abbr3": "Lam",
+  "abbrFull": "Lam.",
+  "author": "Jeremiah",
+  "authoredDateOrder": -585,
+  "authoredDateDisplay": "585 BC",
+  "chapterCount": 5,
+  "wordCount": 2324,
+  "wordCountRank": 28,
+  "oldTestament": true,
+  "newTestament": false,
+  "testament": "old",
+  "category": "prophecy-entry",
+  "designation": "Post-exile",
+  "geography": "Jerusalem",
+  "mapSlug": "lam"
+}

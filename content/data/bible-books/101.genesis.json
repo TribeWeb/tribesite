@@ -1,0 +1,22 @@
+{
+  "slug": "genesis",
+  "pageOrder": 101,
+  "name": "Genesis",
+  "shortName": "",
+  "abbr2": "Ge",
+  "abbr3": "Gen",
+  "abbrFull": "Gen.",
+  "author": "Moses",
+  "authoredDateOrder": -1446,
+  "authoredDateDisplay": "1446 BC",
+  "chapterCount": 50,
+  "wordCount": 32046,
+  "wordCountRank": 65,
+  "oldTestament": true,
+  "newTestament": false,
+  "testament": "old",
+  "category": "history-entry",
+  "designation": "Pentateuch",
+  "geography": "World - Egypt",
+  "mapSlug": "gen"
+}

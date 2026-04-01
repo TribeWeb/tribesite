@@ -1,0 +1,22 @@
+{
+  "slug": "romans",
+  "pageOrder": 206,
+  "name": "Romans",
+  "shortName": "",
+  "abbr2": "Ro",
+  "abbr3": "Rom",
+  "abbrFull": "Rom.",
+  "author": "Paul",
+  "authoredDateOrder": 57,
+  "authoredDateDisplay": "57 AD",
+  "chapterCount": 16,
+  "wordCount": 7111,
+  "wordCountRank": 39,
+  "oldTestament": false,
+  "newTestament": true,
+  "testament": "new",
+  "category": "experience-entry",
+  "designation": "Paul - journey",
+  "geography": "",
+  "mapSlug": "rom"
+}

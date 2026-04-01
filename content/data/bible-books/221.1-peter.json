@@ -1,0 +1,22 @@
+{
+  "slug": "1-peter",
+  "pageOrder": 221,
+  "name": "1 Peter",
+  "shortName": "",
+  "abbr2": "1Pe",
+  "abbr3": "1Pe",
+  "abbrFull": "1 Pet.",
+  "author": "Peter",
+  "authoredDateOrder": 62,
+  "authoredDateDisplay": "62 AD",
+  "chapterCount": 5,
+  "wordCount": 1684,
+  "wordCountRank": 21,
+  "oldTestament": false,
+  "newTestament": true,
+  "testament": "new",
+  "category": "experience",
+  "designation": "General",
+  "geography": "",
+  "mapSlug": "1pet"
+}

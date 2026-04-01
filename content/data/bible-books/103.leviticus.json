@@ -1,0 +1,22 @@
+{
+  "slug": "leviticus",
+  "pageOrder": 103,
+  "name": "Leviticus",
+  "shortName": "",
+  "abbr2": "Le",
+  "abbr3": "Lev",
+  "abbrFull": "Lev.",
+  "author": "Moses",
+  "authoredDateOrder": -1405,
+  "authoredDateDisplay": "1405 BC",
+  "chapterCount": 27,
+  "wordCount": 18852,
+  "wordCountRank": 54,
+  "oldTestament": true,
+  "newTestament": false,
+  "testament": "old",
+  "category": "history-entry",
+  "designation": "Pentateuch",
+  "geography": "Desert",
+  "mapSlug": "lev"
+}

@@ -1,0 +1,22 @@
+{
+  "slug": "nahum",
+  "pageOrder": 134,
+  "name": "Nahum",
+  "shortName": "",
+  "abbr2": "Na",
+  "abbr3": "Nah",
+  "abbrFull": "Nah.",
+  "author": "Nahum",
+  "authoredDateOrder": -655,
+  "authoredDateDisplay": "655 BC",
+  "chapterCount": 3,
+  "wordCount": 855,
+  "wordCountRank": 8,
+  "oldTestament": true,
+  "newTestament": false,
+  "testament": "old",
+  "category": "prophecy",
+  "designation": "Pre-exile",
+  "geography": "Judah",
+  "mapSlug": "nah"
+}

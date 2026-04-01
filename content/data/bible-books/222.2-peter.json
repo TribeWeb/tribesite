@@ -1,0 +1,22 @@
+{
+  "slug": "2-peter",
+  "pageOrder": 222,
+  "name": "2 Peter",
+  "shortName": "",
+  "abbr2": "2Pe",
+  "abbr3": "2Pe",
+  "abbrFull": "2 Pet.",
+  "author": "Peter",
+  "authoredDateOrder": 64,
+  "authoredDateDisplay": "64 AD",
+  "chapterCount": 3,
+  "wordCount": 1099,
+  "wordCountRank": 12,
+  "oldTestament": false,
+  "newTestament": true,
+  "testament": "new",
+  "category": "experience",
+  "designation": "General",
+  "geography": "",
+  "mapSlug": "2pet"
+}

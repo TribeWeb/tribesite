@@ -1,0 +1,22 @@
+{
+  "slug": "galatians",
+  "pageOrder": 209,
+  "name": "Galatians",
+  "shortName": "",
+  "abbr2": "Ga",
+  "abbr3": "Gal",
+  "abbrFull": "Gal.",
+  "author": "Paul",
+  "authoredDateOrder": 52,
+  "authoredDateDisplay": "52 AD",
+  "chapterCount": 6,
+  "wordCount": 2230,
+  "wordCountRank": 27,
+  "oldTestament": false,
+  "newTestament": true,
+  "testament": "new",
+  "category": "experience-entry",
+  "designation": "Paul - journey",
+  "geography": "",
+  "mapSlug": "gal"
+}

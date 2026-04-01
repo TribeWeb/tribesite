@@ -1,0 +1,22 @@
+{
+  "slug": "2-chronicles",
+  "pageOrder": 114,
+  "name": "2 Chronicles",
+  "shortName": "",
+  "abbr2": "2Ch",
+  "abbr3": "2Ch",
+  "abbrFull": "2 Chr.",
+  "author": "Ezra",
+  "authoredDateOrder": -440,
+  "authoredDateDisplay": "440 BC",
+  "chapterCount": 36,
+  "wordCount": 21349,
+  "wordCountRank": 58,
+  "oldTestament": true,
+  "newTestament": false,
+  "testament": "old",
+  "category": "history",
+  "designation": "Monarchy",
+  "geography": "Jerusalem - Exile",
+  "mapSlug": "2chr"
+}

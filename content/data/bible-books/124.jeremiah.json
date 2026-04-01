@@ -1,0 +1,22 @@
+{
+  "slug": "jeremiah",
+  "pageOrder": 124,
+  "name": "Jeremiah",
+  "shortName": "",
+  "abbr2": "Je",
+  "abbr3": "Jer",
+  "abbrFull": "Jer.",
+  "author": "Jeremiah",
+  "authoredDateOrder": -585,
+  "authoredDateDisplay": "585 BC",
+  "chapterCount": 52,
+  "wordCount": 33002,
+  "wordCountRank": 66,
+  "oldTestament": true,
+  "newTestament": false,
+  "testament": "old",
+  "category": "prophecy-entry",
+  "designation": "Pre-exile",
+  "geography": "Judah",
+  "mapSlug": "jer"
+}

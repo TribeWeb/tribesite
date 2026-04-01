@@ -1,0 +1,22 @@
+{
+  "slug": "john",
+  "pageOrder": 204,
+  "name": "John",
+  "shortName": "",
+  "abbr2": "Jn",
+  "abbr3": "Joh",
+  "abbrFull": "Jn.",
+  "author": "John",
+  "authoredDateOrder": 60,
+  "authoredDateDisplay": "60 AD",
+  "chapterCount": 21,
+  "wordCount": 15635,
+  "wordCountRank": 47,
+  "oldTestament": false,
+  "newTestament": true,
+  "testament": "new",
+  "category": "history-entry",
+  "designation": "Gospel",
+  "geography": "",
+  "mapSlug": "john"
+}

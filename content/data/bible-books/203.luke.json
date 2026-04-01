@@ -1,0 +1,22 @@
+{
+  "slug": "luke",
+  "pageOrder": 203,
+  "name": "Luke",
+  "shortName": "",
+  "abbr2": "Lk",
+  "abbr3": "Luk",
+  "abbrFull": "Lk.",
+  "author": "Luke",
+  "authoredDateOrder": 55,
+  "authoredDateDisplay": "55 AD",
+  "chapterCount": 24,
+  "wordCount": 19482,
+  "wordCountRank": 55,
+  "oldTestament": false,
+  "newTestament": true,
+  "testament": "new",
+  "category": "history-entry",
+  "designation": "Gospel - synoptic",
+  "geography": "",
+  "mapSlug": "luke"
+}

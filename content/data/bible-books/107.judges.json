@@ -1,0 +1,22 @@
+{
+  "slug": "judges",
+  "pageOrder": 107,
+  "name": "Judges",
+  "shortName": "",
+  "abbr2": "Ju",
+  "abbr3": "Jdg",
+  "abbrFull": "Jdg.",
+  "author": "Samuel",
+  "authoredDateOrder": -1050,
+  "authoredDateDisplay": "1050 BC",
+  "chapterCount": 21,
+  "wordCount": 15385,
+  "wordCountRank": 46,
+  "oldTestament": true,
+  "newTestament": false,
+  "testament": "old",
+  "category": "history",
+  "designation": "Theocracy",
+  "geography": "Canaan",
+  "mapSlug": "judg"
+}

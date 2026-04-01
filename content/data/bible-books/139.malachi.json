@@ -1,0 +1,22 @@
+{
+  "slug": "malachi",
+  "pageOrder": 139,
+  "name": "Malachi",
+  "shortName": "",
+  "abbr2": "Ma",
+  "abbr3": "Mal",
+  "abbrFull": "Mal.",
+  "author": "Malachi",
+  "authoredDateOrder": -470,
+  "authoredDateDisplay": "470 BC",
+  "chapterCount": 4,
+  "wordCount": 1320,
+  "wordCountRank": 15,
+  "oldTestament": true,
+  "newTestament": false,
+  "testament": "old",
+  "category": "prophecy",
+  "designation": "Post-exile",
+  "geography": "Israel",
+  "mapSlug": "mal"
+}

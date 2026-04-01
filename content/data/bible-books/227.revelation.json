@@ -1,0 +1,22 @@
+{
+  "slug": "revelation",
+  "pageOrder": 227,
+  "name": "Revelation",
+  "shortName": "Rev",
+  "abbr2": "Re",
+  "abbr3": "Rev",
+  "abbrFull": "Rev.",
+  "author": "John",
+  "authoredDateOrder": 95,
+  "authoredDateDisplay": "95 AD",
+  "chapterCount": 22,
+  "wordCount": 9851,
+  "wordCountRank": 42,
+  "oldTestament": false,
+  "newTestament": true,
+  "testament": "new",
+  "category": "prophecy-entry",
+  "designation": "Apocalyptic",
+  "geography": "",
+  "mapSlug": "rev"
+}

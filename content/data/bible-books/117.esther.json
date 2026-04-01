@@ -1,0 +1,22 @@
+{
+  "slug": "esther",
+  "pageOrder": 117,
+  "name": "Esther",
+  "shortName": "",
+  "abbr2": "Es",
+  "abbr3": "Est",
+  "abbrFull": "Est.",
+  "author": "Mordecai?",
+  "authoredDateOrder": -440,
+  "authoredDateDisplay": "440 BC",
+  "chapterCount": 10,
+  "wordCount": 4932,
+  "wordCountRank": 35,
+  "oldTestament": true,
+  "newTestament": false,
+  "testament": "old",
+  "category": "history",
+  "designation": "Restoration",
+  "geography": "Exile",
+  "mapSlug": "esth"
+}

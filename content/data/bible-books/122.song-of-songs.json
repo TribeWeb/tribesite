@@ -1,0 +1,22 @@
+{
+  "slug": "song-of-songs",
+  "pageOrder": 122,
+  "name": "Song of Songs",
+  "shortName": "S of S",
+  "abbr2": "So",
+  "abbr3": "Son",
+  "abbrFull": "Cant.",
+  "author": "Solomon",
+  "authoredDateOrder": -965,
+  "authoredDateDisplay": "965 BC",
+  "chapterCount": 8,
+  "wordCount": 2020,
+  "wordCountRank": 23,
+  "oldTestament": true,
+  "newTestament": false,
+  "testament": "old",
+  "category": "experience-entry",
+  "designation": "Poetry",
+  "geography": "",
+  "mapSlug": "song"
+}

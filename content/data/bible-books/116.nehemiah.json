@@ -1,0 +1,22 @@
+{
+  "slug": "nehemiah",
+  "pageOrder": 116,
+  "name": "Nehemiah",
+  "shortName": "",
+  "abbr2": "Ne",
+  "abbr3": "Neh",
+  "abbrFull": "Neh.",
+  "author": "Nehemiah",
+  "authoredDateOrder": -420,
+  "authoredDateDisplay": "420 BC",
+  "chapterCount": 13,
+  "wordCount": 8507,
+  "wordCountRank": 40,
+  "oldTestament": true,
+  "newTestament": false,
+  "testament": "old",
+  "category": "history",
+  "designation": "Restoration",
+  "geography": "Exile",
+  "mapSlug": "neh"
+}

@@ -1,0 +1,22 @@
+{
+  "slug": "philippians",
+  "pageOrder": 211,
+  "name": "Philippians",
+  "shortName": "",
+  "abbr2": "Ph",
+  "abbr3": "Phi",
+  "abbrFull": "Phil.",
+  "author": "Paul",
+  "authoredDateOrder": 61,
+  "authoredDateDisplay": "61 AD",
+  "chapterCount": 4,
+  "wordCount": 1629,
+  "wordCountRank": 20,
+  "oldTestament": false,
+  "newTestament": true,
+  "testament": "new",
+  "category": "experience-entry",
+  "designation": "Paul - prison",
+  "geography": "",
+  "mapSlug": "phil"
+}

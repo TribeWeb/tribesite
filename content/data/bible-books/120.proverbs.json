@@ -1,0 +1,20 @@
+{
+  "slug": "proverbs",
+  "pageOrder": 120,
+  "name": "Proverbs",
+  "shortName": "",
+  "abbr2": "Pr",
+  "abbr3": "Pro",
+  "abbrFull": "Prov.",
+  "author": "Solomon",
+  "authoredDateOrder": -935,
+  "authoredDateDisplay": "935 BC",
+  "chapterCount": 31,
+  "wordCount": 9921,
+  "wordCountRank": 43,
+  "oldTestament": true,
+  "newTestament": false,
+  "testament": "old",
+  "category": "experience-entry",
+  "designation": "Sayings"
+}

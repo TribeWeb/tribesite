@@ -1,0 +1,22 @@
+{
+  "slug": "ecclesiastes",
+  "pageOrder": 121,
+  "name": "Ecclesiastes",
+  "shortName": "",
+  "abbr2": "Ec",
+  "abbr3": "Ecc",
+  "abbrFull": "Eccl.",
+  "author": "Solomon",
+  "authoredDateOrder": -935,
+  "authoredDateDisplay": "935 BC",
+  "chapterCount": 12,
+  "wordCount": 4537,
+  "wordCountRank": 33,
+  "oldTestament": true,
+  "newTestament": false,
+  "testament": "old",
+  "category": "experience-entry",
+  "designation": "Essay",
+  "geography": "",
+  "mapSlug": "eccl"
+}

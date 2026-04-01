@@ -1,0 +1,22 @@
+{
+  "slug": "2-timothy",
+  "pageOrder": 216,
+  "name": "2 Timothy",
+  "shortName": "",
+  "abbr2": "2Ti",
+  "abbr3": "2Ti",
+  "abbrFull": "2 Tim.",
+  "author": "Paul",
+  "authoredDateOrder": 64,
+  "authoredDateDisplay": "64 AD",
+  "chapterCount": 4,
+  "wordCount": 1238,
+  "wordCountRank": 14,
+  "oldTestament": false,
+  "newTestament": true,
+  "testament": "new",
+  "category": "experience-entry",
+  "designation": "Paul - pastoral",
+  "geography": "",
+  "mapSlug": "2tim"
+}

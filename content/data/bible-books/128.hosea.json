@@ -1,0 +1,22 @@
+{
+  "slug": "hosea",
+  "pageOrder": 128,
+  "name": "Hosea",
+  "shortName": "",
+  "abbr2": "Ho",
+  "abbr3": "Hos",
+  "abbrFull": "Hos.",
+  "author": "Hosea",
+  "authoredDateOrder": -755,
+  "authoredDateDisplay": "755 BC",
+  "chapterCount": 14,
+  "wordCount": 3615,
+  "wordCountRank": 31,
+  "oldTestament": true,
+  "newTestament": false,
+  "testament": "old",
+  "category": "prophecy",
+  "designation": "Pre-exile",
+  "geography": "Israel",
+  "mapSlug": "hos"
+}

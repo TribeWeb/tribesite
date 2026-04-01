@@ -1,0 +1,22 @@
+{
+  "slug": "ephesians",
+  "pageOrder": 210,
+  "name": "Ephesians",
+  "shortName": "",
+  "abbr2": "Ep",
+  "abbr3": "Eph",
+  "abbrFull": "Eph.",
+  "author": "Paul",
+  "authoredDateOrder": 61,
+  "authoredDateDisplay": "61 AD",
+  "chapterCount": 6,
+  "wordCount": 2422,
+  "wordCountRank": 29,
+  "oldTestament": false,
+  "newTestament": true,
+  "testament": "new",
+  "category": "experience-entry",
+  "designation": "Paul - prison",
+  "geography": "",
+  "mapSlug": "eph"
+}

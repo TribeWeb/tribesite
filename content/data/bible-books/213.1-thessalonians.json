@@ -1,0 +1,22 @@
+{
+  "slug": "1-thessalonians",
+  "pageOrder": 213,
+  "name": "1 Thessalonians",
+  "shortName": "1 Thess",
+  "abbr2": "1Th",
+  "abbr3": "1Th",
+  "abbrFull": "1 Thess.",
+  "author": "Paul",
+  "authoredDateOrder": 50,
+  "authoredDateDisplay": "50 AD",
+  "chapterCount": 5,
+  "wordCount": 1481,
+  "wordCountRank": 17,
+  "oldTestament": false,
+  "newTestament": true,
+  "testament": "new",
+  "category": "experience-entry",
+  "designation": "Paul - journey",
+  "geography": "",
+  "mapSlug": "1the"
+}

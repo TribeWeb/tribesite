@@ -1,0 +1,22 @@
+{
+  "slug": "acts",
+  "pageOrder": 205,
+  "name": "Acts",
+  "shortName": "",
+  "abbr2": "Ac",
+  "abbr3": "Act",
+  "abbrFull": "Acts",
+  "author": "Luke",
+  "authoredDateOrder": 62,
+  "authoredDateDisplay": "62 AD",
+  "chapterCount": 28,
+  "wordCount": 18450,
+  "wordCountRank": 52,
+  "oldTestament": false,
+  "newTestament": true,
+  "testament": "new",
+  "category": "history-entry",
+  "designation": "",
+  "geography": "",
+  "mapSlug": "acts"
+}
