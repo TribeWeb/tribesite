@@ -1,5 +1,6 @@
 import { defineContentConfig, defineCollection, property, z } from '@nuxt/content'
 import { schemaPreset } from './app/utils/schemas'
+import { googleSheetsImportSchemas } from './app/utils/googleSheetsImportSchemas'
 
 export default defineContentConfig({
   collections: {
@@ -39,6 +40,17 @@ export default defineContentConfig({
       type: 'data',
       source: 'data/presets/*.json',
       schema: schemaPreset
+    }),
+    bibleBooks: defineCollection({
+      type: 'data',
+      source: 'data/bible-books/*.json',
+      schema: googleSheetsImportSchemas.bibleBooks
+    }),
+    bibleIndexLayers: defineCollection({
+      type: 'data',
+      source: 'data/bible-index-layers/*.json',
+      schema: googleSheetsImportSchemas.bibleIndexLayers
     })
+
   }
 })
