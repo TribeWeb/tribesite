@@ -311,9 +311,9 @@ function getLayerIcons(bookSlug: string) {
             orientation="vertical"
             class="self-stretch mx-0.5"
             icon="i-material-symbols-menu-book-rounded"
-            type="dotted"
-            color="neutral-700"
-            :ui="{ icon: 'text-neutral-700' }"
+            type="dashed"
+            color="neutral"
+            :ui="{ icon: 'text-neutral-700', border: 'border-neutral-700' }"
           />
         </template>
       </div>
