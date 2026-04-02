@@ -170,8 +170,9 @@ function getLayerIcons(bookSlug: string) {
   <UContainer
     v-if="books"
     ref="fullscreenTarget"
+    :class="isFullscreen ? 'min-h-screen bg-default text-default' : ''"
     :style="`${isFullscreen ? 'padding: 200px 200px;' : ''}`"
-    :ui="{ base: 'px-0 sm:px-0 lg:px-0' }"
+    :ui="{ base: 'w-full max-w-none px-0 sm:px-0 lg:px-0' }"
   >
     <div
       ref="popoverBoundary"
