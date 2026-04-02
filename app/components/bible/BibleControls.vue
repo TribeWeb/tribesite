@@ -107,7 +107,7 @@ const keyFeatures = [
 </script>
 
 <template>
-  <div class="flex flex-row items-start gap-x-2" v-bind="$attrs">
+  <div class="flex flex-row items-start gap-x-2 w-full" v-bind="$attrs">
     <UTabs v-if="props.controlsVisible" :items="tabItems" :ui="{ trigger: 'grow' }" class="gap-4 w-full">
       <template #controls>
         <div class="flex flex-row items-start gap-x-4">
@@ -161,7 +161,7 @@ const keyFeatures = [
         </UPageGrid>
       </template>
     </UTabs>
-    <UFieldGroup orientation="horizontal" class="mt-1 self-start">
+    <UFieldGroup orientation="horizontal" class="mt-1 self-start ml-auto">
       <UButton
         color="primary"
         :icon="props.controlsVisible ? 'i-lucide-eye-off' : 'i-lucide-eye'"
