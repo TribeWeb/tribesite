@@ -1,30 +1,9 @@
 <script setup lang="ts">
-const TOOLTIP_RESET_MS = 2000
 const TOOLTIP_DELAY_MS = 1300
 const TOOLTIP_NEIGHBOR_RANGE = 7
 const TOOLTIP_UPPER_SIDE_OFFSET = -85
 const TOOLTIP_LOWER_SIDE_OFFSET = -45
 const testamentOptions = ref<'old' | 'new' | 'both'>('both')
-
-type BaseCategory = 'history' | 'experience' | 'prophecy'
-
-const categoryPalette: Record<BaseCategory, { solid: string, gradient: string, icon: string }> = {
-  history: {
-    solid: 'bg-history-700',
-    gradient: 'bg-gradient-to-b from-history-700 from-10% to-history-500',
-    icon: 'text-history-700'
-  },
-  experience: {
-    solid: 'bg-experience-700',
-    gradient: 'bg-gradient-to-b from-experience-700 from-10% to-experience-500',
-    icon: 'text-experience-700'
-  },
-  prophecy: {
-    solid: 'bg-prophecy-700',
-    gradient: 'bg-gradient-to-b from-prophecy-700 from-10% to-prophecy-500',
-    icon: 'text-prophecy-700'
-  }
-}
 
 const options = ref<string[]>([
   'divisions',
@@ -34,82 +13,47 @@ const options = ref<string[]>([
 
 const optionSet = computed(() => new Set(options.value))
 
-const { data: books } = await useAsyncData('bible-books', () => {
-  return queryCollection('bibleBooks').all()
-})
-
-const { data: layers } = await useAsyncData('bible-index-layers', () => {
-  return queryCollection('bibleIndexLayers').all()
-})
-
 const layer = ref('')
 
-const layerDetails = computed(() => {
-  return layers.value?.find(l => l.layerId === layer.value)
-})
+const {
+  books,
+  booksWithBookEnd,
+  bookWidth
+} = useBibleIndexData(
+  testamentOptions,
+  optionSet,
+  TOOLTIP_UPPER_SIDE_OFFSET,
+  TOOLTIP_LOWER_SIDE_OFFSET
+)
 
-const openBookSlugSet = computed(() => {
-  return new Set(Object.keys(layerDetails.value?.icons ?? {}))
-})
+const {
+  layers,
+  layerDetails,
+  isPopoverOpen,
+  getLayerIcons
+} = useBibleLayers(layer)
 
-const filteredBooks = computed(() => {
-  return (books.value || []).filter((book) => {
-    return testamentOptions.value === book.testament || testamentOptions.value === 'both'
-  })
-})
+const {
+  tooltipIndex,
+  handlePointerEnter,
+  handlePointerLeave,
+  isTooltipIdle
+} = useTooltipHoverState(80)
 
-const bookWidth = computed(() => filteredBooks.value ? 100 / filteredBooks.value.length : 0)
-
-function getBookEnds(bookCategory: string, thisBookCategory: string) {
-  if (optionSet.value.has('categories')) {
-    return bookCategory !== thisBookCategory
-  }
-  return bookCategory?.split('-')[0] !== thisBookCategory.split('-')[0]
-}
-
-const booksWithBookEnd = computed(() => {
-  return (filteredBooks.value || []).map((book, index, allBooks) => {
-    const previousBook = allBooks[index - 1]
-    const nextBook = allBooks[index + 1]
-    const isCategoryStart = previousBook ? getBookEnds(previousBook?.category, book.category) : true
-    const isCategoryEnd = nextBook ? getBookEnds(nextBook?.category, book.category) : true
-    const isLastBook = index === allBooks.length - 1
-
-    let bookEnd: 'start' | 'end' | 'center' | undefined = 'center'
-    let bookAlign: typeof TOOLTIP_UPPER_SIDE_OFFSET | typeof TOOLTIP_LOWER_SIDE_OFFSET = TOOLTIP_UPPER_SIDE_OFFSET
-
-    if (isCategoryEnd) {
-      bookEnd = 'end'
-      bookAlign = isLastBook ? TOOLTIP_UPPER_SIDE_OFFSET : TOOLTIP_LOWER_SIDE_OFFSET
-    } else if (isCategoryStart) {
-      bookEnd = 'start'
-    }
-
-    return {
-      ...book,
-      bookEnd,
-      bookAlign
-    }
-  })
-})
-
-const tooltipIndex = ref<number>(-100)
-const { ready, start } = useTimeout(TOOLTIP_RESET_MS, { controls: true })
-watch(ready, (isReady) => {
-  if (isReady) {
-    tooltipIndex.value = -100
-  }
-})
+const { getCategoryColourClass } = useBibleCategoryStyles()
 
 const tooltipBoundary = ref<HTMLElement | null>(null)
 const popoverBoundary = ref<HTMLElement | null>(null)
 const fullscreenTarget = useTemplateRef<HTMLElement>('fullscreenTarget')
-const controlsVisible = ref(true)
 const { isFullscreen, toggle: toggleFullscreen } = useFullscreen(fullscreenTarget)
 
-function toggleControlsVisible() {
-  controlsVisible.value = !controlsVisible.value
-}
+const containerClass = computed(() => {
+  if (isFullscreen.value) {
+    return 'w-full max-w-none min-h-screen bg-default text-default py-[12vh] px-[10vw]'
+  }
+
+  return 'w-full max-w-none px-0 sm:px-0 lg:px-0'
+})
 
 function getBookHeight(bookRank: number) {
   if (optionSet.value.has('bookLength')) {
@@ -129,54 +73,35 @@ function getDivisionBorderStyle(bookEnd?: 'start' | 'end' | 'center') {
   return 'border: none;'
 }
 
-function getBaseCategory(category: string): BaseCategory {
-  const [base] = category.split('-')
-  if (base === 'history' || base === 'experience' || base === 'prophecy') {
-    return base
-  }
-  return 'history'
-}
-
-function getCategoryColourClass(category: string, useGradient: boolean) {
-  const base = getBaseCategory(category)
-  const shouldUseGradient = useGradient && !category.endsWith('-entry')
-  return shouldUseGradient ? categoryPalette[base].gradient : categoryPalette[base].solid
-}
-
 function isTooltipOpen(bookEnd: 'start' | 'end' | 'center' | undefined, index: number) {
   if (!optionSet.value.has('bookNames')) {
     return false
   }
 
-  return ((bookEnd !== 'center' && (tooltipIndex.value >= index + TOOLTIP_NEIGHBOR_RANGE || tooltipIndex.value <= index - TOOLTIP_NEIGHBOR_RANGE))
-    || tooltipIndex.value === index)
-}
+  const activeIndex = tooltipIndex.value
 
-function isPopoverOpen(bookSlug: string) {
-  return openBookSlugSet.value.has(bookSlug)
-}
-
-function getLayerIcons(bookSlug: string) {
-  const iconsForBook = layerDetails.value?.icons?.[bookSlug]
-  if (iconsForBook && iconsForBook.length > 0) {
-    return iconsForBook
+  if (isTooltipIdle(activeIndex)) {
+    // Idle state: show category boundary labels as the default overview.
+    return bookEnd !== 'center'
   }
 
-  return layerDetails.value?.defaultIcons ?? []
+  const isCurrentBook = activeIndex === index
+  const isCategoryBoundary = bookEnd !== 'center'
+  const isOutsideNeighborRange = activeIndex >= index + TOOLTIP_NEIGHBOR_RANGE
+    || activeIndex <= index - TOOLTIP_NEIGHBOR_RANGE
+
+  return isCurrentBook || (isCategoryBoundary && isOutsideNeighborRange)
 }
 </script>
 
 <template>
-  <UContainer
+  <div
     v-if="books"
     ref="fullscreenTarget"
-    :class="isFullscreen ? 'min-h-screen bg-default text-default' : ''"
-    :style="`${isFullscreen ? 'padding: 200px 200px;' : ''}`"
-    :ui="{ base: 'w-full max-w-none px-0 sm:px-0 lg:px-0' }"
+    :class="containerClass"
   >
     <div
       ref="popoverBoundary"
-      :style="`${isFullscreen ? 'margin-bottom: 200px;' : ''}`"
       class="h-64 py-4 flex flex-col justify-end"
     >
       <div ref="tooltipBoundary" class="flex flex-row ">
@@ -184,14 +109,8 @@ function getLayerIcons(bookSlug: string) {
           v-for="(book, index) in booksWithBookEnd"
           :key="book.slug"
         >
-          <USeparator
+          <BibleSeperator
             v-if="book.slug === 'matthew' && testamentOptions === 'new'"
-            orientation="vertical"
-            class="self-stretch mx-0.5"
-            icon="i-material-symbols-menu-book-rounded"
-            type="dashed"
-            color="neutral"
-            :ui="{ icon: 'text-neutral-700 dark:text-neutral-300', border: 'border-neutral-700' }"
           />
           <div
             :style="`width: ${bookWidth}%;`"
@@ -239,14 +158,13 @@ function getLayerIcons(bookSlug: string) {
               :delay-duration="TOOLTIP_DELAY_MS"
               arrow
               :content="{
-                align: tooltipIndex === index ? 'center' : book.bookEnd,
+                align: tooltipIndex === index ? 'center' : (book.bookEnd || 'center'),
                 side: 'bottom',
-                sideOffset: tooltipIndex === index ? TOOLTIP_UPPER_SIDE_OFFSET : book.bookAlign,
+                sideOffset: tooltipIndex === index ? TOOLTIP_UPPER_SIDE_OFFSET : (book.bookAlign ?? TOOLTIP_UPPER_SIDE_OFFSET),
                 alignOffset: 0,
                 collisionBoundary: tooltipBoundary,
                 collisionPadding: 0
               }"
-              :text="book.shortName || book.name"
               :ui="{
                 content: 'px-1.5 text-sm text-white font-bold bg-neutral-900/70 ring-neutral-900/70',
                 arrow: 'fill-neutral-900/70 stroke-neutral-900/70'
@@ -256,18 +174,21 @@ function getLayerIcons(bookSlug: string) {
                 class="basis-9/12"
                 :style="getDivisionBorderStyle(book.bookEnd)"
                 :class="getCategoryColourClass(book.category, optionSet.has('categories'))"
-                @pointerenter="tooltipIndex = index, start()"
+                @pointerenter="handlePointerEnter(index)"
+                @pointerleave="handlePointerLeave()"
               />
+              <template #content>
+                <span
+                  @pointerenter="handlePointerEnter(index)"
+                  @pointerleave="handlePointerLeave()"
+                >
+                  {{ book.shortName || book.name }}
+                </span>
+              </template>
             </UTooltip>
           </div>
-          <USeparator
+          <BibleSeperator
             v-if="book.slug === 'malachi' && testamentOptions !== 'new'"
-            orientation="vertical"
-            class="self-stretch mx-0.5"
-            icon="i-material-symbols-menu-book-rounded"
-            type="dashed"
-            color="neutral"
-            :ui="{ icon: 'text-neutral-700 dark:text-neutral-300', border: 'border-neutral-700' }"
           />
         </template>
       </div>
@@ -278,12 +199,10 @@ function getLayerIcons(bookSlug: string) {
       v-model:layer="layer"
       :layers="layers || []"
       :is-fullscreen="isFullscreen"
-      :controls-visible="controlsVisible"
       class="mt-10"
       @toggle-fullscreen="toggleFullscreen()"
-      @toggle-controls="toggleControlsVisible"
     />
-  </UContainer>
+  </div>
 </template>
 
 <style>
