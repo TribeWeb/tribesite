@@ -1,47 +1,10 @@
 <script setup lang="ts">
-import type { CheckboxGroupItem, RadioGroupItem } from '@nuxt/ui'
-
 const TOOLTIP_RESET_MS = 2000
 const TOOLTIP_DELAY_MS = 1300
 const TOOLTIP_NEIGHBOR_RANGE = 7
 const TOOLTIP_UPPER_SIDE_OFFSET = -85
 const TOOLTIP_LOWER_SIDE_OFFSET = -45
-
-const testamentItems = ref<RadioGroupItem[]>([
-  {
-    label: 'Both testaments',
-    value: 'both'
-  },
-  {
-    label: 'Old Testament',
-    value: 'old'
-  },
-  {
-    label: 'New Testament',
-    value: 'new'
-  }
-])
-
 const testamentOptions = ref<'old' | 'new' | 'both'>('both')
-
-const items = ref<CheckboxGroupItem[]>([
-  {
-    label: 'Divisions',
-    value: 'divisions'
-  },
-  {
-    label: 'Categories',
-    value: 'categories'
-  },
-  {
-    label: 'Book length',
-    value: 'bookLength'
-  },
-  {
-    label: 'Book names',
-    value: 'bookNames'
-  }
-])
 
 type BaseCategory = 'history' | 'experience' | 'prophecy'
 
@@ -63,7 +26,7 @@ const categoryPalette: Record<BaseCategory, { solid: string, gradient: string, i
   }
 }
 
-const options = ref([
+const options = ref<string[]>([
   'divisions',
   'categories',
   'bookNames'
@@ -140,7 +103,13 @@ watch(ready, (isReady) => {
 
 const tooltipBoundary = ref<HTMLElement | null>(null)
 const popoverBoundary = ref<HTMLElement | null>(null)
-const keyPopoverBoundary = ref<HTMLElement | null>(null)
+const fullscreenTarget = useTemplateRef<HTMLElement>('fullscreenTarget')
+const controlsVisible = ref(true)
+const { isFullscreen, toggle: toggleFullscreen } = useFullscreen(fullscreenTarget)
+
+function toggleControlsVisible() {
+  controlsVisible.value = !controlsVisible.value
+}
 
 function getBookHeight(bookRank: number) {
   if (optionSet.value.has('bookLength')) {
@@ -174,42 +143,6 @@ function getCategoryColourClass(category: string, useGradient: boolean) {
   return shouldUseGradient ? categoryPalette[base].gradient : categoryPalette[base].solid
 }
 
-const keyFeatures = computed(() => {
-  return [
-    {
-      key: 'history',
-      title: 'Books of History',
-      description: 'Carry the core historical narrative and redemptive storyline.',
-      leadingIcon: `${categoryPalette.history.icon} size-12`
-    },
-    {
-      key: 'experience',
-      title: 'Books of Experience',
-      description: 'Books of letters, poetry and philosophy with collections of songs and wise sayings.',
-      leadingIcon: `${categoryPalette.experience.icon} size-12`
-    },
-    {
-      key: 'prophecy',
-      title: 'Books of Prophecy',
-      description: 'Books and collections by the prophets containing visions and apocalyptic writings.',
-      leadingIcon: `${categoryPalette.prophecy.icon} size-12`
-    }
-  ]
-})
-
-const keyFeatureUiBase = {
-  root: 'mb-2',
-  title: 'text-md',
-  description: 'text-sm'
-}
-
-function getKeyFeatureUi(leadingIcon: string) {
-  return {
-    ...keyFeatureUiBase,
-    leadingIcon
-  }
-}
-
 function isTooltipOpen(bookEnd: 'start' | 'end' | 'center' | undefined, index: number) {
   if (!optionSet.value.has('bookNames')) {
     return false
@@ -234,18 +167,37 @@ function getLayerIcons(bookSlug: string) {
 </script>
 
 <template>
-  <div v-if="books" ref="keyPopoverBoundary">
-    <div ref="popoverBoundary" class="h-64 py-4 flex flex-col justify-end">
+  <UContainer
+    v-if="books"
+    ref="fullscreenTarget"
+    :style="`${isFullscreen ? 'padding: 200px 200px;' : ''}`"
+    :ui="{ base: 'px-0 sm:px-0 lg:px-0' }"
+  >
+    <div
+      ref="popoverBoundary"
+      :style="`${isFullscreen ? 'margin-bottom: 200px;' : ''}`"
+      class="h-64 py-4 flex flex-col justify-end"
+    >
       <div ref="tooltipBoundary" class="flex flex-row ">
         <template
           v-for="(book, index) in booksWithBookEnd"
           :key="book.slug"
         >
+          <USeparator
+            v-if="book.slug === 'matthew' && testamentOptions === 'new'"
+            orientation="vertical"
+            class="self-stretch mx-0.5"
+            icon="i-material-symbols-menu-book-rounded"
+            type="dashed"
+            color="neutral"
+            :ui="{ icon: 'text-neutral-700 dark:text-neutral-300', border: 'border-neutral-700' }"
+          />
           <div
             :style="`width: ${bookWidth}%;`"
             class="flex flex-col min-h-30"
           >
             <UPopover
+              :portal="!isFullscreen"
               :open="isPopoverOpen(book.slug)"
               :arrow="{ rounded: false }"
               :content="{
@@ -281,6 +233,7 @@ function getLayerIcons(bookSlug: string) {
             </UPopover>
             <UTooltip
               :key="index"
+              :portal="!isFullscreen"
               :open="isTooltipOpen(book.bookEnd, index)"
               :delay-duration="TOOLTIP_DELAY_MS"
               arrow
@@ -307,93 +260,29 @@ function getLayerIcons(bookSlug: string) {
             </UTooltip>
           </div>
           <USeparator
-            v-if="book.slug === 'malachi'"
+            v-if="book.slug === 'malachi' && testamentOptions !== 'new'"
             orientation="vertical"
             class="self-stretch mx-0.5"
             icon="i-material-symbols-menu-book-rounded"
             type="dashed"
             color="neutral"
-            :ui="{ icon: 'text-neutral-700', border: 'border-neutral-700' }"
+            :ui="{ icon: 'text-neutral-700 dark:text-neutral-300', border: 'border-neutral-700' }"
           />
         </template>
       </div>
     </div>
-    <div class="flex flex-row items-start gap-x-4 mt-10">
-      <URadioGroup
-        v-model="testamentOptions"
-        :items="testamentItems"
-        size="sm"
-        variant="table"
-        orientation="vertical"
-        class="w-48"
-      />
-      <UCheckboxGroup
-        v-model="options"
-        :items="items"
-        size="sm"
-        variant="table"
-        orientation="vertical"
-        class="w-48"
-      />
-
-      <div class="w-70 flex flex-row place-self-start gap-x-1">
-        <USelect
-          v-model="layer"
-          :items="layers"
-          leading
-          value-key="layerId"
-          label-key="title"
-          placeholder="Image overlays"
-          class="w-64"
-        />
-        <UButton
-          v-if="layerDetails"
-          icon="i-lucide-x"
-          variant="soft"
-          size="sm"
-          @click="layer = ''"
-        />
-      </div>
-      <UPopover
-        class="ml-auto self-start"
-        :arrow="{ rounded: false }"
-        :content="{
-          side: 'left',
-          align: 'start',
-          alignOffset: 0,
-          collisionBoundary: keyPopoverBoundary,
-          collisionPadding: 0
-        }"
-        :ui="{ content: 'max-w-[min(95vw,56rem)] overflow-x-auto' }"
-      >
-        <UButton
-          icon="i-lucide-key"
-          variant="solid"
-          size="sm"
-          color="primary"
-        />
-        <template #content>
-          <UPageGrid :ui="{ base: 'relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 p-4' }">
-            <UPageFeature
-              v-for="feature in keyFeatures"
-              :key="feature.key"
-              :title="feature.title"
-              :description="feature.description"
-              icon="i-mdi-square-rounded"
-              :ui="getKeyFeatureUi(feature.leadingIcon)"
-            />
-            <UPageFeature
-              v-if="optionSet.has('categories')"
-              title="Books of Entry"
-              description="Gradient colours are for books that follow collections that serve as entry points to each set of writings."
-              icon="i-mdi-square-rounded"
-              :ui="getKeyFeatureUi('text-neutral-200 size-12')"
-            />
-          </UPageGrid>
-        </template>
-      </UPopover>
-    </div>
-  </div>
+    <BibleControls
+      v-model:testament-options="testamentOptions"
+      v-model:options="options"
+      v-model:layer="layer"
+      :layers="layers || []"
+      :is-fullscreen="isFullscreen"
+      :controls-visible="controlsVisible"
+      class="mt-10"
+      @toggle-fullscreen="toggleFullscreen()"
+      @toggle-controls="toggleControlsVisible"
+    />
+  </UContainer>
 </template>
 
 <style>
