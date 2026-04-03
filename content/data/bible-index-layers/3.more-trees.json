@@ -6,6 +6,7 @@
         "genesis": ["i-noto-deciduous-tree"],
         "job": ["i-game-icons-stump-regrowth"],
         "psalms": ["i-noto-deciduous-tree"],
+        "daniel": ["i-noto-deciduous-tree","i-game-icons-stump-regrowth"],
         "acts": ["i-noto-v1-latin-cross"],
         "revelation": ["i-noto-deciduous-tree"]
     },

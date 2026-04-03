@@ -1,0 +1,20 @@
+{
+    "layerId": "treeImages",
+    "title": "Tree images",
+    "description": "Images related to trees in the Psalm 1.",
+    "icons": {
+        "psalms": [ 
+            "i-noto-deciduous-tree", 
+            "i-game-icons-stump-regrowth" , 
+            "i-noto-v1-latin-cross" , 
+            "i-noto-v1-grapes",
+            "i-twemoji-sunflower",
+            "i-noto-v1-water-wave",
+            "i-meteocons-thunderstorms-extreme-fill",
+            "i-noto-eye",
+            "i-twemoji-herb",
+            "i-noto-rainbow" 
+        ]
+    },
+    "defaultIcons": []
+}
