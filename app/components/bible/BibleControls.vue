@@ -154,7 +154,7 @@ const fullscreenHeaderUi = { root: fullscreenHeaderRootClass }
       <UPopover
         mode="click"
         :portal="!props.isFullscreen"
-        :content="{ side: 'bottom', align: 'end' }"
+        :content="{ side: 'top', align: 'end' }"
       >
         <UButton
           color="neutral"
