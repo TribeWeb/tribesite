@@ -97,8 +97,8 @@ function isTooltipOpen(bookEnd: 'start' | 'end' | 'center' | undefined, index: n
             v-if="book.slug === 'matthew' && testamentOptions === 'new'"
           />
           <div
-            :style="{ '--book-width': `${bookWidth}%` }"
-            class="flex flex-col min-h-30 w-(--book-width)"
+            :style="`width: ${bookWidth}%;`"
+            class="flex flex-col min-h-30"
           >
             <UPopover
               :portal="!isFullscreen"
@@ -124,8 +124,7 @@ function isTooltipOpen(bookEnd: 'start' | 'end' | 'center' | undefined, index: n
                 }"
               >
                 <div
-                  :style="{ '--book-height': `${getBookHeight(book.wordCountRank)}%` }"
-                  class="h-(--book-height)"
+                  :style="`height: ${getBookHeight(book.wordCountRank)}%;`"
                   :class="getCategoryColourClass(book.category, false)"
                 />
               </div>
