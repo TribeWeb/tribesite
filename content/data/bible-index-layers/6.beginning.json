@@ -1,0 +1,11 @@
+{
+    "layerId": "beginning",
+    "title": "In the beginning",
+    "description": "Genesis and John.",
+    "icons": {
+        "genesis": [ "i-mdi-alpha" ],
+        "john": [ "i-material-symbols-download-2" ],
+        "revelation": [ "i-mdi-omega" ]
+    },
+    "defaultIcons": [ "" ]
+}
