@@ -17,6 +17,15 @@ const emit = defineEmits<{
 
 const isTestamentsOpen = ref(false)
 const isOptionsOpen = ref(false)
+const isTouchInput = ref(false)
+
+const controlsPopoverMode = computed(() => {
+  return isTouchInput.value ? 'click' : 'hover'
+})
+
+onMounted(() => {
+  isTouchInput.value = window.matchMedia('(hover: none), (pointer: coarse)').matches
+})
 
 const testamentOptions = defineModel<'old' | 'new' | 'both'>('testamentOptions', {
   required: true
@@ -71,9 +80,9 @@ const keyFeatures = [
 ]
 
 const fullscreenHeaderRootClass = [
-  'fixed inset-x-0 !top-auto bottom-0 z-50',
+  'fixed inset-x-0 !top-auto bottom-0',
   'border-t border-default bg-default/95',
-  'backdrop-blur supports-backdrop-filter:bg-default/80'
+  'backdrop-blur supports-backdrop-filter:bg-default/95'
 ].join(' ')
 const fullscreenHeaderUi = { root: fullscreenHeaderRootClass }
 </script>
@@ -83,7 +92,7 @@ const fullscreenHeaderUi = { root: fullscreenHeaderRootClass }
     <template #left>
       <div class="flex items-center gap-2">
         <UPopover
-          mode="hover"
+          :mode="controlsPopoverMode"
           :portal="!props.isFullscreen"
           :content="{ side: 'top', align: 'start' }"
           @update:open="isTestamentsOpen = $event"
@@ -106,7 +115,7 @@ const fullscreenHeaderUi = { root: fullscreenHeaderRootClass }
         </UPopover>
 
         <UPopover
-          mode="hover"
+          :mode="controlsPopoverMode"
           :portal="!props.isFullscreen"
           :content="{ side: 'top', align: 'start' }"
           @update:open="isOptionsOpen = $event"
@@ -135,6 +144,7 @@ const fullscreenHeaderUi = { root: fullscreenHeaderRootClass }
         v-model="layer"
         :portal="!props.isFullscreen"
         :items="props.layers"
+        :content="{ side: 'top' }"
         leading
         value-key="layerId"
         label-key="title"
