@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from '@nuxt/ui'
+import type { RadioGroupItem, CheckboxGroupItem } from '@nuxt/ui'
 
 type LayerItem = {
   layerId: string
@@ -15,52 +15,8 @@ const emit = defineEmits<{
   toggleFullscreen: []
 }>()
 
-const showKeyPanel = ref(false)
-
-function toggleKeyPanel() {
-  showKeyPanel.value = !showKeyPanel.value
-}
-
-function checkboxIcon(checked: boolean) {
-  return checked ? 'i-lucide-square-check-big' : 'i-lucide-square'
-}
-
-function preventMenuNavigation(e: Event) {
-  e.preventDefault()
-}
-
-function createMenuActionItem(
-  label: string,
-  value: string,
-  icon: string,
-  onAction: (e: Event) => void
-): NavigationMenuItem {
-  return {
-    label,
-    value,
-    icon,
-    type: 'trigger',
-    as: 'button',
-    onClick: onAction,
-    onSelect: onAction
-  }
-}
-
-function createMenuTriggerItem(
-  label: string,
-  icon: string,
-  children: NavigationMenuItem[]
-): NavigationMenuItem {
-  return {
-    label,
-    icon,
-    type: 'trigger',
-    as: 'button',
-    onClick: preventMenuNavigation,
-    onSelect: preventMenuNavigation,
-    children
-  }
-}
+const isTestamentsOpen = ref(false)
+const isOptionsOpen = ref(false)
 
 const testamentOptions = defineModel<'old' | 'new' | 'both'>('testamentOptions', {
   required: true
@@ -74,44 +30,17 @@ const layer = defineModel<string>('layer', {
   required: true
 })
 
-function selectTestament(option: 'both' | 'old' | 'new', e?: Event) {
-  e?.preventDefault()
-  testamentOptions.value = option
-}
+const testamentItems = ref<RadioGroupItem[]>([
+  { label: 'Both testaments', value: 'both' },
+  { label: 'Old Testament', value: 'old' },
+  { label: 'New Testament', value: 'new' }
+])
 
-function toggleOption(option: string, e?: Event) {
-  e?.preventDefault()
-
-  if (options.value.includes(option)) {
-    options.value = options.value.filter(value => value !== option)
-    return
-  }
-
-  options.value = [...options.value, option]
-}
-
-function handleTestamentMenuUpdate(value: string | string[] | undefined) {
-  if (Array.isArray(value)) {
-    return
-  }
-
-  if (value === 'both' || value === 'old' || value === 'new') {
-    testamentOptions.value = value
-  }
-}
-
-const headerMenuItems = computed<NavigationMenuItem[]>(() => [
-  createMenuTriggerItem('Testaments', 'i-lucide-book-open', [
-    createMenuActionItem('Both testaments', 'both', checkboxIcon(testamentOptions.value === 'both'), e => selectTestament('both', e)),
-    createMenuActionItem('Old Testament', 'old', checkboxIcon(testamentOptions.value === 'old'), e => selectTestament('old', e)),
-    createMenuActionItem('New Testament', 'new', checkboxIcon(testamentOptions.value === 'new'), e => selectTestament('new', e))
-  ]),
-  createMenuTriggerItem('Options', 'i-lucide-list-filter', [
-    createMenuActionItem('Divisions', 'divisions', checkboxIcon(options.value.includes('divisions')), e => toggleOption('divisions', e)),
-    createMenuActionItem('Categories', 'categories', checkboxIcon(options.value.includes('categories')), e => toggleOption('categories', e)),
-    createMenuActionItem('Book length', 'bookLength', checkboxIcon(options.value.includes('bookLength')), e => toggleOption('bookLength', e)),
-    createMenuActionItem('Book names', 'bookNames', checkboxIcon(options.value.includes('bookNames')), e => toggleOption('bookNames', e))
-  ])
+const optionItems = ref<CheckboxGroupItem[]>([
+  { label: 'Divisions', value: 'divisions' },
+  { label: 'Categories', value: 'categories' },
+  { label: 'Book length', value: 'bookLength' },
+  { label: 'Book names', value: 'bookNames' }
 ])
 
 const keyFeatures = [
@@ -147,28 +76,58 @@ const fullscreenHeaderRootClass = [
   'backdrop-blur supports-backdrop-filter:bg-default/80'
 ].join(' ')
 const fullscreenHeaderUi = { root: fullscreenHeaderRootClass }
-
-const navigationMenuUi = computed(() => ({
-  root: 'w-full min-w-56',
-  viewportWrapper: props.isFullscreen
-    ? 'w-full justify-start top-auto bottom-full mb-2'
-    : 'w-full justify-start',
-  viewport: 'w-72 sm:w-80',
-  content: 'w-72 sm:w-80',
-  childList: 'grid-cols-1 w-full'
-}))
 </script>
 
 <template>
   <UHeader :ui="props.isFullscreen ? fullscreenHeaderUi : {}">
-    <template #title>
-      <UNavigationMenu
-        :items="headerMenuItems"
-        value-key="value"
-        highlight
-        :ui="navigationMenuUi"
-        @update:model-value="handleTestamentMenuUpdate"
-      />
+    <template #left>
+      <div class="flex items-center gap-2">
+        <UPopover
+          mode="hover"
+          :portal="!props.isFullscreen"
+          :content="{ side: 'top', align: 'start' }"
+          @update:open="isTestamentsOpen = $event"
+        >
+          <UButton
+            label="Testaments"
+            :trailing-icon="isTestamentsOpen ? 'i-lucide-chevron-up' : 'i-lucide-chevron-down'"
+            variant="soft"
+            color="neutral"
+            @click.prevent
+          />
+          <template #content>
+            <div class="w-48 p-3">
+              <URadioGroup
+                v-model="testamentOptions"
+                :items="testamentItems"
+              />
+            </div>
+          </template>
+        </UPopover>
+
+        <UPopover
+          mode="hover"
+          :portal="!props.isFullscreen"
+          :content="{ side: 'top', align: 'start' }"
+          @update:open="isOptionsOpen = $event"
+        >
+          <UButton
+            label="Options"
+            :trailing-icon="isOptionsOpen ? 'i-lucide-chevron-up' : 'i-lucide-chevron-down'"
+            variant="soft"
+            color="neutral"
+            @click.prevent
+          />
+          <template #content>
+            <div class="w-48 p-3">
+              <UCheckboxGroup
+                v-model="options"
+                :items="optionItems"
+              />
+            </div>
+          </template>
+        </UPopover>
+      </div>
     </template>
 
     <div class="w-70 flex flex-row place-self-start gap-x-1">
@@ -192,15 +151,36 @@ const navigationMenuUi = computed(() => ({
     </div>
 
     <template #right>
+      <UPopover
+        mode="click"
+        :portal="!props.isFullscreen"
+        :content="{ side: 'bottom', align: 'end' }"
+      >
+        <UButton
+          color="neutral"
+          icon="i-lucide-map"
+          variant="subtle"
+          size="md"
+        />
+        <template #content>
+          <div class="w-[min(90vw,56rem)] p-3">
+            <UPageGrid
+              :ui="{ base: 'relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2' }"
+            >
+              <UPageFeature
+                v-for="feature in keyFeatures"
+                :key="feature.key"
+                :title="feature.title"
+                :description="feature.description"
+                icon="i-mdi-square-rounded"
+                :ui="{ leadingIcon: `${feature.leadingIcon}` }"
+              />
+            </UPageGrid>
+          </div>
+        </template>
+      </UPopover>
       <UButton
-        color="primary"
-        :icon="showKeyPanel ? 'i-lucide-sliders-horizontal' : 'i-lucide-map'"
-        variant="subtle"
-        size="md"
-        @click="toggleKeyPanel"
-      />
-      <UButton
-        color="primary"
+        color="neutral"
         :icon="props.isFullscreen ? 'i-lucide-minimize' : 'i-lucide-fullscreen'"
         variant="subtle"
         size="md"
@@ -208,19 +188,4 @@ const navigationMenuUi = computed(() => ({
       />
     </template>
   </UHeader>
-  <div v-bind="$attrs" class="w-full">
-    <UPageGrid
-      v-if="showKeyPanel"
-      :ui="{ base: 'relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 p-4' }"
-    >
-      <UPageFeature
-        v-for="feature in keyFeatures"
-        :key="feature.key"
-        :title="feature.title"
-        :description="feature.description"
-        icon="i-mdi-square-rounded"
-        :ui="{ leadingIcon: `${feature.leadingIcon}` }"
-      />
-    </UPageGrid>
-  </div>
 </template>

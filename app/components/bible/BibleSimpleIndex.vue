@@ -47,30 +47,11 @@ const popoverBoundary = ref<HTMLElement | null>(null)
 const fullscreenTarget = useTemplateRef<HTMLElement>('fullscreenTarget')
 const { isFullscreen, toggle: toggleFullscreen } = useFullscreen(fullscreenTarget)
 
-const containerClass = computed(() => {
-  if (isFullscreen.value) {
-    return 'w-full max-w-none min-h-screen bg-default text-default py-[12vh] px-[10vw]'
-  }
-
-  return 'w-full max-w-none px-0 sm:px-0 lg:px-0'
-})
-
 function getBookHeight(bookRank: number) {
   if (optionSet.value.has('bookLength')) {
     return (bookRank / 66) * 100
   }
   return 100
-}
-
-function getDivisionBorderStyle(bookEnd?: 'start' | 'end' | 'center') {
-  if (optionSet.value.has('divisions')) {
-    if (bookEnd && bookEnd !== 'end') {
-      return 'border: none;'
-    }
-    return 'border-right: 1px solid var(--ui-bg);'
-  }
-
-  return 'border: none;'
 }
 
 function isTooltipOpen(bookEnd: 'start' | 'end' | 'center' | undefined, index: number) {
@@ -98,11 +79,14 @@ function isTooltipOpen(bookEnd: 'start' | 'end' | 'center' | undefined, index: n
   <div
     v-if="books"
     ref="fullscreenTarget"
-    :class="containerClass"
+    class="bg-default text-default w-full"
+    :class="{
+      'px-[10vw] flex flex-col justify-center': isFullscreen
+    }"
   >
     <div
       ref="popoverBoundary"
-      class="h-64 py-4 flex flex-col justify-end"
+      class="h-64 py-4 flex flex-col justify-end w-full"
     >
       <div ref="tooltipBoundary" class="flex flex-row ">
         <template
@@ -113,8 +97,8 @@ function isTooltipOpen(bookEnd: 'start' | 'end' | 'center' | undefined, index: n
             v-if="book.slug === 'matthew' && testamentOptions === 'new'"
           />
           <div
-            :style="`width: ${bookWidth}%;`"
-            class="flex flex-col min-h-30"
+            :style="{ '--book-width': `${bookWidth}%` }"
+            class="flex flex-col min-h-30 w-(--book-width)"
           >
             <UPopover
               :portal="!isFullscreen"
@@ -133,11 +117,15 @@ function isTooltipOpen(bookEnd: 'start' | 'end' | 'center' | undefined, index: n
               }"
             >
               <div
-                :style="getDivisionBorderStyle()"
                 class="flex flex-col-reverse basis-3/12"
+                :class="{
+                  'border-r border-bg': optionSet.has('divisions'),
+                  'border-0': !optionSet.has('divisions')
+                }"
               >
                 <div
-                  :style="`height: ${getBookHeight(book.wordCountRank)}%;`"
+                  :style="{ '--book-height': `${getBookHeight(book.wordCountRank)}%` }"
+                  class="h-(--book-height)"
                   :class="getCategoryColourClass(book.category, false)"
                 />
               </div>
@@ -172,8 +160,13 @@ function isTooltipOpen(bookEnd: 'start' | 'end' | 'center' | undefined, index: n
             >
               <div
                 class="basis-9/12"
-                :style="getDivisionBorderStyle(book.bookEnd)"
-                :class="getCategoryColourClass(book.category, optionSet.has('categories'))"
+                :class="[
+                  {
+                    'border-r border-bg': optionSet.has('divisions') && (!book.bookEnd || book.bookEnd === 'end'),
+                    'border-0': !optionSet.has('divisions') || (book.bookEnd && book.bookEnd !== 'end')
+                  },
+                  getCategoryColourClass(book.category, optionSet.has('categories'))
+                ]"
                 @pointerenter="handlePointerEnter(index)"
                 @pointerleave="handlePointerLeave()"
               />
@@ -193,15 +186,16 @@ function isTooltipOpen(bookEnd: 'start' | 'end' | 'center' | undefined, index: n
         </template>
       </div>
     </div>
-    <BibleControls
-      v-model:testament-options="testamentOptions"
-      v-model:options="options"
-      v-model:layer="layer"
-      :layers="layers || []"
-      :is-fullscreen="isFullscreen"
-      class="mt-10"
-      @toggle-fullscreen="toggleFullscreen()"
-    />
+    <div class="mt-10">
+      <BibleControls
+        v-model:testament-options="testamentOptions"
+        v-model:options="options"
+        v-model:layer="layer"
+        :layers="layers || []"
+        :is-fullscreen="isFullscreen"
+        @toggle-fullscreen="toggleFullscreen()"
+      />
+    </div>
   </div>
 </template>
 
