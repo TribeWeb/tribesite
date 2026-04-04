@@ -1,0 +1,10 @@
+{
+    "layerId": "babylonianAttributes",
+    "title": "Babylonian images and attributes",
+    "description": "Images and attributes related to the biblical idea of Babylon.",
+    "icons": {
+        "genesis": [ "i-noto-brick","i-game-icons-furnace","i-mdi-city-variant-outline" ],
+        "daniel": [ "i-fluent-people-team-add-20-filled","i-game-icons-furnace" ]
+    },
+    "defaultIcons": []
+}

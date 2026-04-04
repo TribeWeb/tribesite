@@ -3,8 +3,8 @@
     "title": "Babylon Pentecost",
     "description": "Ge 11 & Acts 2.",
     "icons": {
-        "genesis": ["i-openmoji-hanging-gardens-of-babylon"],
-        "acts": ["i-noto-fire"]
+        "genesis": [ "i-openmoji-hanging-gardens-of-babylon" ],
+        "acts": [ "i-noto-fire" ]
     },
     "defaultIcons": [],
     "bringToFront": []

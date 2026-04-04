@@ -1,0 +1,10 @@
+{
+    "layerId": "baked",
+    "title": "Bake bricks",
+    "description": "Bake bricks and bake the 3 friends.",
+    "icons": {
+        "genesis": [ "i-noto-brick","i-game-icons-furnace" ],
+        "daniel": [ "i-fluent-people-team-add-20-filled","i-game-icons-furnace" ]
+    },
+    "defaultIcons": []
+}

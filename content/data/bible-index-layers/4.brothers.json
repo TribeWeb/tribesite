@@ -6,6 +6,6 @@
         "genesis": [],
         "luke": []
     },
-    "defaultIcons": ["i-twemoji-angry-face","i-twemoji-slightly-smiling-face"],
+    "defaultIcons": [ "i-twemoji-angry-face","i-twemoji-slightly-smiling-face" ],
     "bringToFront": []
 }
