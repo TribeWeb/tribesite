@@ -1,0 +1,46 @@
+{
+    "layerId": "olderBrothers",
+    "title": "Older brothers & pharisees",
+    "description": "Images common to older brothers and pharisees.",
+    "icons": {
+        "genesis": [
+            "i-twemoji-angry-face",
+            "i-emojione-v1-right-anger-bubble",
+            "i-noto-leftwards-pushing-hand-medium-light-skin-tone",
+            "i-emojione-v1-downcast-face-with-sweat",
+            "i-game-icons-slavery-whip",
+            "i-game-icons-chalk-outline-murder"
+        ],
+        "daniel": [
+            "i-twemoji-angry-face",
+            "i-emojione-v1-right-anger-bubble",
+            "i-noto-leftwards-pushing-hand-medium-light-skin-tone",
+            "i-emojione-v1-downcast-face-with-sweat",
+            "i-game-icons-slavery-whip",
+            "i-game-icons-chalk-outline-murder"
+        ],
+        "luke": [
+            "i-twemoji-angry-face",
+            "i-emojione-v1-right-anger-bubble",
+            "i-noto-leftwards-pushing-hand-medium-light-skin-tone",
+            "i-emojione-v1-downcast-face-with-sweat",
+            "i-game-icons-slavery-whip",
+            "i-emojione-v1-question-mark"
+        ],
+        "john": [
+            "i-twemoji-angry-face",
+            "i-emojione-v1-right-anger-bubble",
+            "i-noto-leftwards-pushing-hand-medium-light-skin-tone",
+            "i-emojione-v1-downcast-face-with-sweat",
+            "i-game-icons-slavery-whip",
+            "i-game-icons-chalk-outline-murder"
+        ]
+    },
+    "defaultIcons": [],
+    "bringToFront": [ 
+        "john" 
+    ],
+    "nudge": [
+        [ "luke", "john" ]
+    ]
+}

@@ -44,5 +44,7 @@
         "jude": [ "i-noto-deciduous-tree" ],
         "revelation": [ "i-noto-deciduous-tree" ]
     },
-    "defaultIcons": [ "i-noto-leafless-tree" ]
+    "defaultIcons": [ "i-noto-leafless-tree" ],
+    "bringToFront": [ "genesis", "psalms", "revelation" ],
+    "emphasise": [ "genesis", "psalms", "revelation" ]
 }

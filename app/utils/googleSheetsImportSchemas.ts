@@ -29,7 +29,9 @@ const bibleIndexLayers = z.object({
   description: z.string(),
   icons: z.record(z.string(), z.array(z.string())),
   defaultIcons: z.array(z.string()).optional(),
-  bringToFront: z.array(z.string()).optional()
+  bringToFront: z.array(z.string()).optional(),
+  emphasise: z.array(z.string()).optional(),
+  nudge: z.array(z.tuple([z.string(), z.string()])).optional()
 })
 
 export const googleSheetsImportSchemas = {

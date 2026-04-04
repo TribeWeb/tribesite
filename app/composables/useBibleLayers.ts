@@ -24,10 +24,29 @@ export function useBibleLayers(layer: Ref<string>) {
     return layerDetails.value?.defaultIcons ?? []
   }
 
+  function getPopoverAlign(bookSlug: string) {
+    const nudges = layerDetails.value?.nudge ?? []
+
+    for (const nudge of nudges) {
+      const [leftBook, rightBook] = nudge
+
+      if (bookSlug === leftBook) {
+        return 'end'
+      }
+
+      if (bookSlug === rightBook) {
+        return 'start'
+      }
+    }
+
+    return 'center'
+  }
+
   return {
     layers,
     layerDetails,
     isPopoverOpen,
-    getLayerIcons
+    getLayerIcons,
+    getPopoverAlign
   }
 }
