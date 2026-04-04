@@ -4,7 +4,7 @@ if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
 
-defineOgImage('Projects')
+// defineOgImage('Projects')
 
 useSeoMeta({
   title: page.value.seo.title,
