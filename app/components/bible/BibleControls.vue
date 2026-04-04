@@ -140,7 +140,7 @@ const fullscreenHeaderUi = { root: fullscreenHeaderRootClass }
     </template>
 
     <div class="w-70 flex flex-row place-self-start gap-x-1">
-      <USelect
+      <USelectMenu
         v-model="layer"
         :portal="!props.isFullscreen"
         :items="props.layers"
