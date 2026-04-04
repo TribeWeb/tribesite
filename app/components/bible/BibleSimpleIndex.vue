@@ -30,7 +30,8 @@ const {
   layers,
   layerDetails,
   isPopoverOpen,
-  getLayerIcons
+  getLayerIcons,
+  getPopoverAlign
 } = useBibleLayers(layer)
 
 const {
@@ -106,13 +107,15 @@ function isTooltipOpen(bookEnd: 'start' | 'end' | 'center' | undefined, index: n
               :arrow="{ rounded: false }"
               :content="{
                 side: 'top',
+                sideOffset: layerDetails?.emphasise?.includes(book.slug) ? 3 : 0,
+                align: getPopoverAlign(book.slug),
                 collisionBoundary: popoverBoundary,
                 collisionPadding: 0
               }"
               :ui="{
-                content: layerDetails?.bringToFront?.includes(book.slug)
-                  ? 'z-10 px-0.5 py-3 ring-inverted/50 dark:bg-inverted'
-                  : 'px-0.5 py-3 ring-inverted/50 dark:bg-inverted',
+                content: `px-0.5 py-3 ring-inverted/50 dark:bg-inverted
+                ${layerDetails?.bringToFront?.includes(book.slug) ? 'z-10 ' : ''},
+                ${layerDetails?.emphasise?.includes(book.slug) ? 'p-2 scale-120 shadow-lg/80 ' : ''}`,
                 arrow: 'stroke-inverted/70 dark:fill-inverted'
               }"
             >
@@ -129,13 +132,26 @@ function isTooltipOpen(bookEnd: 'start' | 'end' | 'center' | undefined, index: n
                 />
               </div>
               <template #content>
-                <UIcon
-                  v-for="(icon, i) in getLayerIcons(book.slug)"
-                  :key="i"
-                  :name="icon"
-                  size="60"
-                  class="text-default dark:text-inverted"
-                />
+                <div
+                  class="grid gap-2"
+                  :class="{
+                    'grid-cols-1': getLayerIcons(book.slug).length <= 1,
+                    'grid-cols-2': getLayerIcons(book.slug).length > 1 && getLayerIcons(book.slug).length < 7,
+                    'grid-cols-3': getLayerIcons(book.slug).length >= 7
+                  }"
+                >
+                  <div
+                    v-for="(icon, i) in getLayerIcons(book.slug)"
+                    :key="i"
+                    class="flex justify-center"
+                  >
+                    <UIcon
+                      :name="icon"
+                      size="60"
+                      class="text-default dark:text-inverted"
+                    />
+                  </div>
+                </div>
               </template>
             </UPopover>
             <UTooltip
