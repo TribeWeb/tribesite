@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxt/content',
-    'nuxt-og-image',
+    // 'nuxt-og-image',
     '@vueuse/nuxt',
     '@nuxt/fonts',
     'nuxt-studio',
@@ -19,10 +19,10 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  site: {
-    url: 'https://tribeweb.co.uk',
-    name: 'Tribeweb'
-  },
+  // site: {
+  //   url: 'https://tribeweb.co.uk',
+  //   name: 'Tribeweb'
+  // },
 
   runtimeConfig: {
     // Private keys are only available on the server
@@ -90,9 +90,9 @@ export default defineNuxtConfig({
     }
   },
 
-  ogImage: {
-    zeroRuntime: true
-  },
+  // ogImage: {
+  //   zeroRuntime: true
+  // },
 
   studio: {
     repository: {
