@@ -10,7 +10,7 @@ defineShortcuts({
 
 <template>
   <div
-    class="flex flex-1 flex-row-reverse h-svh bg-neutral-50 dark:bg-neutral-950"
+    class="flex flex-1 flex-row-reverse h-svh bg-transparent dark:bg-neutral-950"
   >
     <USidebar
       v-model:open="open"
@@ -44,10 +44,10 @@ defineShortcuts({
     </USidebar>
 
     <div
-      class="relative flex-1 flex flex-col overflow-hidden lg:m-2 rounded-lg shadow-md ring ring-default bg-default"
+      class="relative flex-1 flex flex-col overflow-hidden lg:m-2 rounded-lg shadow-md ring ring-default bg-transparent"
     >
-      <div class="flex-1 p-3">
-        <slot name="body" class="size-full" />
+      <div class="flex-1 p-4">
+        <slot name="body" />
       </div>
       <div class="absolute bottom-2 right-2 flex z-50">
         <UTooltip
