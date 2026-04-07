@@ -31,7 +31,7 @@ defineShortcuts({
 
 <template>
   <div
-    class="flex flex-1 flex-row-reverse h-[calc(100vh-var(--ui-header-height))] bg-neutral-50 dark:bg-neutral-950"
+    class="flex flex-1 flex-row-reverse h-screen bg-neutral-50 dark:bg-neutral-950"
   >
     <USidebar
       v-model:open="open"
@@ -41,9 +41,7 @@ defineShortcuts({
       collapsible="offcanvas"
       side="right"
       :ui="{
-        gap: 'h-3',
-        container:
-          'absolute top-[var(--ui-header-height)] bottom-0 h-[calc(100vh-var(--ui-header-height))]'
+        container: 'h-full py-1'
       }"
     >
       <template #header>
