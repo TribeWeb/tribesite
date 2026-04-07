@@ -1,26 +1,5 @@
 <script setup lang="ts">
-// import type { NavigationMenuItem, SidebarProps } from '@nuxt/ui'
-
-// Ignore the props for the example
-
 const open = ref(true)
-
-// const items: NavigationMenuItem[] = [
-//   {
-//     label: 'Home',
-//     icon: 'i-lucide-house',
-//     active: true
-//   },
-//   {
-//     label: 'Inbox',
-//     icon: 'i-lucide-inbox',
-//     badge: '4'
-//   },
-//   {
-//     label: 'Contacts',
-//     icon: 'i-lucide-users'
-//   }
-// ]
 
 defineShortcuts({
   meta_o: () => {
@@ -31,7 +10,7 @@ defineShortcuts({
 
 <template>
   <div
-    class="flex flex-1 flex-row-reverse h-screen bg-neutral-50 dark:bg-neutral-950"
+    class="flex flex-1 flex-row-reverse h-svh bg-neutral-50 dark:bg-neutral-950"
   >
     <USidebar
       v-model:open="open"
@@ -41,7 +20,7 @@ defineShortcuts({
       collapsible="offcanvas"
       side="right"
       :ui="{
-        container: 'h-full py-1'
+        container: 'py-1'
       }"
     >
       <template #header>
