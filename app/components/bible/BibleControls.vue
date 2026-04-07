@@ -10,12 +10,6 @@ const props = defineProps<{
   layers: LayerItem[]
 }>()
 
-const isTouchInput = ref(false)
-
-onMounted(() => {
-  isTouchInput.value = window.matchMedia('(hover: none), (pointer: coarse)').matches
-})
-
 const testamentOptions = defineModel<'old' | 'new' | 'both'>('testamentOptions', {
   required: true
 })
@@ -72,7 +66,6 @@ const optionItems = ref<CheckboxGroupItem[]>([
         label-key="title"
         placeholder="Image overlays"
         class="w-64"
-        :ui="{ content: '' }"
       />
     </UFieldGroup>
   </div>
