@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const { seo } = useAppConfig()
+const route = useRoute()
+const isAppsRoute = computed(() => route.path.startsWith('/apps/'))
 
 const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('projects'), {
   // transform: data => data.find(item => item.path === '/projects')?.children || []
@@ -35,7 +37,7 @@ provide('navigation', navigation)
   <UApp>
     <NuxtLoadingIndicator />
 
-    <AppHeader />
+    <AppHeader v-if="!isAppsRoute" />
 
     <UMain>
       <NuxtLayout>
@@ -43,7 +45,7 @@ provide('navigation', navigation)
       </NuxtLayout>
     </UMain>
 
-    <AppFooter />
+    <AppFooter v-if="!isAppsRoute" />
 
     <ClientOnly>
       <LazyUContentSearch
