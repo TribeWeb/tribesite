@@ -1,13 +1,10 @@
 <template>
-  <USeparator
-    orientation="vertical"
-    class="self-stretch mx-0.5"
-    icon="i-material-symbols-menu-book-rounded"
-    type="dashed"
-    color="neutral"
-    :ui="{
-      icon: 'text-neutral-700 dark:text-neutral-300',
-      border: 'border-neutral-700'
-    }"
-  />
+  <div class="mx-0.5 self-stretch flex flex-col items-center justify-center">
+    <div class="w-px flex-1 border-l border-dashed border-default" />
+    <UIcon
+      name="i-material-symbols-menu-book-rounded"
+      class="my-1 shrink-0 text-default"
+    />
+    <div class="w-px flex-1 border-l border-dashed border-default" />
+  </div>
 </template>
