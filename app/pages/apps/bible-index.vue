@@ -180,137 +180,142 @@ function isTooltipOpen(bookEnd: 'start' | 'end' | 'center' | undefined, index: n
         <div class="flex flex-col gap-6 pt-20">
           <div ref="captureFrame" class="bg-transparent px-4">
             <div ref="overlayBoundary" class="relative w-full bg-transparent pt-60 pb-6 flex flex-col justify-end">
-              <div class="flex flex-row">
-                <template
-                  v-for="(book, index) in booksWithBookEnd"
-                  :key="book.slug"
-                >
-                  <BibleSeperator
-                    v-if="book.slug === 'matthew' && testamentOptions === 'new'"
-                  />
-                  <div
-                    :style="`width: ${bookWidth}%;`"
-                    class="flex flex-col min-h-30"
+              <Transition name="bible-fade" mode="out-in">
+                <div :key="testamentOptions" class="flex flex-row">
+                  <template
+                    v-for="(book, index) in booksWithBookEnd"
+                    :key="book.slug"
                   >
-                    <UPopover
-                      :portal="false"
-                      :open="isPopoverOpen(book.slug)"
-                      :arrow="{ rounded: false }"
-                      :content="{
-                        side: 'top',
-                        sideOffset: layerDetails?.emphasise?.includes(book.slug) ? 7 : 4,
-                        align: getPopoverAlign(book.slug),
-                        positionStrategy: 'absolute',
-                        updatePositionStrategy: 'always',
-                        collisionBoundary: overlayBoundary,
-                        collisionPadding: 0
-                      }"
-                      :ui="{
-                        content: `px-0.5 py-3 ring-inverted/50 dark:bg-inverted
+                    <BibleSeperator
+                      v-if="book.slug === 'matthew' && testamentOptions === 'new'"
+                    />
+                    <div
+                      :style="`width: ${bookWidth}%;`"
+                      class="flex flex-col min-h-30"
+                    >
+                      <UPopover
+                        :portal="false"
+                        :open="isPopoverOpen(book.slug)"
+                        :arrow="{ rounded: false }"
+                        :content="{
+                          side: 'top',
+                          sideOffset: layerDetails?.emphasise?.includes(book.slug) ? 7 : 4,
+                          align: getPopoverAlign(book.slug),
+                          positionStrategy: 'absolute',
+                          updatePositionStrategy: 'always',
+                          collisionBoundary: overlayBoundary,
+                          collisionPadding: 0
+                        }"
+                        :ui="{
+                          content: `px-0.5 py-3 ring-inverted/50 dark:bg-inverted
                 ${layerDetails?.bringToFront?.includes(book.slug) ? 'z-10 ' : ''},
                 ${layerDetails?.emphasise?.includes(book.slug) ? 'p-2 scale-120 shadow-lg/80 ' : ''}`,
-                        arrow: 'stroke-inverted/70 dark:fill-inverted'
-                      }"
-                    >
-                      <div
-                        class="flex flex-col-reverse basis-3/12"
-                        :class="{
-                          'border-r border-bg': optionSet.has('divisions'),
-                          'border-0': !optionSet.has('divisions')
+                          arrow: 'stroke-inverted/70 dark:fill-inverted'
                         }"
                       >
                         <div
-                          :style="`height: ${getBookHeight(book.wordCountRank)}%;`"
-                          :class="getCategoryColourClass(book.category, false)"
-                        />
-                      </div>
-                      <template #content>
-                        <div
-                          class="grid gap-2"
+                          class="flex flex-col-reverse basis-3/12"
                           :class="{
-                            'grid-cols-1': getLayerIcons(book.slug).length <= 1,
-                            'grid-cols-2': getLayerIcons(book.slug).length > 1 && getLayerIcons(book.slug).length < 7,
-                            'grid-cols-3': getLayerIcons(book.slug).length >= 7
+                            'border-r border-bg': optionSet.has('divisions'),
+                            'border-0': !optionSet.has('divisions')
                           }"
                         >
                           <div
-                            v-for="(icon, i) in getLayerIcons(book.slug)"
-                            :key="i"
-                            class="flex justify-center"
-                          >
-                            <UIcon
-                              :name="icon"
-                              size="60"
-                              class="text-default dark:text-inverted"
-                            />
-                          </div>
+                            class="transition-[height] duration-200 ease-out"
+                            :style="`height: ${getBookHeight(book.wordCountRank)}%;`"
+                            :class="getCategoryColourClass(book.category, false)"
+                          />
                         </div>
-                      </template>
-                    </UPopover>
-                    <UTooltip
-                      :key="index"
-                      :portal="false"
-                      :open="isTooltipOpen(book.bookEnd, index)"
-                      :delay-duration="TOOLTIP_DELAY_MS"
-                      arrow
-                      :content="{
-                        align: tooltipIndex === index ? 'center' : (book.bookEnd || 'center'),
-                        side: 'bottom',
-                        sideOffset: tooltipIndex === index ? TOOLTIP_UPPER_SIDE_OFFSET : (book.bookAlign ?? TOOLTIP_UPPER_SIDE_OFFSET),
-                        alignOffset: 0,
-                        positionStrategy: 'absolute',
-                        updatePositionStrategy: 'always',
-                        collisionBoundary: overlayBoundary,
-                        collisionPadding: 0
-                      }"
-                      :ui="{
-                        content: 'px-1.5 text-sm text-white font-bold bg-neutral-900/70 ring-neutral-900/70',
-                        arrow: 'fill-neutral-900/70 stroke-neutral-900/70'
-                      }"
-                    >
-                      <div
-                        class="basis-9/12"
-                        :class="[
-                          {
-                            'border-r border-bg': optionSet.has('divisions') && (!book.bookEnd || book.bookEnd === 'end'),
-                            'border-0': !optionSet.has('divisions') || (book.bookEnd && book.bookEnd !== 'end')
-                          },
-                          getCategoryColourClass(book.category, optionSet.has('categories'))
-                        ]"
-                        @pointerenter="handlePointerEnter(index)"
-                        @pointerleave="handlePointerLeave()"
-                      />
-                      <template #content>
-                        <span
+                        <template #content>
+                          <div
+                            class="grid gap-2"
+                            :class="{
+                              'grid-cols-1': getLayerIcons(book.slug).length <= 1,
+                              'grid-cols-2': getLayerIcons(book.slug).length > 1 && getLayerIcons(book.slug).length < 7,
+                              'grid-cols-3': getLayerIcons(book.slug).length >= 7
+                            }"
+                          >
+                            <div
+                              v-for="(icon, i) in getLayerIcons(book.slug)"
+                              :key="i"
+                              class="flex justify-center"
+                            >
+                              <UIcon
+                                :name="icon"
+                                size="60"
+                                class="text-default dark:text-inverted"
+                              />
+                            </div>
+                          </div>
+                        </template>
+                      </UPopover>
+                      <UTooltip
+                        :key="index"
+                        :portal="false"
+                        :open="isTooltipOpen(book.bookEnd, index)"
+                        :delay-duration="TOOLTIP_DELAY_MS"
+                        arrow
+                        :content="{
+                          align: tooltipIndex === index ? 'center' : (book.bookEnd || 'center'),
+                          side: 'bottom',
+                          sideOffset: tooltipIndex === index ? TOOLTIP_UPPER_SIDE_OFFSET : (book.bookAlign ?? TOOLTIP_UPPER_SIDE_OFFSET),
+                          alignOffset: 0,
+                          positionStrategy: 'absolute',
+                          updatePositionStrategy: 'always',
+                          collisionBoundary: overlayBoundary,
+                          collisionPadding: 0
+                        }"
+                        :ui="{
+                          content: 'px-1.5 text-sm text-white font-bold bg-neutral-900/70 ring-neutral-900/70',
+                          arrow: 'fill-neutral-900/70 stroke-neutral-900/70'
+                        }"
+                      >
+                        <div
+                          class="basis-9/12"
+                          :class="[
+                            {
+                              'border-r border-bg': optionSet.has('divisions') && (!book.bookEnd || book.bookEnd === 'end'),
+                              'border-0': !optionSet.has('divisions') || (book.bookEnd && book.bookEnd !== 'end')
+                            },
+                            getCategoryColourClass(book.category, optionSet.has('categories'))
+                          ]"
                           @pointerenter="handlePointerEnter(index)"
                           @pointerleave="handlePointerLeave()"
-                        >
-                          {{ book.shortName || book.name }}
-                        </span>
-                      </template>
-                    </UTooltip>
-                  </div>
-                  <BibleSeperator
-                    v-if="book.slug === 'malachi' && testamentOptions !== 'new'"
-                  />
-                </template>
-              </div>
+                        />
+                        <template #content>
+                          <span
+                            @pointerenter="handlePointerEnter(index)"
+                            @pointerleave="handlePointerLeave()"
+                          >
+                            {{ book.shortName || book.name }}
+                          </span>
+                        </template>
+                      </UTooltip>
+                    </div>
+                    <BibleSeperator
+                      v-if="book.slug === 'malachi' && testamentOptions !== 'new'"
+                    />
+                  </template>
+                </div>
+              </Transition>
             </div>
           </div>
-          <div v-if="showKey" class="flex flex-col justify-center">
-            <UPageGrid
-              :ui="{ base: 'relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 p-10' }"
-            >
-              <UPageFeature
-                v-for="feature in keyFeatures"
-                :key="feature.key"
-                :title="feature.title"
-                :description="feature.description"
-                icon="i-mdi-square-rounded"
-                :ui="{ leadingIcon: `${feature.leadingIcon}` }"
-              />
-            </UPageGrid>
-          </div>
+          <Transition name="bible-fade">
+            <div v-if="showKey" class="flex flex-col justify-center">
+              <UPageGrid
+                :ui="{ base: 'relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 p-10' }"
+              >
+                <UPageFeature
+                  v-for="feature in keyFeatures"
+                  :key="feature.key"
+                  :title="feature.title"
+                  :description="feature.description"
+                  icon="i-mdi-square-rounded"
+                  :ui="{ leadingIcon: `${feature.leadingIcon}` }"
+                />
+              </UPageGrid>
+            </div>
+          </Transition>
         </div>
       </div>
     </template>
@@ -321,5 +326,15 @@ function isTooltipOpen(bookEnd: 'start' | 'end' | 'center' | undefined, index: n
 [data-slot="arrow"] {
   height: 10px;
   width: 8px;
+}
+
+.bible-fade-enter-active,
+.bible-fade-leave-active {
+  transition: opacity 140ms ease-in-out;
+}
+
+.bible-fade-enter-from,
+.bible-fade-leave-to {
+  opacity: 0;
 }
 </style>
