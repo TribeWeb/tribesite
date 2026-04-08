@@ -100,9 +100,6 @@ function isTooltipOpen(bookEnd: 'start' | 'end' | 'center' | undefined, index: n
 
   return isCurrentBook || (isCategoryBoundary && isOutsideNeighborRange)
 }
-definePageMeta({
-  layout: false
-})
 </script>
 
 <template>
