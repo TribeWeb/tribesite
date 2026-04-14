@@ -11,7 +11,7 @@ This means all the styles are contained in these files:
   Public_Sans/PublicSans-Italic-VariableFont_wght.ttf
 
 If your app fully supports variable fonts, you can now pick intermediate styles
-that aren’t available as static fonts. Not all apps support variable fonts, and
+that aren't available as static fonts. Not all apps support variable fonts, and
 in those cases you can use the static font files for Public Sans:
   Public_Sans/static/PublicSans-Thin.ttf
   Public_Sans/static/PublicSans-ExtraLight.ttf

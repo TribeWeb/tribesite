@@ -1,11 +1,34 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+/* @media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+} */
+
 @source "../../../content";
+
+@font-face {
+  font-family: 'PetalumaScript';
+  src: url('/fonts/Petaluma/PetalumaScript.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Petaluma';
+  src: url('/fonts/Petaluma/Petaluma.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 @theme static {
   --font-sans: 'Public Sans', sans-serif;
   --font-feature: 'Comfortaa', sans-serif;
+  --font-music: 'PetalumaScript', 'Petaluma', serif;
 
   --color-tribeweb-50: #ebf8fb;
   --color-tribeweb-100: #d2eef6;

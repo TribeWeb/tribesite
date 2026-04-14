@@ -34,8 +34,32 @@ const bibleIndexLayers = z.object({
   nudge: z.array(z.tuple([z.string(), z.string()])).optional()
 })
 
+const lyrics = z.object({
+  slug: z.string(),
+  title: z.string(),
+  copyright: z.string().optional(),
+  key: z.string().optional(),
+  audio: z.string().optional(),
+  video: z.string().optional(),
+  leadsheet: z.string().optional(),
+  notes: z.string().optional()
+  // verse1: z.string().optional(),
+  // verse2: z.string().optional(),
+  // verse3: z.string().optional(),
+  // verse4: z.string().optional(),
+  // verse5: z.string().optional(),
+  // prechorus1: z.string().optional(),
+  // prechorus2: z.string().optional(),
+  // chorus1: z.string().optional(),
+  // chorus2: z.string().optional(),
+  // chorus3: z.string().optional(),
+  // chorus4: z.string().optional(),
+  // bridge1: z.string().optional(),
+  // bridge2: z.string().optional()
+})
+
 export const googleSheetsImportSchemas = {
   bibleBooks,
-  bibleIndexLayers
-
+  bibleIndexLayers,
+  lyrics
 }

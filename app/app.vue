@@ -6,9 +6,9 @@ const isAppsRoute = computed(() => route.path.startsWith('/apps/'))
 const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('projects'), {
   // transform: data => data.find(item => item.path === '/projects')?.children || []
 })
-const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSections('projects'), {
-  server: false
-})
+// const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSections('projects'), {
+//   server: false
+// })
 
 useHead({
   meta: [
@@ -47,11 +47,11 @@ provide('navigation', navigation)
 
     <AppFooter v-if="!isAppsRoute" />
 
-    <ClientOnly>
+    <!-- <ClientOnly>
       <LazyUContentSearch
         :files="files"
         :navigation="navigation"
       />
-    </ClientOnly>
+    </ClientOnly> -->
   </UApp>
 </template>

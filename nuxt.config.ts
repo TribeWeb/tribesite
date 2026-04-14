@@ -62,7 +62,8 @@ export default defineNuxtConfig({
 
   googleSheetsImport: {
     googleSheets: [
-      { id: '1aOTrB6bE4DjvEmefNMgx9-1irITIozynNW-clLi7MCs', label: 'Bible data' }
+      { id: '1aOTrB6bE4DjvEmefNMgx9-1irITIozynNW-clLi7MCs', label: 'Bible data' },
+      { id: '1CZA1Yz2zEVqEo8nDU_p6vU3S3c5vOyX9b4pHJCLGr0s', label: 'Nobletheme' }
     ]
   },
 

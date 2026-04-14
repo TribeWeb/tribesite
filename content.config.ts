@@ -50,7 +50,11 @@ export default defineContentConfig({
       type: 'data',
       source: 'data/bible-index-layers/*.json',
       schema: googleSheetsImportSchemas.bibleIndexLayers
+    }),
+    lyrics: defineCollection({
+      type: 'page',
+      source: 'lyrics/*.md',
+      schema: googleSheetsImportSchemas.lyrics
     })
-
   }
 })
