@@ -32,6 +32,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-07-11',
 
   nitro: {
+    experimental: {
+      websocket: true
+    },
     prerender: {
       routes: [
         '/'
@@ -96,6 +99,7 @@ export default defineNuxtConfig({
   // },
 
   studio: {
+    dev: false,
     repository: {
       provider: 'github', // 'github' or 'gitlab'
       owner: 'tribeweb',

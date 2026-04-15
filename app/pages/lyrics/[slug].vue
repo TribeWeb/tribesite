@@ -86,16 +86,21 @@ const lyricFontSize = computed(() => {
             <USeparator type="dashed" />
             <UContentToc
               highlight
+              default-open
               :links="song?.body?.toc?.links"
               :title="song.title"
-              :ui="{ root: 'top-0 px-0 sm:px-0',
-                     container: 'lg:pt-0 lg:py-0' }"
+              :ui="{ root: 'top-0 px-0 sm:px-0 sm:mx-0',
+                     container: 'lg:pt-0 lg:py-0',
+                     trailingIcon: 'hidden' }"
             />
             <USeparator type="dashed" />
             <NobleSongShortlist :song="song" />
+            <USeparator type="dashed" />
           </div>
         </template>
-        <template #footer />
+        <template #footer>
+          <NobleLyricsSync />
+        </template>
       </UDrawer>
     </UPageBody>
 
