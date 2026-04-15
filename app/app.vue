@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { seo } = useAppConfig()
 const route = useRoute()
-const isAppsRoute = computed(() => route.path.startsWith('/apps/'))
+const isAppsRoute = computed(() => route.path.startsWith('/apps/') || route.path.startsWith('/lyrics/'))
 
 const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('projects'), {
   // transform: data => data.find(item => item.path === '/projects')?.children || []
