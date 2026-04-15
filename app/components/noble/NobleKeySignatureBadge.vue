@@ -1,6 +1,8 @@
 <script setup lang="ts">
-const { keyId } = defineProps<{
+const { keyId, variant, color } = defineProps<{
   keyId: string
+  variant?: 'solid' | 'outline' | 'soft' | 'subtle'
+  color?: 'error' | 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'neutral'
 }>()
 
 const accidental = computed(() => {
@@ -28,9 +30,9 @@ const majorMinor = computed(() => {
 
 <template>
   <UBadge
-    color="primary"
-    variant="solid"
-    class="flex justify-center font-music text-sm font-bold rounded-none"
+    :color="color ?? 'primary'"
+    :variant="variant ?? 'solid'"
+    class="flex justify-center font-music text-sm font-bold rounded-sm ml-1"
     :ui="{ base: 'py-0' }"
   >
     {{ tonic }}

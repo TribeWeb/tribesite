@@ -4,28 +4,6 @@
 <script setup lang="ts">
 import type { ContentSearchItem } from '@nuxt/ui'
 
-export interface LyricSection {
-  sectionTitle: string
-  label: string
-  shortcut: string
-}
-
-const lyricSections = ref<{ [s: string]: LyricSection }>({
-  verse1: { sectionTitle: 'Verse 1', label: 'V1', shortcut: '1' },
-  verse2: { sectionTitle: 'Verse 2', label: 'V2', shortcut: '2' },
-  verse3: { sectionTitle: 'Verse 3', label: 'V3', shortcut: '3' },
-  verse4: { sectionTitle: 'Verse 4', label: 'V4', shortcut: '4' },
-  verse5: { sectionTitle: 'Verse 5', label: 'V5', shortcut: '5' },
-  prechorus1: { sectionTitle: 'Prechorus 1', label: 'PCh', shortcut: '6' },
-  prechorus2: { sectionTitle: 'Prechorus 2', label: 'PCh2', shortcut: '7' },
-  chorus1: { sectionTitle: 'Chorus 1', label: 'Ch', shortcut: '8' },
-  chorus2: { sectionTitle: 'Chorus 2', label: 'Ch2', shortcut: '9' },
-  chorus3: { sectionTitle: 'Chorus 3', label: 'Ch3', shortcut: '0' },
-  chorus4: { sectionTitle: 'Chorus 4', label: 'Ch4', shortcut: '-' },
-  bridge1: { sectionTitle: 'Bridge 1', label: 'Br1', shortcut: '=' },
-  bridge2: { sectionTitle: 'Bridge 2', label: 'Br2', shortcut: '[' }
-})
-
 interface LyricSectionResult {
   id: string
   title: string
@@ -33,16 +11,21 @@ interface LyricSectionResult {
   level: number
   content: string
   key?: string
+  stem?: string
 }
 
 interface SongSearchItem extends ContentSearchItem {
   key?: string
   sectionId?: string
+  primarySection?: string
+  primarySectionId?: string
+  secondarySection?: string
+  secondarySectionId?: string
 }
 
 const { data: lyricsNavigation } = await useAsyncData('lyrics-navigation', () => queryCollectionNavigation('lyrics'))
 const { data: lyricsFiles } = useLazyAsyncData('lyrics-search', () =>
-  queryCollectionSearchSections('lyrics', { extraFields: ['key'] }) as unknown as Promise<LyricSectionResult[]>,
+  queryCollectionSearchSections('lyrics', { extraFields: ['key', 'stem'] }) as unknown as Promise<LyricSectionResult[]>,
 {
   server: false
 })
@@ -50,47 +33,58 @@ const { data: lyricsFiles } = useLazyAsyncData('lyrics-search', () =>
 const groups = computed(() => [{
   id: 'songs',
   label: 'Songs',
-  items: (lyricsFiles.value ?? []).map(file => ({
+  items: (lyricsFiles.value ?? []).map(buildSearchItem)
+}])
+
+function buildSearchItem(file: LyricSectionResult): SongSearchItem {
+  // Section previews:
+  //   primary  = first available section (verse-1 > chorus-1 > verse-2)
+  //   secondary = second available section, only shown when verse-1 exists
+  const primarySectionId = getFirstSectionId(file, 'verse-1', 'chorus-1', 'verse-2')
+  const hasVerse1 = !!getSectionContent(file, 'verse-1')
+
+  return {
     label: file.title,
     prefix: file.titles[0] || undefined,
     suffix: file.content,
     to: file.id,
     level: file.level,
     key: file.key,
-    sectionId: file.id?.split('#')[1]?.replace(/-/g, '') // extract section id from file id
-  } satisfies SongSearchItem))
-}])
+    sectionId: file.id?.split('#')[1],
+    primarySectionId,
+    primarySection: primarySectionId ? getSectionContent(file, primarySectionId) : undefined,
+    secondarySectionId: hasVerse1 ? getFirstSectionId(file, 'chorus-1', 'verse-2') : undefined,
+    secondarySection: hasVerse1 ? getSectionContent(file, 'chorus-1') || getSectionContent(file, 'verse-2') || undefined : undefined
+  } satisfies SongSearchItem
+}
 
-// defineShortcuts({
-//   k: () => {
-//     open.value = !open.value
-//   }
-// })
+function getSectionContent(file: LyricSectionResult, sectionId: string) {
+  return lyricsFiles.value?.find(f => f.id === `/${file.stem}#${sectionId}`)?.content || ''
+}
+
+function getFirstSectionId(file: LyricSectionResult, ...sectionIds: string[]) {
+  return sectionIds.find(id => getSectionContent(file, id)) || undefined
+}
 </script>
 
 <template>
   <ClientOnly>
     <LazyUContentSearch
-      shortcut="meta_k"
+      shortcut="/"
       :groups="groups"
       :navigation="lyricsNavigation"
       :fuse="{ resultLimit: 42 }"
       placeholder="Search songs..."
       :color-mode="false"
       size="lg"
-      :ui="{ modal: 'sm:h-[calc(100dvh-8rem)]' }"
+      :ui="{ modal: 'sm:h-[calc(100dvh-8rem)]', itemTrailing: 'w-8', itemLabel: 'min-h-[2rem]' }"
     >
       <template #item-leading="">
         <UIcon name="i-lucide-music" class="mt-1" />
       </template>
       <template #item-label="{ item }">
-        <div v-if="item?.matches?.length && item.level === 1" class="text-default">
-          <p v-html="item.labelHtml" />
-        </div>
-        <div v-else-if="!item?.matches?.length && item.level === 1" class="text-default">
-          <p class="text-default">
-            {{ item.label }} <span />
-          </p>
+        <div v-if="item.level === 1" class="text-default">
+          <p v-html="item.labelHtml || item.label" />
         </div>
         <div v-else class="flex flex-row gap-x-2 text-default">
           <p class="text-default">
@@ -101,21 +95,38 @@ const groups = computed(() => [{
           </p>
         </div>
       </template>
-      <!-- <template #item-description="{ item }">
-        <p class="pt-1 truncate whitespace-pre line-clamp-2" v-html="item.suffixHtml" />
-      </template> -->
       <template #item-description="{ item }">
-        <!-- <pre>{{ item }}</pre> -->
-        <div class="flex w-full gap-x-4 text-muted">
+        <div v-if="item.level === 1" class="w-full flex flex-row gap-x-4 text-muted">
+          <UAvatar size="sm" class="self-center">
+            {{ lyricSections[item.primarySectionId]?.label }}
+          </UAvatar>
+          <p class="pt-1 basis-1/2 truncate whitespace-pre line-clamp-2">
+            {{ item.primarySection }}
+          </p>
+          <UAvatar size="sm" class="self-center">
+            {{ lyricSections[item.secondarySectionId]?.label }}
+          </UAvatar>
+          <p class="pt-1 basis-1/2 truncate whitespace-pre line-clamp-2">
+            {{ item.secondarySection }}
+          </p>
+        </div>
+        <div v-else class="w-full flex flex-row gap-x-4 text-muted">
           <UAvatar size="sm" class="self-center">
             {{ lyricSections[item.sectionId]?.label }}
           </UAvatar>
-          <p class="pt-1 basis-1/2 truncate whitespace-pre line-clamp-2" v-html="item.suffixHtml" />
-          <p class="pt-1 basis-1/2 truncate whitespace-pre line-clamp-2" />
+          <p class="pt-1 basis-1/2 truncate whitespace-pre line-clamp-2" v-html="item.suffixHtml || item.suffix" />
+          <UAvatar size="sm" class="self-center">
+            {{ lyricSections[item.sectionId === 'verse-1' ? item.secondarySectionId : item.primarySectionId]?.label }}
+          </UAvatar>
+          <p class="pt-1 basis-1/2 truncate whitespace-pre line-clamp-2">
+            {{ item.sectionId === 'verse-1' ? item.secondarySection : item.primarySection }}
+          </p>
         </div>
       </template>
       <template #item-trailing="{ item }">
-        <NobleKeySignatureBadge v-if="item.key" :key-id="item.key" class="w-8" />
+        <div class="w-8 flex flex-col items-center justify-center">
+          <NobleKeySignatureBadge v-if="item.key" :key-id="item.key" />
+        </div>
       </template>
     </LazyUContentSearch>
   </ClientOnly>
