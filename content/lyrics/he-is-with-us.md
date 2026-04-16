@@ -3,8 +3,8 @@ slug: he-is-with-us
 title: He is with us
 copyright: ""
 key: ""
-audio: "https://open.spotify.com/track/6dCtufWGkHe6rAIp67d282?si=djqPvyScQwWPHSnn61Ex0g"
-video: ""
+audio:
+  spotify: "https://open.spotify.com/track/6dCtufWGkHe6rAIp67d282?si=djqPvyScQwWPHSnn61Ex0g"
 leadsheet: ""
 notes: ""
 ---

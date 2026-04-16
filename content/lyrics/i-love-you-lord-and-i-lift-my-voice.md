@@ -3,8 +3,8 @@ slug: i-love-you-lord-and-i-lift-my-voice
 title: I love you Lord and I lift my voice
 copyright: "@ Klein Laurie B"
 key: G_major
-audio: ""
-video: "https://www.youtube.com/watch?v=8hyBJwTKmQ8"
+video:
+  youtube: "https://www.youtube.com/watch?v=8hyBJwTKmQ8"
 leadsheet: "https://www.worshipchords.net/guitar/laurie-klein/i-love-you-lord"
 notes: ""
 ---

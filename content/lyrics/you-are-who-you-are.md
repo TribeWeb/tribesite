@@ -3,8 +3,6 @@ slug: you-are-who-you-are
 title: You Are (Who You Are)
 copyright: © 2001 a songwriter
 key: G_major
-audio: ""
-video: ""
 leadsheet: ""
 notes: ""
 ---

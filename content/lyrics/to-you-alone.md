@@ -3,8 +3,10 @@ slug: to-you-alone
 title: To You Alone
 copyright: © Capitol Christian Music Group
 key: D_major
-audio: "https://open.spotify.com/track/4YjHf4rgZ0QRMhvX61wVah?si=e0f03107a8ed4d57"
-video: "https://www.youtube.com/watch?v=8ij3cfUn0xg"
+audio:
+  spotify: "https://open.spotify.com/track/4YjHf4rgZ0QRMhvX61wVah?si=e0f03107a8ed4d57"
+video:
+  youtube: "https://www.youtube.com/watch?v=8ij3cfUn0xg"
 leadsheet: ""
 notes: ""
 ---

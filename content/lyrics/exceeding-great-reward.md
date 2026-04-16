@@ -3,8 +3,11 @@ slug: exceeding-great-reward
 title: Exceeding Great Reward
 copyright: © 2012 Precision Centre
 key: Am
-audio: "https://soundcloud.com/congressmusicfactory/exceeding-great-reward"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/exceeding-great-reward"
+  apple: "https://music.apple.com/us/album/exceeding-great-reward/1484692093?i=1484692097"
+video:
+  youtube: "https://www.youtube.com/watch?v=VNgbCyr17uY"
 leadsheet: "https://app.box.com/s/5rv2a0uxe4myhkpdvyrs5f6q56699qs6"
 notes: ""
 ---

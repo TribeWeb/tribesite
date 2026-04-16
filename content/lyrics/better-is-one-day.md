@@ -3,8 +3,6 @@ slug: better-is-one-day
 title: Better is One Day
 copyright: ""
 key: ""
-audio: ""
-video: ""
 leadsheet: ""
 notes: ""
 ---

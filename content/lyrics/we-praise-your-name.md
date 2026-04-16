@@ -3,8 +3,11 @@ slug: we-praise-your-name
 title: We Praise Your Name
 copyright: © 2018 Congress MusicFactory
 key: F_major
-audio: "https://soundcloud.com/congressmusicfactory/we-praise-your-name"
-video: "https://www.youtube.com/watch?v=IIvZX-tUIGw"
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/we-praise-your-name"
+  apple: "https://music.apple.com/us/album/we-praise-your-name-feat-inuka-band-kingdom-life-advancement/1377975542?i=1377976064"
+video:
+  youtube: "https://www.youtube.com/watch?v=IIvZX-tUIGw"
 leadsheet: "https://app.box.com/s/3vyujwam0osq17mrqsu6ozdolx6tq1u2"
 notes: ""
 ---

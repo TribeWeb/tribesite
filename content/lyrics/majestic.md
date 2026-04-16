@@ -3,8 +3,11 @@ slug: majestic
 title: Majestic
 copyright: © 2019 Congress MusicFactory
 key: Eb_major
-audio: "https://soundcloud.com/congressmusicfactory/16-majestic?in=congressmusicfactory/sets/power-of-the-journey"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/16-majestic?in=congressmusicfactory/sets/power-of-the-journey"
+  apple: "https://music.apple.com/us/album/majestic/1608695618?i=1608695635"
+video:
+  youtube: "https://www.youtube.com/watch?v=KpaA4pFOljA"
 leadsheet: "https://www.dropbox.com/s/l37cz4sj1mmjfy6/Majestic.pdf?dl=0"
 notes: ""
 ---

@@ -3,8 +3,8 @@ slug: "holy,-there-is-no-one-like-you"
 title: "Holy, There is No One like You"
 copyright: © 2018 New Horizons Church
 key: E_major
-audio: "https://app.box.com/s/32tpfvmik07dvznq0bpc5iffrhofsl8x"
-video: ""
+audio:
+  other: "https://app.box.com/s/32tpfvmik07dvznq0bpc5iffrhofsl8x"
 leadsheet: ""
 notes: I vi IV V
 ---

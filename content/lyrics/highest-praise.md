@@ -3,8 +3,10 @@ slug: highest-praise
 title: Highest Praise
 copyright: "℗ 2024 The Harmony Group, LLC"
 key: E_major
-audio: "https://open.spotify.com/track/07KfkF3DR65fiZ8LJp38Cy?si=a322fe896b414f60"
-video: "https://www.youtube.com/watch?v=h7lfdTVMDC8"
+audio:
+  spotify: "https://open.spotify.com/track/07KfkF3DR65fiZ8LJp38Cy?si=a322fe896b414f60"
+video:
+  youtube: "https://www.youtube.com/watch?v=h7lfdTVMDC8"
 leadsheet: "https://www.praisecharts.com/songs/details/86177/highest-praise-chords"
 notes: "https://chordify.net/chords/highest-praise-live-recording-celebration-music-ft-lauren-tyler-celebration-music"
 ---

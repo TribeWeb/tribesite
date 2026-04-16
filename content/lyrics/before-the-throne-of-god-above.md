@@ -3,8 +3,8 @@ slug: before-the-throne-of-god-above
 title: Before the Throne of God Above
 copyright: (C) Sovereign Grace Music ‧ 2003
 key: ""
-audio: "https://open.spotify.com/track/6Y7aqhtVqwl7ZaUQkU7ABC?si=Xt43J6RkS1OPLq8T-pqp4Q"
-video: ""
+audio:
+  spotify: "https://open.spotify.com/track/6Y7aqhtVqwl7ZaUQkU7ABC?si=Xt43J6RkS1OPLq8T-pqp4Q"
 leadsheet: ""
 notes: ""
 ---

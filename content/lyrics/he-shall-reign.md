@@ -3,8 +3,10 @@ slug: he-shall-reign
 title: He Shall Reign
 copyright: ©2019 Hillsong Worship
 key: E_major
-audio: "https://open.spotify.com/track/21qUDqtW6QmirlDxd5zsZf?si=9ad47175aaab4209"
-video: "https://www.youtube.com/watch?v=oW7PcW9xfvE"
+audio:
+  spotify: "https://open.spotify.com/track/21qUDqtW6QmirlDxd5zsZf?si=9ad47175aaab4209"
+video:
+  youtube: "https://www.youtube.com/watch?v=oW7PcW9xfvE"
 leadsheet: ""
 notes: ""
 ---

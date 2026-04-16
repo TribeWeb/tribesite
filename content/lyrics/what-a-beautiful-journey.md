@@ -3,8 +3,6 @@ slug: what-a-beautiful-journey
 title: What a Beautiful Journey
 copyright: © 2012 NHC
 key: ""
-audio: ""
-video: ""
 leadsheet: ""
 notes: ""
 ---

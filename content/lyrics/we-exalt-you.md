@@ -3,8 +3,8 @@ slug: we-exalt-you
 title: We Exalt You
 copyright: © 2019 New Horizons Church
 key: ""
-audio: "https://www.dropbox.com/s/a7dootxzbje2k8m/We%20Exalt%20You.mp3?dl=0"
-video: ""
+audio:
+  other: "https://www.dropbox.com/s/a7dootxzbje2k8m/We%20Exalt%20You.mp3?dl=0"
 leadsheet: ""
 notes: ""
 ---

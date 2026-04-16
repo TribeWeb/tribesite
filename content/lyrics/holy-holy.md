@@ -3,8 +3,9 @@ slug: holy-holy
 title: Holy Holy
 copyright: © 2018 Congress MusicFactory
 key: A_minor
-audio: "https://soundcloud.com/congressmusicfactory/holy-holy-1"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/holy-holy-1"
+  apple: "https://music.apple.com/us/album/holy-holy-feat-davidic-signature-kingdom-life-advancement/1377975542?i=1377976073"
 leadsheet: "https://app.box.com/s/qey91yar1e7t0liorz9ucsntyxqn83hs"
 notes: ""
 ---

@@ -3,8 +3,10 @@ slug: look-no-further
 title: Look No Further
 copyright: Copyright © 20xx Congress Music Factory
 key: ""
-audio: "https://open.spotify.com/track/7ATY6mog7MCsVtAKh1XAu6?si=mXQsipevRZGfLyHilgAGuw"
-video: "https://youtu.be/WBcxBrR_fKc?si=opYDuhSSyeLQbG6t"
+audio:
+  spotify: "https://open.spotify.com/track/7ATY6mog7MCsVtAKh1XAu6?si=mXQsipevRZGfLyHilgAGuw"
+video:
+  youtube: "https://youtu.be/WBcxBrR_fKc?si=opYDuhSSyeLQbG6t"
 leadsheet: ""
 notes: ""
 ---

@@ -3,8 +3,8 @@ slug: there-is-no-other-god
 title: There is No Other God
 copyright: Copyright © 2024 Congress WBN Music Factory
 key: D_major
-audio: "https://on.soundcloud.com/EN33gSijoe6ys5nn6"
-video: ""
+audio:
+  soundcloud: "https://on.soundcloud.com/EN33gSijoe6ys5nn6"
 leadsheet: ""
 notes: ""
 ---

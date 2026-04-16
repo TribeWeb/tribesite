@@ -3,8 +3,10 @@ slug: you-are-the-lord
 title: You Are The Lord
 copyright: Copyright © 2024 Congress WBN Music Factory
 key: Bb_major
-audio: "https://open.spotify.com/track/2E7AargC9DALwZqTLPQmEx?si=74bbe3f93eb04ebc"
-video: "https://www.youtube.com/watch?v=bPwcqsINi-w"
+audio:
+  spotify: "https://open.spotify.com/track/2E7AargC9DALwZqTLPQmEx?si=74bbe3f93eb04ebc"
+video:
+  youtube: "https://www.youtube.com/watch?v=bPwcqsINi-w"
 leadsheet: ""
 notes: ""
 ---

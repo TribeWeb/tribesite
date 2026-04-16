@@ -3,8 +3,11 @@ slug: we-rise
 title: We Rise
 copyright: Congress WBN Music Factory
 key: ""
-audio: "https://soundcloud.com/congressmusicfactory/01-we-rise"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/01-we-rise"
+  apple: "https://music.apple.com/us/album/we-rise/1765413659?i=1765413661"
+video:
+  youtube: "https://www.youtube.com/watch?v=soWTbdJSvCU"
 leadsheet: ""
 notes: ""
 ---

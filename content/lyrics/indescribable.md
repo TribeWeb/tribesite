@@ -3,8 +3,10 @@ slug: indescribable
 title: Indescribable
 copyright: © 2001 a songwriter
 key: Bb_major
-audio: "https://open.spotify.com/track/0q7F2eLU0WDvrhuGTeVCYi?si=d711efb90bd44f0c"
-video: "https://www.youtube.com/watch?v=5IlVfkY5q54"
+audio:
+  spotify: "https://open.spotify.com/track/0q7F2eLU0WDvrhuGTeVCYi?si=d711efb90bd44f0c"
+video:
+  youtube: "https://www.youtube.com/watch?v=5IlVfkY5q54"
 leadsheet: "https://www.praisecharts.com/songs/details/2161/indescribable-sheet-music"
 notes: ""
 ---

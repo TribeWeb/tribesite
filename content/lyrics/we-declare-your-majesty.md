@@ -3,8 +3,6 @@ slug: we-declare-your-majesty
 title: We Declare Your Majesty
 copyright: ""
 key: E_major
-audio: ""
-video: ""
 leadsheet: ""
 notes: ""
 ---

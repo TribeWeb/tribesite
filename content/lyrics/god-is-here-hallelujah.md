@@ -3,8 +3,8 @@ slug: god-is-here-hallelujah
 title: God is Here (Hallelujah)
 copyright: © 2020 Congress MusicFactory
 key: ""
-audio: ""
-video: "https://www.youtube.com/watch?v=Cw9AwHqJzhA"
+video:
+  youtube: "https://www.youtube.com/watch?v=Cw9AwHqJzhA"
 leadsheet: ""
 notes: ""
 ---

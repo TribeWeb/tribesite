@@ -3,8 +3,6 @@ slug: hark-the-herald-angels-sing
 title: "Hark! The Herald Angels Sing"
 copyright: ""
 key: ""
-audio: ""
-video: ""
 leadsheet: ""
 notes: "Charles Wesley, 1739"
 ---

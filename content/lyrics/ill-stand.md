@@ -3,8 +3,6 @@ slug: ill-stand
 title: "I'll Stand"
 copyright: © 2001 a songwriter
 key: G_major
-audio: ""
-video: ""
 leadsheet: ""
 notes: ""
 ---

@@ -3,8 +3,10 @@ slug: you-alone
 title: You Alone
 copyright: © 2020 Congress MusicFactory
 key: D_major
-audio: "https://open.spotify.com/track/71uDbtOZpwGNHtyobMYjAy?si=37cb7f06e236460f"
-video: "https://www.youtube.com/watch?v=dTa0LB1KDg0"
+audio:
+  spotify: "https://open.spotify.com/track/71uDbtOZpwGNHtyobMYjAy?si=37cb7f06e236460f"
+video:
+  youtube: "https://www.youtube.com/watch?v=dTa0LB1KDg0"
 leadsheet: ""
 notes: ""
 ---

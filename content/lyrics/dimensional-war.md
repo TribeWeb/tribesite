@@ -3,8 +3,11 @@ slug: dimensional-war
 title: Dimensional War (Post GGPE)
 copyright: © 2016 Congress Music Factory
 key: A_minor
-audio: "https://soundcloud.com/congressmusicfactory/dimensional-war-1"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/dimensional-war-1"
+  apple: "https://music.apple.com/us/album/dimensional-war-post-ggpe/1608695618?i=1608695623"
+video:
+  youtube: "https://www.youtube.com/watch?v=1J-oNiVlVE4"
 leadsheet: "https://app.box.com/s/6bh36qv7vt535cw53vqzya6kk4itvl59"
 notes: "V1, V2, Ch1, V3, Ch2"
 ---

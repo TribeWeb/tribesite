@@ -3,8 +3,8 @@ slug: i-will-worship
 title: I Will Worship
 copyright: ""
 key: ""
-audio: ""
-video: "https://www.youtube.com/watch?v=pEAd2nz_kV0"
+video:
+  youtube: "https://www.youtube.com/watch?v=pEAd2nz_kV0"
 leadsheet: ""
 notes: ""
 ---

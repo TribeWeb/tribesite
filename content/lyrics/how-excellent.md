@@ -3,8 +3,6 @@ slug: how-excellent
 title: How Excellent
 copyright: © 2012 Precision Centre
 key: ""
-audio: ""
-video: ""
 leadsheet: ""
 notes: ""
 ---

@@ -3,8 +3,8 @@ slug: build-my-life
 title: Build My Life
 copyright: ""
 key: G_major
-audio: ""
-video: "https://www.youtube.com/watch?v=minFjSUyVsE"
+video:
+  youtube: "https://www.youtube.com/watch?v=minFjSUyVsE"
 leadsheet: ""
 notes: ""
 ---

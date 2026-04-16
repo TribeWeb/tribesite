@@ -3,8 +3,6 @@ slug: psalm-16
 title: Psalm 16
 copyright: © 2016 NHC
 key: D_major
-audio: ""
-video: ""
 leadsheet: "https://app.box.com/s/9s393tynb3qou2f356q65fxvbqkw80dx"
 notes: ""
 ---

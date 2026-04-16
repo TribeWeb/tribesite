@@ -3,8 +3,10 @@ slug: hallelujah-to-the-one
 title: Hallelujah to the One
 copyright: ""
 key: ""
-audio: "https://open.spotify.com/track/4aGPELxgX4wxuWAzzlzSWp?si=QbBbARkGS0qK8AEfwZ8ksg"
-video: "https://youtu.be/5WksO_-JmHM?si=Y1H6BFQxBojZ8fP9"
+audio:
+  spotify: "https://open.spotify.com/track/4aGPELxgX4wxuWAzzlzSWp?si=QbBbARkGS0qK8AEfwZ8ksg"
+video:
+  youtube: "https://youtu.be/5WksO_-JmHM?si=Y1H6BFQxBojZ8fP9"
 leadsheet: ""
 notes: ""
 ---

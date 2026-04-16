@@ -3,8 +3,6 @@ slug: deep-calls-to-deep
 title: Deep Calls to Deep
 copyright: © 2012 NHC
 key: G_major
-audio: ""
-video: ""
 leadsheet: "https://www.dropbox.com/s/we7q6ypj8dmdtqo/Deep%20Calls%20to%20Deep%20-%2020130127%20-%20NHC%20.pdf?dl=0"
 notes: ""
 ---

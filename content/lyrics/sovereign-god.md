@@ -3,8 +3,11 @@ slug: sovereign-god
 title: Sovereign God
 copyright: © 2016 NHC
 key: A_major
-audio: "https://soundcloud.com/congressmusicfactory/sovereign-god-1?ref=whatsapp&p=i&c=0&si=6C4D93CB141F4DC5AC0B6806ED899BDE&utm_source=whatsapp&utm_medium=message&utm_campaign=social_sharing"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/sovereign-god-1?ref=whatsapp&p=i&c=0&si=6C4D93CB141F4DC5AC0B6806ED899BDE&utm_source=whatsapp&utm_medium=message&utm_campaign=social_sharing"
+  apple: "https://music.apple.com/us/album/sovereign-god/1484685078?i=1484685090"
+video:
+  youtube: "https://www.youtube.com/watch?v=nxsIp8-uC4M"
 leadsheet: ""
 notes: ""
 ---

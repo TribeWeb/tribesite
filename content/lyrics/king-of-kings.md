@@ -3,8 +3,10 @@ slug: king-of-kings
 title: King of Kings
 copyright: © Copyright 1996 Jarrod Cooper
 key: D_major
-audio: "https://open.spotify.com/track/50YorEIitzB3kyCQhRysTv?si=_YgLd4klSF-TA561mIqakw"
-video: "https://youtu.be/AfOOksq7kFI?si=uPYzK2xcz2aLU09R"
+audio:
+  spotify: "https://open.spotify.com/track/50YorEIitzB3kyCQhRysTv?si=_YgLd4klSF-TA561mIqakw"
+video:
+  youtube: "https://youtu.be/AfOOksq7kFI?si=uPYzK2xcz2aLU09R"
 leadsheet: ""
 notes: ""
 ---

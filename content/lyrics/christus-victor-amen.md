@@ -3,8 +3,10 @@ slug: christus-victor-amen
 title: Christus Victor (Amen)
 copyright: ©2024 Getty Music Publishing
 key: F_major
-audio: "https://open.spotify.com/track/72qqgNgJZqj1YJ57bmvO28?si=phIDHkzlRxmvbUvV9qJf5Q&context=spotify%3Asearch%3AChristus%2BVictor%2B%28Amen%29"
-video: "https://youtu.be/4Zj4oo2w_lo"
+audio:
+  spotify: "https://open.spotify.com/track/72qqgNgJZqj1YJ57bmvO28?si=phIDHkzlRxmvbUvV9qJf5Q&context=spotify%3Asearch%3AChristus%2BVictor%2B%28Amen%29"
+video:
+  youtube: "https://youtu.be/4Zj4oo2w_lo"
 leadsheet: ""
 notes: ""
 ---

@@ -3,8 +3,11 @@ slug: joyous-war
 title: Joyous War
 copyright: © 2016 Congress Music Factory
 key: A_major
-audio: "https://soundcloud.com/congressmusicfactory/joyous-war-1"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/joyous-war-1"
+  apple: "https://music.apple.com/us/album/joyous-war/1608695618?i=1608695624"
+video:
+  youtube: "https://www.youtube.com/watch?v=7k1CyGGKL3A"
 leadsheet: "https://app.box.com/s/e5oa842gvjfufdpgfd2itvqg7rg0u8a9"
 notes: "We won't be playing the exact arrangement from the tracks, we need to bring the sound of who we are as a community within those songs - making them accessible without having to follow any set arrangement.  I spent a couple of hours listening them in the car yesterday and I think we can approach the sections to both songs in ways which will bring out the strength in the words.  We will probably play them with fewer musical phrases between sections and although the option of key changes is good  - let's not be tied to them.  
 Joyous war probably lends itself more easily to a sectional approach with a more obvious chorus that we could play straighter and that would lift after a verse."

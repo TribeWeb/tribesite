@@ -3,8 +3,11 @@ slug: we-magnify-you
 title: We Magnify You
 copyright: © 2019 Congress MusicFactory
 key: C_major
-audio: "https://soundcloud.com/congressmusicfactory/we-magnify-you?in=congressmusicfactory/sets/we-magnify-you"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/we-magnify-you?in=congressmusicfactory/sets/we-magnify-you"
+  apple: "https://music.apple.com/us/album/we-magnify-you/1473111487?i=1473111503"
+video:
+  youtube: "https://www.youtube.com/watch?v=WWU5TqSMjco"
 leadsheet: "http://resources.congressmusicfactory.com/wp-content/uploads/2019/07/We-Magnify-You-We-Magnify-You-Lead-Sheet.pdf"
 notes: ""
 ---

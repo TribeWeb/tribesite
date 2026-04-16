@@ -3,8 +3,10 @@ slug: worthy-o-god
 title: Worthy O God
 copyright: Copyright © 2024 Congress Music Factory
 key: ""
-audio: "https://open.spotify.com/track/2fZ6FHyM05WY3uXioOJIPK?si=af8a723b5e614726"
-video: "https://youtu.be/_-Ry4zUo9RM?si=8O-7CmOi69DSAoTY"
+audio:
+  spotify: "https://open.spotify.com/track/2fZ6FHyM05WY3uXioOJIPK?si=af8a723b5e614726"
+video:
+  youtube: "https://youtu.be/_-Ry4zUo9RM?si=8O-7CmOi69DSAoTY"
 leadsheet: ""
 notes: ""
 ---

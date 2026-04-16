@@ -3,8 +3,6 @@ slug: the-voice-of-the-lord
 title: The Voice of the Lord
 copyright: © 2014 New Horizons Church
 key: G_major
-audio: ""
-video: ""
 leadsheet: "https://www.dropbox.com/s/wfhjabygo7we8ff/The%20Voice%20of%20the%20Lord%20-%2020130428%20-%20NHC.pdf?dl=0"
 notes: ""
 ---

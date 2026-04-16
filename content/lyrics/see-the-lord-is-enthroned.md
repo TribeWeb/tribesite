@@ -3,8 +3,8 @@ slug: see-the-lord-is-enthroned
 title: See the Lord is Enthroned
 copyright: ""
 key: E_major
-audio: "https://on.soundcloud.com/ayMSQEy7a41wDRAH8"
-video: ""
+audio:
+  soundcloud: "https://on.soundcloud.com/ayMSQEy7a41wDRAH8"
 leadsheet: ""
 notes: ""
 ---

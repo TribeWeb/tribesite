@@ -3,8 +3,8 @@ slug: praise-eternal-god
 title: Praise Eternal God
 copyright: © 2015 New Horizons Church
 key: E_major
-audio: "https://soundcloud.com/newhorizonskc/praise-eternal"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/newhorizonskc/praise-eternal"
 leadsheet: "https://www.dropbox.com/s/390gainz6n9ogad/Praise%20Eternal.pdf?dl=0"
 notes: ""
 ---

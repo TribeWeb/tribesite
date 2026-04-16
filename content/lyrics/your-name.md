@@ -3,8 +3,10 @@ slug: your-name
 title: Your Name
 copyright: ""
 key: G_major
-audio: "https://open.spotify.com/track/2mVDuDEuyv3eyOuiXQEAix?si=Tr-qjEieTDC0YtbrtCCLKw&context=spotify%3Aplaylist%3A2GC7hG0Vpfr3zjWTYjHaFz"
-video: "https://youtu.be/Z7CFr8w9z38?si=dVb6wsVbarm4lzaj"
+audio:
+  spotify: "https://open.spotify.com/track/2mVDuDEuyv3eyOuiXQEAix?si=Tr-qjEieTDC0YtbrtCCLKw&context=spotify%3Aplaylist%3A2GC7hG0Vpfr3zjWTYjHaFz"
+video:
+  youtube: "https://youtu.be/Z7CFr8w9z38?si=dVb6wsVbarm4lzaj"
 leadsheet: ""
 notes: ""
 ---

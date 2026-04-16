@@ -3,8 +3,6 @@ slug: the-splendour-of-the-king
 title: The Splendour of the King
 copyright: © 2001 a songwriter
 key: A_major
-audio: ""
-video: ""
 leadsheet: ""
 notes: ""
 ---

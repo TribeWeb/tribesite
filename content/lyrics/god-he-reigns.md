@@ -3,8 +3,8 @@ slug: god-he-reigns
 title: God He Reigns
 copyright: © 2001 a songwriter
 key: G_major
-audio: "https://open.spotify.com/track/5igRzFqEa9bZb2sKJkQowY?si=bd39e9c2d14e4fc0"
-video: ""
+audio:
+  spotify: "https://open.spotify.com/track/5igRzFqEa9bZb2sKJkQowY?si=bd39e9c2d14e4fc0"
 leadsheet: ""
 notes: ""
 ---

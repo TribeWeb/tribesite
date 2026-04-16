@@ -3,8 +3,8 @@ slug: endless-praise
 title: Endless Praise
 copyright: ""
 key: Gb_major
-audio: ""
-video: "https://www.youtube.com/watch?v=xjQfe6OwH64"
+video:
+  youtube: "https://www.youtube.com/watch?v=xjQfe6OwH64"
 leadsheet: "https://www.praisecharts.com/songs/details/77519/endless-praise-chords"
 notes: ""
 ---

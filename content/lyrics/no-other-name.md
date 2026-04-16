@@ -3,8 +3,10 @@ slug: no-other-name
 title: No Other Name
 copyright: © Capitol Christian Music Group
 key: D_major
-audio: "https://open.spotify.com/track/6KwkVtXm8OUp2XffN5k7lY?si=f72d2b8f19434d01"
-video: "https://www.youtube.com/watch?v=Wku9OphQ7JE"
+audio:
+  spotify: "https://open.spotify.com/track/6KwkVtXm8OUp2XffN5k7lY?si=f72d2b8f19434d01"
+video:
+  youtube: "https://www.youtube.com/watch?v=Wku9OphQ7JE"
 leadsheet: ""
 notes: ""
 ---

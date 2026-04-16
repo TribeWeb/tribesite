@@ -3,8 +3,11 @@ slug: no-one-like-you
 title: No One Like You
 copyright: © 2016 Congress Music Factory
 key: G_major
-audio: "https://soundcloud.com/congressmusicfactory/no-one"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/no-one"
+  apple: "https://music.apple.com/us/album/no-one-like-you/1527314830?i=1527314843"
+video:
+  youtube: "https://www.youtube.com/watch?v=EUkdXRRdFDg"
 leadsheet: "https://drive.google.com/file/d/0B6chfG6Sx-uRTzRVdE03WVBRbVU/view?usp=sharing"
 notes: Chunky guitar
 ---

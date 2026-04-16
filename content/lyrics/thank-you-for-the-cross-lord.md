@@ -3,8 +3,6 @@ slug: thank-you-for-the-cross-lord
 title: Thank You for the Cross Lord
 copyright: © 2001 a songwriter
 key: ""
-audio: ""
-video: ""
 leadsheet: ""
 notes: ""
 ---

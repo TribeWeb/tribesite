@@ -3,8 +3,11 @@ slug: raise-a-banner
 title: Raise a Banner (post-GGPE)
 copyright: © 2016 Congress Music Factory
 key: C_minor
-audio: "https://soundcloud.com/congressmusicfactory/raise-a-banner?in=congressmusicfactory/sets/you-have-brought-us-here"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/raise-a-banner?in=congressmusicfactory/sets/you-have-brought-us-here"
+  apple: "https://music.apple.com/us/album/raise-a-banner-feat-jon-williams/1273282217?i=1273282748"
+video:
+  youtube: "https://www.youtube.com/watch?v=Am76nMQ7UN8"
 leadsheet: "https://app.box.com/s/j6hs1dblb8xx6f5wgb2gmqhny5rl981y"
 notes: ""
 ---

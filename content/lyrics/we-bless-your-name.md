@@ -3,8 +3,8 @@ slug: we-bless-your-name
 title: We Bless Your Name
 copyright: © 2019 Song Factory and Ben Poffley
 key: ""
-audio: "https://on.soundcloud.com/m6UFC"
-video: ""
+audio:
+  soundcloud: "https://on.soundcloud.com/m6UFC"
 leadsheet: ""
 notes: ""
 ---

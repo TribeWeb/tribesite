@@ -3,8 +3,6 @@ slug: holy-holy-lift-up-his-name
 title: "Holy, Holy (Lift Up His name)"
 copyright: © 2001 a songwriter
 key: E_major
-audio: ""
-video: ""
 leadsheet: ""
 notes: ""
 ---

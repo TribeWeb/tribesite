@@ -3,8 +3,8 @@ slug: you-will-find-us-singing-soys-of-joy
 title: You will find us singing soys of Joy (When You Return)
 copyright: ©2024 New Horizons
 key: F_major
-audio: "https://soundcloud.com/newhorizonskc/you-will-find-us-singing-songs-of-joy?si=c324b567c3ba446c8b1570cc4554f2b7&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/newhorizonskc/you-will-find-us-singing-songs-of-joy?si=c324b567c3ba446c8b1570cc4554f2b7&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
 leadsheet: ""
 notes: ""
 ---

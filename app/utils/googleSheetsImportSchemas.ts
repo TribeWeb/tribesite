@@ -38,24 +38,21 @@ const lyrics = z.object({
   slug: z.string(),
   title: z.string(),
   copyright: z.string().optional(),
+  writers: z.array(z.string()).optional(),
   key: z.string().optional(),
-  audio: z.string().optional(),
-  video: z.string().optional(),
+  audio: z.object({
+    spotify: z.string().optional(),
+    soundcloud: z.string().optional(),
+    apple: z.string().optional(),
+    other: z.string().optional()
+  }).optional(),
+  video: z.object({
+    youtube: z.string().optional(),
+    vimeo: z.string().optional(),
+    other: z.string().optional()
+  }).optional(),
   leadsheet: z.string().optional(),
   notes: z.string().optional()
-  // verse1: z.string().optional(),
-  // verse2: z.string().optional(),
-  // verse3: z.string().optional(),
-  // verse4: z.string().optional(),
-  // verse5: z.string().optional(),
-  // prechorus1: z.string().optional(),
-  // prechorus2: z.string().optional(),
-  // chorus1: z.string().optional(),
-  // chorus2: z.string().optional(),
-  // chorus3: z.string().optional(),
-  // chorus4: z.string().optional(),
-  // bridge1: z.string().optional(),
-  // bridge2: z.string().optional()
 })
 
 export const googleSheetsImportSchemas = {

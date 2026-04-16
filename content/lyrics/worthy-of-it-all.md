@@ -3,8 +3,10 @@ slug: worthy-of-it-all
 title: Worthy of it All
 copyright: ""
 key: Eb_major
-audio: "https://www.youtube.com/watch?v=JzZSrOPeolc"
-video: "https://www.youtube.com/watch?v=fff1c-HZf50"
+audio:
+  other: "https://www.youtube.com/watch?v=JzZSrOPeolc"
+video:
+  youtube: "https://www.youtube.com/watch?v=fff1c-HZf50"
 leadsheet: ""
 notes: ""
 ---

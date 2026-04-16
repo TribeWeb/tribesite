@@ -3,8 +3,8 @@ slug: there-is-a-redeemer
 title: There is a Redeemer
 copyright: ""
 key: ""
-audio: ""
-video: "https://www.youtube.com/watch?v=yp1NAwRDp3Q"
+video:
+  youtube: "https://www.youtube.com/watch?v=yp1NAwRDp3Q"
 leadsheet: ""
 notes: ""
 ---

@@ -3,8 +3,8 @@ slug: our-god-forever
 title: Our God Forever
 copyright: "https://resources.congressmusicfactory.com/world-of-worship-vol-3-our-god-forever/"
 key: ""
-audio: "https://open.spotify.com/track/6w0I6pBZP52we3B4x7v8sS?si=edd7ca101a864d67"
-video: ""
+audio:
+  spotify: "https://open.spotify.com/track/6w0I6pBZP52we3B4x7v8sS?si=edd7ca101a864d67"
 leadsheet: ""
 notes: ""
 ---

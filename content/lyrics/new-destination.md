@@ -3,8 +3,8 @@ slug: new-destination
 title: New Destination
 copyright: © 2015 The Community
 key: C_major
-audio: "https://open.spotify.com/track/6vcy1FnDj17yaENlr7rBTb?si=49826f6a589b4dc7"
-video: ""
+audio:
+  spotify: "https://open.spotify.com/track/6vcy1FnDj17yaENlr7rBTb?si=49826f6a589b4dc7"
 leadsheet: ""
 notes: ""
 ---

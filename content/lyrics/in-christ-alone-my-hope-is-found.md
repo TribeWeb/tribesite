@@ -3,8 +3,6 @@ slug: in-christ-alone-my-hope-is-found
 title: In Christ Alone My Hope is Found
 copyright: © 2001 a songwriter
 key: E_major
-audio: ""
-video: ""
 leadsheet: ""
 notes: ""
 ---

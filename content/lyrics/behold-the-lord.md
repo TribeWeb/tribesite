@@ -3,8 +3,11 @@ slug: behold-the-lord
 title: Behold the Lord
 copyright: © 2019 Congress MusicFactory
 key: C_major
-audio: "https://soundcloud.com/congressmusicfactory/behold-the-lord?in=congressmusicfactory/sets/we-magnify-you"
-video: "https://youtu.be/aGTBe1fUWHE?si=pFG_M7162ew49wYy"
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/behold-the-lord?in=congressmusicfactory/sets/we-magnify-you"
+  apple: "https://music.apple.com/us/album/behold-the-lord/1473111487?i=1473111778"
+video:
+  youtube: "https://youtu.be/aGTBe1fUWHE?si=pFG_M7162ew49wYy"
 leadsheet: "http://resources.congressmusicfactory.com/wp-content/uploads/2019/07/We-Magnify-You-Behold-the-Lord-Lead-Sheet.pdf"
 notes: ""
 ---

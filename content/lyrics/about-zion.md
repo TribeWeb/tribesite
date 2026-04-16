@@ -3,8 +3,8 @@ slug: about-zion
 title: About Zion
 copyright: Copyright © 2005 Congress Music Fatory
 key: ""
-audio: "https://open.spotify.com/track/3FguxioFhgYCsPygStXp29?si=q9p3A8SuTH2PSkExoBBGqQ"
-video: ""
+audio:
+  spotify: "https://open.spotify.com/track/3FguxioFhgYCsPygStXp29?si=q9p3A8SuTH2PSkExoBBGqQ"
 leadsheet: ""
 notes: ""
 ---

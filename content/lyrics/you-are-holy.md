@@ -3,8 +3,6 @@ slug: you-are-holy
 title: You Are Holy
 copyright: © 2015 Congress Music Factory
 key: ""
-audio: ""
-video: ""
 leadsheet: "https://www.dropbox.com/s/skngwc4lq8oppeo/You%20are%20Worthy%20C-WBN.pdf?dl=0"
 notes: ""
 ---

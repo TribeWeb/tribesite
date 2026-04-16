@@ -3,8 +3,8 @@ slug: singing-majesty
 title: Majesty
 copyright: ""
 key: ""
-audio: "https://open.spotify.com/track/0nnXzlq26HQ2AY0ahVmCo6?si=gPsDEphpQIqwpHbqaA5Mrw"
-video: ""
+audio:
+  spotify: "https://open.spotify.com/track/0nnXzlq26HQ2AY0ahVmCo6?si=gPsDEphpQIqwpHbqaA5Mrw"
 leadsheet: ""
 notes: ""
 ---

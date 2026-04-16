@@ -3,8 +3,8 @@ slug: is-he-worthy
 title: Is He Worthy?
 copyright: ""
 key: ""
-audio: "https://open.spotify.com/track/4E43YlwUlpYDJIxcMjt0S7?si=565a1a6b920b4c24"
-video: ""
+audio:
+  spotify: "https://open.spotify.com/track/4E43YlwUlpYDJIxcMjt0S7?si=565a1a6b920b4c24"
 leadsheet: ""
 notes: ""
 ---

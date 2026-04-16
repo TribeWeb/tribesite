@@ -3,8 +3,8 @@ slug: you-are-beautiful-beyond-description
 title: You Are Beautiful Beyond Description
 copyright: Copyright © 1987 Sovereign Grace Praise
 key: A_major
-audio: ""
-video: "https://www.youtube.com/watch?v=Q6FWNXjacGc"
+video:
+  youtube: "https://www.youtube.com/watch?v=Q6FWNXjacGc"
 leadsheet: ""
 notes: ""
 ---

@@ -3,8 +3,10 @@ slug: your-joy-is-a-light-to-my-soul
 title: "Joy!"
 copyright: ""
 key: C_major
-audio: "https://open.spotify.com/track/3lBx38lEd0o5YUiJk4d2Ho?si=GFUQy_T9T1eY29J0W5YmQw"
-video: "https://youtu.be/kI2FumOnCys?si=KSEPfcvY1kTXfO-o"
+audio:
+  spotify: "https://open.spotify.com/track/3lBx38lEd0o5YUiJk4d2Ho?si=GFUQy_T9T1eY29J0W5YmQw"
+video:
+  youtube: "https://youtu.be/kI2FumOnCys?si=KSEPfcvY1kTXfO-o"
 leadsheet: "https://resources.congressmusicfactory.com/wp-content/uploads/2020/11/Joy-no-key-change-.pdf"
 notes: ""
 ---

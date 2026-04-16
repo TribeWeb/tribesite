@@ -3,8 +3,8 @@ slug: what-a-beautiful-name
 title: What A Beautiful Name
 copyright: ""
 key: D_major
-audio: ""
-video: "https://www.youtube.com/watch?v=r5L6QlAH3L4"
+video:
+  youtube: "https://www.youtube.com/watch?v=r5L6QlAH3L4"
 leadsheet: ""
 notes: ""
 ---

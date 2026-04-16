@@ -3,8 +3,11 @@ slug: the-path
 title: The Path
 copyright: © 2018 Congress MusicFactory
 key: Dm
-audio: "https://soundcloud.com/congressmusicfactory/the-path"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/the-path"
+  apple: "https://music.apple.com/us/album/the-path-feat-davidic-signature-kingdom-life/1377975542?i=1377976083"
+video:
+  youtube: "https://www.youtube.com/watch?v=RIyHNCOcgQw"
 leadsheet: "https://app.box.com/s/i1flrt5r2spdhp535cy3s9ulu4aq5rdk"
 notes: ""
 ---

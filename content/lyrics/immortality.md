@@ -3,8 +3,6 @@ slug: immortality
 title: Immortality
 copyright: Copyright © 2024 Congress WBN Music Factory
 key: ""
-audio: ""
-video: ""
 leadsheet: ""
 notes: ""
 ---

@@ -3,8 +3,8 @@ slug: you-are-god
 title: You Are God
 copyright: ©2024 New Horizons
 key: ""
-audio: "https://soundcloud.com/newhorizonskc/you-are-god?in=newhorizonskc/sets/project-heritage-worshippers&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/newhorizonskc/you-are-god?in=newhorizonskc/sets/project-heritage-worshippers&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
 leadsheet: ""
 notes: ""
 ---

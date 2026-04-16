@@ -3,8 +3,6 @@ slug: majesty-so-exalt
 title: Majesty
 copyright: © Jack Hayford
 key: G_major
-audio: ""
-video: ""
 leadsheet: "http://www.kennycarter.net/Chords/Majesty%20(Chords).htm"
 notes: ""
 ---

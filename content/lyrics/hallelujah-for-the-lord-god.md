@@ -3,8 +3,8 @@ slug: hallelujah-for-the-lord-god
 title: Hallelujah (For the Lord God...)
 copyright: ""
 key: F_major
-audio: "https://on.soundcloud.com/zGWTdaZPJmHtKR5L6"
-video: ""
+audio:
+  soundcloud: "https://on.soundcloud.com/zGWTdaZPJmHtKR5L6"
 leadsheet: ""
 notes: ""
 ---

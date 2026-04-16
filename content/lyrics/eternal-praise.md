@@ -3,8 +3,11 @@ slug: eternal-praise
 title: Eternal Praise
 copyright: © 2015 a songwriter
 key: E_major
-audio: "https://soundcloud.com/congressmusicfactory/eternal-praise"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/eternal-praise"
+  apple: "https://music.apple.com/us/album/eternal-praise/1484692093?i=1484692113"
+video:
+  youtube: "https://www.youtube.com/watch?v=nE9NkPHreG8"
 leadsheet: ""
 notes: ""
 ---

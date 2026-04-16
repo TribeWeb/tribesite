@@ -3,8 +3,8 @@ slug: awesome-god
 title: Awesome God
 copyright: ""
 key: G_major
-audio: "https://open.spotify.com/track/2R0B44jOb1mC2rU8ObMh0f?si=1LLnL4liRfC514Su8hn9dg"
-video: ""
+audio:
+  spotify: "https://open.spotify.com/track/2R0B44jOb1mC2rU8ObMh0f?si=1LLnL4liRfC514Su8hn9dg"
 leadsheet: ""
 notes: ""
 ---

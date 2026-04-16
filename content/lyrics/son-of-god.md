@@ -3,8 +3,11 @@ slug: son-of-god
 title: Son of God
 copyright: Congress WBN Music Factory
 key: D_major
-audio: "https://soundcloud.com/congressmusicfactory/04-son-of-god"
-video: "https://www.youtube.com/watch?v=bJr4Wa-ObvA"
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/04-son-of-god"
+  apple: "https://music.apple.com/us/album/son-of-god/1765413659?i=1765413666"
+video:
+  youtube: "https://www.youtube.com/watch?v=bJr4Wa-ObvA"
 leadsheet: ""
 notes: ""
 ---

@@ -3,8 +3,8 @@ slug: i-exalt-you
 title: I Exalt You
 copyright: ""
 key: ""
-audio: "https://open.spotify.com/track/722Vem9yzpJNZY3OueGOXp"
-video: ""
+audio:
+  spotify: "https://open.spotify.com/track/722Vem9yzpJNZY3OueGOXp"
 leadsheet: ""
 notes: ""
 ---

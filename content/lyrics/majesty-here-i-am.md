@@ -3,8 +3,6 @@ slug: majesty-here-i-am
 title: Majesty (Here I Am)
 copyright: © 2001 a songwriter
 key: E_major
-audio: ""
-video: ""
 leadsheet: ""
 notes: ""
 ---

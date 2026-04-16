@@ -3,8 +3,10 @@ slug: lift-up-your-heads
 title: Lift Up Your Heads
 copyright: ""
 key: G_major
-audio: "https://open.spotify.com/track/4VrRNgErX2enkjrOR4cKcE?si=uCc5cPbIQVaX5eimwcnzZA"
-video: "https://youtu.be/-LD-Cv09Hms?si=rjxIs2CbX_XnHxwK"
+audio:
+  spotify: "https://open.spotify.com/track/4VrRNgErX2enkjrOR4cKcE?si=uCc5cPbIQVaX5eimwcnzZA"
+video:
+  youtube: "https://youtu.be/-LD-Cv09Hms?si=rjxIs2CbX_XnHxwK"
 leadsheet: ""
 notes: ""
 ---

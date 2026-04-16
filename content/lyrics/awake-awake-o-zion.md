@@ -3,8 +3,10 @@ slug: awake-awake-o-zion
 title: Awake Awake O Zion
 copyright: © 1999  Thankyou Music
 key: F_major
-audio: "https://open.spotify.com/track/6G673qEEf4DWPZVo05Cdac?si=93f196b2ba8a45eb"
-video: "https://www.youtube.com/watch?v=vWYcCw9yy-U"
+audio:
+  spotify: "https://open.spotify.com/track/6G673qEEf4DWPZVo05Cdac?si=93f196b2ba8a45eb"
+video:
+  youtube: "https://www.youtube.com/watch?v=vWYcCw9yy-U"
 leadsheet: ""
 notes: ""
 ---

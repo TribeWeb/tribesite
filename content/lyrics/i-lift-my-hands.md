@@ -3,8 +3,6 @@ slug: i-lift-my-hands
 title: I Lift My Hands
 copyright: © 2001 a songwriter
 key: E_major
-audio: ""
-video: ""
 leadsheet: ""
 notes: ""
 ---

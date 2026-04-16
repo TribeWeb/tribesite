@@ -3,8 +3,10 @@ slug: everlasting-god
 title: Everlasting God
 copyright: Copyright © 2005 Thankyou Music
 key: C_major
-audio: "https://open.spotify.com/track/1cUyNauQChHpZm4RIe2Yuy?si=ckizGmvuQfeXOSpLQpE0VQ&context=spotify%3Atrack%3A1cUyNauQChHpZm4RIe2Yuy"
-video: "https://www.youtube.com/watch?v=JSHRThrP1O0"
+audio:
+  spotify: "https://open.spotify.com/track/1cUyNauQChHpZm4RIe2Yuy?si=ckizGmvuQfeXOSpLQpE0VQ&context=spotify%3Atrack%3A1cUyNauQChHpZm4RIe2Yuy"
+video:
+  youtube: "https://www.youtube.com/watch?v=JSHRThrP1O0"
 leadsheet: ""
 notes: ""
 ---

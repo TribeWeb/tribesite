@@ -3,8 +3,8 @@ slug: joy
 title: Joy
 copyright: © 2019 New Horizons Church
 key: D_major
-audio: "https://www.dropbox.com/s/y1mh998sslaa4ot/Joy.mp3?dl=0"
-video: ""
+audio:
+  other: "https://www.dropbox.com/s/y1mh998sslaa4ot/Joy.mp3?dl=0"
 leadsheet: "https://www.dropbox.com/s/vda3oz3wgtsha49/joy.pdf?dl=0"
 notes: ""
 ---

@@ -3,8 +3,6 @@ slug: phenomenon
 title: Phenomenon
 copyright: © 2001 Precision Centre
 key: A_major
-audio: ""
-video: ""
 leadsheet: ""
 notes: "Sing all of it!"
 ---

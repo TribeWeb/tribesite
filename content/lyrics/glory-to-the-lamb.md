@@ -3,8 +3,11 @@ slug: glory-to-the-lamb
 title: Glory to the Lamb
 copyright: © 2020 Congress MusicFactory
 key: ""
-audio: "https://soundcloud.com/congressmusicfactory/glory-to-the-lamb"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/glory-to-the-lamb"
+  apple: "https://music.apple.com/us/album/glory-to-the-lamb/1482323338?i=1482323343"
+video:
+  youtube: "https://www.youtube.com/watch?v=uuDyXFZeSEQ"
 leadsheet: ""
 notes: ""
 ---

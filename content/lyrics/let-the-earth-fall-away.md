@@ -3,8 +3,6 @@ slug: let-the-earth-fall-away
 title: Let the Earth Fall Away
 copyright: © 2012 NHC
 key: ""
-audio: ""
-video: ""
 leadsheet: ""
 notes: ""
 ---

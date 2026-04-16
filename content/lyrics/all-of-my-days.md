@@ -3,8 +3,10 @@ slug: all-of-my-days
 title: All of My Days
 copyright: © 2000 Hillsong Music Publishing
 key: E_major
-audio: "https://open.spotify.com/track/5tBlPXAKVQJq1KvKj8CESa"
-video: "https://www.youtube.com/watch?v=iN_Fl4i1jeU"
+audio:
+  spotify: "https://open.spotify.com/track/5tBlPXAKVQJq1KvKj8CESa"
+video:
+  youtube: "https://www.youtube.com/watch?v=iN_Fl4i1jeU"
 leadsheet: "https://www.e-chords.com/chords/hillsong-music-australia/all-of-my-days"
 notes: ""
 ---

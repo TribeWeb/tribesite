@@ -3,8 +3,8 @@ slug: let-me-see-jesus
 title: Let Me See Jesus
 copyright: ""
 key: E_major
-audio: "https://open.spotify.com/track/7o4ReVU85sKOYOfD9RfWdL?si=Jl9CTgWQRQu4pKZK5U8fIw&context=spotify%3Asearch%3Ais%2Bhe%2B"
-video: ""
+audio:
+  spotify: "https://open.spotify.com/track/7o4ReVU85sKOYOfD9RfWdL?si=Jl9CTgWQRQu4pKZK5U8fIw&context=spotify%3Asearch%3Ais%2Bhe%2B"
 leadsheet: ""
 notes: ""
 ---

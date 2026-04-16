@@ -3,8 +3,10 @@ slug: the-revelation-song
 title: The Revelation Song
 copyright: © 2001 a songwriter
 key: D_major
-audio: "https://soundcloud.com/congressmusicfactory/when-the-dust-settles"
-video: "https://www.youtube.com/watch?v=dsiDukXIeVY"
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/when-the-dust-settles"
+video:
+  youtube: "https://www.youtube.com/watch?v=dsiDukXIeVY"
 leadsheet: "https://www.worshipchords.net/guitar/jennie-lee-riddle-kari-jobe/revelation-song"
 notes: D / / / Am7 / / / C / / / G / / /
 ---

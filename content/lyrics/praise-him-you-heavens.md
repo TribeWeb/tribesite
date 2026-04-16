@@ -3,8 +3,6 @@ slug: praise-him-you-heavens
 title: Praise Him You Heavens
 copyright: © 2001 a songwriter
 key: D_major
-audio: ""
-video: ""
 leadsheet: ""
 notes: ""
 ---

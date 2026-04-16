@@ -3,8 +3,11 @@ slug: forever
 title: Forever
 copyright: © 2018 Congress MusicFactory
 key: A_major
-audio: "https://soundcloud.com/congressmusicfactory/forever"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/forever"
+  apple: "https://music.apple.com/us/album/forever/1527314830?i=1527314846"
+video:
+  youtube: "https://www.youtube.com/watch?v=gWqe9Mdj--M"
 leadsheet: "https://app.box.com/s/8lrh158qfki5p1cikb4qtcigxq1qo34z"
 notes: ""
 ---

@@ -3,8 +3,8 @@ slug: walk-with-me
 title: Walk with Me
 copyright: © 2018 New Horizons Church
 key: ""
-audio: "https://app.box.com/s/vdh9wz7kazo5bytp4vxfy51t1rvzyzo9"
-video: ""
+audio:
+  other: "https://app.box.com/s/vdh9wz7kazo5bytp4vxfy51t1rvzyzo9"
 leadsheet: ""
 notes: I vi IV V
 ---

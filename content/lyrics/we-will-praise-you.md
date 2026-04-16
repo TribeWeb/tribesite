@@ -3,8 +3,11 @@ slug: we-will-praise-you
 title: We Will Praise You
 copyright: © Congress MusicFactory. All Rights Reserved. www.congressmusicfactory.com
 key: G_major
-audio: "https://soundcloud.com/congressmusicfactory/we-will-praise-you"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/we-will-praise-you"
+  apple: "https://music.apple.com/us/album/we-will-praise-you/1484685078?i=1484685088"
+video:
+  youtube: "https://www.youtube.com/watch?v=FvnGpjp1FzA"
 leadsheet: "https://www.dropbox.com/s/ez7etvkyyywitv9/We%20Will%20Praise%20You%20-%20CMF.pdf?dl=0"
 notes: ""
 ---

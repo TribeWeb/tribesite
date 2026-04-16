@@ -3,8 +3,12 @@ slug: high-and-lifted-up
 title: "High & Lifted Up"
 copyright: Copyright © 2024 Congress WBN Music Factory
 key: ""
-audio: "https://on.soundcloud.com/mmMEQWoPgeidMHW67"
-video: "https://nhkc.wistia.com/medias/s7is37vcmy"
+audio:
+  soundcloud: "https://on.soundcloud.com/mmMEQWoPgeidMHW67"
+  apple: "https://music.apple.com/us/album/high-and-lifted-up/1765413659?i=1765413663"
+video:
+  youtube: "https://www.youtube.com/watch?v=QV24au7EV7s"
+  other: "https://nhkc.wistia.com/medias/s7is37vcmy"
 leadsheet: ""
 notes: ""
 ---

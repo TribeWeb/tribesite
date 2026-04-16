@@ -3,8 +3,10 @@ slug: worthy-is-your-name
 title: Worthy
 copyright: Elevation Worship
 key: Eb_major
-audio: "https://open.spotify.com/track/7qqtTPQIMXAFubamFBPHG5?si=_GDvsTh6QNmHuVkEqP4pnA"
-video: "https://youtu.be/Ak5WTb-mgeA?si=L4boPg_K7vLqvnV0"
+audio:
+  spotify: "https://open.spotify.com/track/7qqtTPQIMXAFubamFBPHG5?si=_GDvsTh6QNmHuVkEqP4pnA"
+video:
+  youtube: "https://youtu.be/Ak5WTb-mgeA?si=L4boPg_K7vLqvnV0"
 leadsheet: ""
 notes: ""
 ---

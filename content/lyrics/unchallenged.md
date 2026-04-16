@@ -3,8 +3,11 @@ slug: unchallenged
 title: Unchallenged
 copyright: © 2001 a songwriter
 key: D_major
-audio: "https://soundcloud.com/congressmusicfactory/unchallenged"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/unchallenged"
+  apple: "https://music.apple.com/us/album/unchallenged/1484692093?i=1484692103"
+video:
+  youtube: "https://www.youtube.com/watch?v=NE7KktUh520"
 leadsheet: "https://www.dropbox.com/s/urlt6jua9hak45e/Unchallenged%20Chords%20-%20PC.pdf?dl=0"
 notes: ""
 ---

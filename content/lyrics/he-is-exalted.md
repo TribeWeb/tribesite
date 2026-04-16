@@ -3,8 +3,10 @@ slug: he-is-exalted
 title: He is Exalted
 copyright: © 1985 Straightway Music
 key: G_major
-audio: "https://open.spotify.com/search/he%20is%20exalted"
-video: "https://www.youtube.com/watch?v=X9jiI0GwWc8"
+audio:
+  spotify: "https://open.spotify.com/track/3KmUHXOpWlQ2RBeqxPoBYy"
+video:
+  youtube: "https://www.youtube.com/watch?v=X9jiI0GwWc8"
 leadsheet: "https://www.praisecharts.com/songs/details/28248/he-is-exalted-sheet-music"
 notes: ""
 ---

@@ -3,8 +3,11 @@ slug: rest-on-us
 title: Rest On Us
 copyright: © 2018 Congress MusicFactory
 key: D_major
-audio: "https://soundcloud.com/congressmusicfactory/rest-on-us"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/rest-on-us"
+  apple: "https://music.apple.com/us/album/rest-on-us-feat-davidic-signature-kingdom-life-advancement/1377975542?i=1377975990"
+video:
+  youtube: "https://www.youtube.com/watch?v=tp-puRpFgt0"
 leadsheet: "https://app.box.com/s/dg9x033jmznzqqucrhutesrty7565xpo"
 notes: ""
 ---

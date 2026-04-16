@@ -3,8 +3,8 @@ slug: no-one-higher
 title: No One Higher
 copyright: © Aaron Shust
 key: A_major
-audio: ""
-video: "https://www.youtube.com/watch?v=XCWHoQ1LZQ8"
+video:
+  youtube: "https://www.youtube.com/watch?v=XCWHoQ1LZQ8"
 leadsheet: "http://www.yourchords.com/632889/Aaron-Shust/No-One-Higher-ver-3-Chords/"
 notes: ""
 ---

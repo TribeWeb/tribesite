@@ -3,8 +3,6 @@ slug: all-hail-the-lamb
 title: All Hail the Lamb
 copyright: © 2001 a songwriter
 key: ""
-audio: ""
-video: ""
 leadsheet: ""
 notes: ""
 ---

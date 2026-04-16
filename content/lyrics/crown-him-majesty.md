@@ -3,8 +3,10 @@ slug: crown-him-majesty
 title: Crown Him (Majesty)
 copyright: ©2013 Alletrop Music
 key: A_major
-audio: "https://open.spotify.com/track/23hpQH3gde7yxn89rBxksN?si=ac152e455acb4427"
-video: "https://www.youtube.com/watch?v=hqy-gob13kA"
+audio:
+  spotify: "https://open.spotify.com/track/23hpQH3gde7yxn89rBxksN?si=ac152e455acb4427"
+video:
+  youtube: "https://www.youtube.com/watch?v=hqy-gob13kA"
 leadsheet: ""
 notes: ""
 ---

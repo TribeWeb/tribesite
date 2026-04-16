@@ -3,8 +3,8 @@ slug: you-are-worthy
 title: You Are Worthy
 copyright: Copyright © 2024 Congress WBN Music Factory
 key: D_major
-audio: "https://on.soundcloud.com/zAHf2qRQQRd7r4bKA"
-video: ""
+audio:
+  soundcloud: "https://on.soundcloud.com/zAHf2qRQQRd7r4bKA"
 leadsheet: ""
 notes: ""
 ---

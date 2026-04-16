@@ -3,8 +3,10 @@ slug: give-thanks-to-the-lord-our-god-and-king
 title: Give thanks to the Lord our God and King (Forever God is Faithful)
 copyright: © 2001 Samuel Martin / Simon Katz
 key: G_major
-audio: "https://open.spotify.com/track/6ChFsa3xElTTIJAo460out"
-video: "https://www.youtube.com/watch?v=6umWkVwpfBk"
+audio:
+  spotify: "https://open.spotify.com/track/6ChFsa3xElTTIJAo460out"
+video:
+  youtube: "https://www.youtube.com/watch?v=6umWkVwpfBk"
 leadsheet: "https://tabs.ultimate-guitar.com/tab/chris_tomlin/forever_chords_610372"
 notes: ""
 ---

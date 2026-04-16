@@ -3,8 +3,11 @@ slug: we-honour-you
 title: We Honour You
 copyright: © 2016 Congress Music Factory
 key: Eb_major
-audio: "https://soundcloud.com/congressmusicfactory/we-honour-you"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/we-honour-you"
+  apple: "https://music.apple.com/us/album/we-honour-you/1484692093?i=1484692115"
+video:
+  youtube: "https://www.youtube.com/watch?v=Fyt8WR-7QQ0"
 leadsheet: "https://www.dropbox.com/s/us0v5fwbbw2fd2r/We%20Honour%20You.pdf?dl=0"
 notes: "V1, V2, V1, (toE) V2, Ch, Ch, Br1x4, Br2x4, Br2x, Br2x4"
 ---

@@ -3,8 +3,6 @@ slug: amen-so-let-it-be
 title: "Amen!"
 copyright: © 2019 Congress MusicFactory
 key: F_major
-audio: ""
-video: ""
 leadsheet: ""
 notes: ""
 ---

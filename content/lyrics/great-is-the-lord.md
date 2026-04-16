@@ -3,8 +3,6 @@ slug: great-is-the-lord
 title: Great is the Lord
 copyright: © 2001 a songwriter
 key: A_major
-audio: ""
-video: ""
 leadsheet: ""
 notes: Play this with real majesty
 ---

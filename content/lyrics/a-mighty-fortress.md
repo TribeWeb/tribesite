@@ -3,8 +3,8 @@ slug: a-mighty-fortress
 title: A Mighty Fortress
 copyright: © Capitol CMG Publishing
 key: C_major
-audio: ""
-video: "https://music.youtube.com/watch?v=z4Q0M_CMv-I"
+video:
+  youtube: "https://music.youtube.com/watch?v=z4Q0M_CMv-I"
 leadsheet: ""
 notes: ""
 ---

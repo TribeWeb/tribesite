@@ -3,8 +3,6 @@ slug: agnus-dei
 title: Agnus Dei
 copyright: © 1994 Michael W Smith
 key: G_major
-audio: ""
-video: ""
 leadsheet: ""
 notes: ""
 ---

@@ -3,8 +3,8 @@ slug: holy-forever
 title: Holy Forever
 copyright: "© 2022 Rivermusic Holdings, LP"
 key: G_major
-audio: ""
-video: "https://www.youtube.com/watch?v=IkHgxKemCRk"
+video:
+  youtube: "https://www.youtube.com/watch?v=IkHgxKemCRk"
 leadsheet: ""
 notes: ""
 ---

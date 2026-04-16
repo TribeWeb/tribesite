@@ -3,8 +3,8 @@ slug: come-hear-the-cry-of-your-holy-ones
 title: Come
 copyright: Copyright © 2024 Congress Music Factory
 key: ""
-audio: "https://open.spotify.com/track/3xE8Zk445Mxh1oTuPKGUpq?si=51cef13a285b4067&nd=1&dlsi=7c783a3795f247b2"
-video: ""
+audio:
+  spotify: "https://open.spotify.com/track/3xE8Zk445Mxh1oTuPKGUpq?si=51cef13a285b4067&nd=1&dlsi=7c783a3795f247b2"
 leadsheet: ""
 notes: ""
 ---

@@ -3,8 +3,6 @@ slug: i-will-bless-the-lord-forever-made-me-glad
 title: I Will Bless the Lord Forever (Made Me Glad)
 copyright: © 2001 Darlene Zscech
 key: A_major
-audio: ""
-video: ""
 leadsheet: ""
 notes: ""
 ---

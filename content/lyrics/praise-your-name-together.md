@@ -3,8 +3,6 @@ slug: praise-your-name-together
 title: Praise Your Name Together
 copyright: © 2001 a songwriter
 key: D_major
-audio: ""
-video: ""
 leadsheet: ""
 notes: Go back down a key if repeating song
 ---

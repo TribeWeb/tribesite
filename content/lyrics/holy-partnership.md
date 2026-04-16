@@ -3,8 +3,11 @@ slug: holy-partnership
 title: Holy Partnership
 copyright: © Congress MusicFactory
 key: A_major
-audio: "https://soundcloud.com/congressmusicfactory/holy-partnership"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/congressmusicfactory/holy-partnership"
+  apple: "https://music.apple.com/us/album/holy-partnership/1484692093?i=1484692096"
+video:
+  youtube: "https://www.youtube.com/watch?v=ueFfq1Q8oWk"
 leadsheet: "https://www.dropbox.com/s/zz6m2ehtwr9y52n/Holy%20Partnership%20Lead%20Sheet%20CMF.pdf?dl=0"
 notes: ""
 ---

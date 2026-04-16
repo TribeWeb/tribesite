@@ -3,8 +3,8 @@ slug: i-see-the-lord
 title: I See the Lord
 copyright: © New Horizons
 key: E_major
-audio: "https://soundcloud.com/newhorizonskc/hallelujah-1?si=d147a469f145493a83f43b20fc2e6322"
-video: ""
+audio:
+  soundcloud: "https://soundcloud.com/newhorizonskc/hallelujah-1?si=d147a469f145493a83f43b20fc2e6322"
 leadsheet: ""
 notes: ""
 ---
