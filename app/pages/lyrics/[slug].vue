@@ -46,7 +46,7 @@ const lyricFontSize = computed(() => {
     <UPageBody class="pb-0 mt-0">
       <div
         ref="lyricsWrapper"
-        class="flex flex-col items-center transition-[padding-right] duration-300"
+        class="flex flex-col items-center transition-[padding-right] duration-200"
         :class="{ 'pr-80': open }"
         :style="{ '--lyric-aspect-ratio': String(LYRIC_ASPECT_RATIO), '--lyric-font-size': `${lyricFontSize}px` }"
       >
@@ -78,25 +78,7 @@ const lyricFontSize = computed(() => {
           </div>
         </template>
         <template #body>
-          <div class="flex flex-col items-stretch gap-y-4">
-            <USeparator type="dashed" />
-            <UContentSearchButton variant="subtle" :collapsed="false" :kbds="['/']">
-              <NobleSearch />
-            </UContentSearchButton>
-            <USeparator type="dashed" />
-            <UContentToc
-              highlight
-              default-open
-              :links="song?.body?.toc?.links"
-              :title="song.title"
-              :ui="{ root: 'top-0 px-0 sm:px-0 sm:mx-0',
-                     container: 'lg:pt-0 lg:py-0',
-                     trailingIcon: 'hidden' }"
-            />
-            <USeparator type="dashed" />
-            <NobleSongShortlist :song="song" />
-            <USeparator type="dashed" />
-          </div>
+          <NobleSideBarContents :song="song" />
         </template>
         <template #footer>
           <NobleLyricsSync />
@@ -105,7 +87,7 @@ const lyricFontSize = computed(() => {
     </UPageBody>
 
     <div
-      class="fixed bottom-2 flex z-50 transition-[right] duration-300"
+      class="fixed bottom-2 flex z-50 transition-[right] duration-200"
       :style="{ right: open ? 'calc(20rem + 0.5rem)' : '0.5rem' }"
     >
       <UTooltip
