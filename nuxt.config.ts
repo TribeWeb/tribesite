@@ -5,12 +5,12 @@ export default defineNuxtConfig({
     '@nuxt/eslint',
     '@nuxt/image',
     '@nuxt/ui',
-    '@nuxt/content',
-    // 'nuxt-og-image',
+    '@nuxt/content', // 'nuxt-og-image',
     '@vueuse/nuxt',
     '@nuxt/fonts',
     'nuxt-studio',
-    'nuxt-google-sheets-import'
+    'nuxt-google-sheets-import',
+    '@nuxt/scripts'
   ],
 
   devtools: {
@@ -26,7 +26,12 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     // Private keys are only available on the server
-    googleApiKey: ''
+    googleApiKey: '',
+    public: {
+      // Cloudflare Worker host for WebSocket sync (e.g. 'lyrics-sync.your-account.workers.dev')
+      // Leave empty for local dev to use Nitro's built-in WebSocket
+      wsHost: ''
+    }
   },
 
   compatibilityDate: '2024-07-11',

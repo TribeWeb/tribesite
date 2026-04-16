@@ -36,8 +36,17 @@ function _useLyricsSync() {
     }
   }
 
+  const config = useRuntimeConfig()
+
   const wsUrl = computed(() => {
     if (!sessionId.value || import.meta.server) return ''
+    const wsHost = config.public.wsHost as string
+    if (wsHost) {
+      // External WebSocket server (Cloudflare Worker)
+      const proto = wsHost.startsWith('localhost') ? 'ws:' : 'wss:'
+      return `${proto}//${wsHost}/ws/lyrics/${sessionId.value}`
+    }
+    // Local dev fallback — Nitro WebSocket handler
     const proto = location.protocol === 'https:' ? 'wss:' : 'ws:'
     return `${proto}//${location.host}/_ws/lyrics/${sessionId.value}`
   })
@@ -63,6 +72,9 @@ function _useLyricsSync() {
           hash: route.value.hash
         }))
       }
+    },
+    onError(ws, event) {
+      console.error('Error:', event)
     }
   })
 
